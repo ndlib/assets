@@ -20,7 +20,7 @@ body {
 }
 
 div.header {
-	background:url(/local_css/images/header-home.jpg) no-repeat;
+	background:url(/assets/1.0/header-home.jpg) no-repeat;
 	position:relative;
 	height: 90px;
 }
