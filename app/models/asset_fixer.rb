@@ -75,7 +75,7 @@ class AssetFixer
       new_path = path.gsub(/^images/,"/css/images")
       get_download_url(new_path)
     elsif filename == "foundation.css" && path =~ FOUNDATION_REGEX
-      new_path = path.gsub(FOUNDATION_REGEX,"/css/images")
+      new_path = path.gsub(FOUNDATION_REGEX,"/styleguide/images")
       get_download_url(new_path)
     else
       puts "Unknown path: #{path}"
