@@ -1,11 +1,17 @@
 class AssetFixer
   URL_REGEX = /url\(['"]?([^'")]+)['"]?\)/
 
-  def self.fix_assets(version)
+  def self.fix_assets(version, filename = nil)
     require 'open-uri'
     failed_downloads = []
-    css_files = [File.join(stylesheets_directory(version), "hesburgh.css")]
-    css_files.each do |file_path|
+    if filename
+      css_files = [filename]
+    else
+      css_files = Dir.entries(stylesheets_directory(version)).reject{|f| !(f =~ /.css$/)}
+    end
+
+    css_files.each do |name|
+      file_path = File.join(stylesheets_directory(version), name)
       replacements = []
       css_contents = File.read(file_path)
       matches = css_contents.scan(URL_REGEX)
@@ -61,9 +67,5 @@ class AssetFixer
       puts "Failed to download #{download_url} - #{e.message}"
       false
     end
-  end
-
-  def self.test
-    self.fix_assets("1.0")
   end
 end
