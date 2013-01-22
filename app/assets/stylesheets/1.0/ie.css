@@ -13,7 +13,7 @@
 	.lt-ie8 input[type=submit].large.button		{ padding: 9px 18px 10px; }
 
 	 dl.tabs dd a, dl.tabs dd a, li.tbi .menu_center, li.tb .menu_center  {
-	 	background:url("/local_images/tab.gif") repeat-x scroll;
+	 	background:url("/assets/1.0/tab.gif") repeat-x scroll;
 	} 
 	 dl.tabs dd a.active, li.tba .menu_center {
 	 	background:#fff !important;
@@ -61,5 +61,5 @@ dl.tabs dd a.active, .tba .menu_center {
 	border-width: 1px 1px 0 !important;
 	border-color:#B1C6D3 !important;
 	-ms-border-radius: 6px 6px 0 0 !important;
-	behavior: url(/js/responsive/PIE.htc);
+	behavior: url(/assets/1.0/PIE.htc);
 }
