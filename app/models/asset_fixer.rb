@@ -71,6 +71,9 @@ class AssetFixer
       # skip anything already in /assets
     elsif path =~ /^\//
       "https://www.library.nd.edu#{path}"
+    elsif filename == "superfish.css" && path =~ /^images/
+      new_path = path.gsub(/^images/,"/css/images")
+      get_download_url(new_path)
     elsif filename == "foundation.css" && path =~ FOUNDATION_REGEX
       new_path = path.gsub(FOUNDATION_REGEX,"/css/images")
       get_download_url(new_path)
