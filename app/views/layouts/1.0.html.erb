@@ -30,15 +30,38 @@
       </div>
       <div class="row content">
         <div class="container">
-          <div class="three columns">
-            <div id="in_cont_nar" class="box">
-              <%= content_for(:left_column) %>
-            </div>  
-          </div>
-          <div class="nine columns">
+          <% if content_for?(:left_column) %>
+            <div class="three columns">
+              <%= content_for(:left_column) %> 
+            </div>
+          <% end %>
+          <%
+          content_width = 12
+          if content_for?(:left_column)
+            content_width -= 3
+          end
+          if content_for?(:right_column)
+            content_width -= 4
+          end
+          if content_for?(:right_column_wide)
+            content_width -= 5
+          end
+          %>
+          <div class="<%= number_to_word(content_width) %> columns">
             <div id="pg-title"><%= page_title %></div>
+
             <%= yield %>
           </div>
+          <% if content_for?(:right_column) %>
+            <div class="four columns">
+              <%= content_for(:right_column) %> 
+            </div>
+          <% end %>
+          <% if content_for?(:right_column_wide) %>
+            <div class="five columns">
+              <%= content_for(:right_column_wide) %> 
+            </div>
+          <% end %>
         </div>
       </div>
       <%= include_ssi("/local_ssi/responsive/footer.shtml") %>
