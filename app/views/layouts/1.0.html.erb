@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Hesburgh Libraries // University of Notre Dame</title>
+    <meta name="description" content="Information resources and collections of the Hesburgh Libraries, University of Notre Dame." />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    
+    <%= stylesheet_link_tag    "1.0/", :media => "all" %>
+    <%= javascript_include_tag "1.0/" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row header">
+        <div class="twelve columns">
+          <!--#include virtual="/local_ssi/responsive/header.shtml" -->
+        </div>
+      </div>
+      <div class="row menu">
+        <div class="twelve columns">
+          <!--#include virtual="/ssi/main-menu.shtml" -->
+        </div>
+      </div>
+      <div class="row breadcrumb hide-on-phones">
+        <div class="twelve columns">
+          <p><%= breadcrumb_trail %></p>
+        </div>
+      </div>
+      <div class="row content">
+        <div class="container">
+          <div class="three columns">
+            <div id="in_cont_nar" class="box">
+              <%= content_for(:left_column) %>
+            </div>  
+          </div>
+          <div class="nine columns">
+            <div id="pg-title"><%= page_title %></div>
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+      <!--#include virtual="/local_ssi/responsive/footer.shtml" -->
+    </div>
+  </body>
+</html>
