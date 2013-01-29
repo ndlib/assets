@@ -41,9 +41,6 @@ module AssetsHelper
   end
 
   def page_title
-    if !content_for?(:page_title)
-      set_page_title("Page Title")
-    end
     content_for(:page_title)
   end
 

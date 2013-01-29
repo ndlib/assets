@@ -20,9 +20,15 @@ a:hover {
   text-decoration: underline;
 }
 
-/*
-comment out .row styles somehow
-*/
+.row {
+  margin: 0 auto;
+}
+
+.container,
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container {
+  width: auto;
+}
 
 p {
   margin: 0 0 1.12em;
@@ -179,7 +185,7 @@ comment out icon- classes somehow
 
 div.breadcrumb {
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   border: none;
   -webkit-border-radius: 0;
      -moz-border-radius: 0;
