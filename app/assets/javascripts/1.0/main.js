@@ -1,6 +1,4 @@
 //Scripts related to the interface of the entire site
-jQuery.noConflict();
-
 jQuery(function($) {
   /* Creates the dropdown menu navigation */
   if (jQuery('ul.sf-menu').superfish) {
