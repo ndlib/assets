@@ -66,7 +66,7 @@ module Assets
 
     # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
     # config.assets.precompile += %w( search.js )
-    config.assets.precompile += %w( 1.0/index.js 1.0/index.css )
+    config.assets.precompile += %w( 1.0/index.js 1.0/index.css 1.0/ie.css )
 
     config.assets.initialize_on_precompile = false
   end
