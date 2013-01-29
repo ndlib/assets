@@ -136,4 +136,59 @@ blockquote {
   padding-left: 150px;
 }
 
+table {
+  background-color: transparent;
+}
 
+.table-striped tbody tr:nth-child(odd) td,
+.table-striped tbody tr:nth-child(odd) th {
+  background-color: #DCD5B6;
+}
+
+.table tbody tr:hover td,
+.table tbody tr:hover th {
+  background-color: #EAE6D3;
+}
+
+/*
+comment out icon- classes somehow
+*/
+
+.btn-primary {
+  *background-color: #304962;
+  background-image: -ms-linear-gradient(top, #8392A1, #304962);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#8392A1), to(#304962));
+  background-image: -webkit-linear-gradient(top, #8392A1, #304962);
+  background-image: -o-linear-gradient(top, #8392A1, #304962);
+  background-image: -moz-linear-gradient(top, #8392A1, #304962);
+  background-image: linear-gradient(top, #8392A1, #304962);
+  border-color: #304962 #304962 #003580;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#8392A1', endColorstr='#304962', GradientType=0);
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.disabled,
+.btn-primary[disabled] {
+  background-color: #304962;
+  *background-color: #004ab3;
+}
+
+.breadcrumb p {
+  margin:0;
+  color:#A99A4B;
+  padding:20px;
+}
+
+.breadcrumb a {
+  font-weight:bold;
+  text-decoration:none;
+  color:#A99A4B;
+}
+
+/*
+comment out .breadcrumb styles somehow
+*/
