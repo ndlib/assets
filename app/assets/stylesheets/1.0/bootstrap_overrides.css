@@ -16,6 +16,14 @@ a:hover {
   text-decoration: underline;
 }
 
+/*
+comment out .row styles somehow
+*/
+
+p {
+  margin: 0 0 1.12em;
+}
+
 h1,
 h2,
 h3,
@@ -61,6 +69,18 @@ h4 small {
 li {
   line-height: 20px;
 }
+
+/*
+comment out these somehow:
+dl {
+  margin-bottom: 18px;
+}
+
+dt,
+dd {
+  line-height: 18px;
+}
+*/
 
 dd {
   margin-left: 1.5em;
