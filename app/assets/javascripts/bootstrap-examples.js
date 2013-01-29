@@ -14,9 +14,11 @@
     })
 
     // side bar
-    $('.bs-docs-sidenav').affix({
+    var sidenav = $('.bs-docs-sidenav')
+    var sidebar = $('.bs-docs-sidenav').parent()
+    sidenav.affix({
       offset: {
-        top: function () { return $window.width() <= 980 ? 290 : 210 }
+        top: function () { return sidebar.offset().top }
       , bottom: 270
       }
     })
