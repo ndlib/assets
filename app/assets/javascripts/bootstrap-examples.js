@@ -15,10 +15,10 @@
 
     // side bar
     var sidenav = $('.bs-docs-sidenav')
-    var sidebar = $('.bs-docs-sidenav').parent()
+    var column = $('.bs-docs-sidenav').parent().parent();
     sidenav.affix({
       offset: {
-        top: function () { return sidebar.offset().top }
+        top: function () { return column.offset().top }
       , bottom: 270
       }
     })
