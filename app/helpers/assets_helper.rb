@@ -36,6 +36,16 @@ module AssetsHelper
     end
   end
 
+  # Blocks rendered through development_only() will only display when Rails is running in the development environment
+  def development_only(&block)
+    if Rails.env == 'development'
+      content_tag(:div,
+        content_tag(:h4, "Development Only") + capture(&block),
+        style: "border: dashed 1px #000;padding: 5px;"
+      )
+    end
+  end
+
   def success
     flash[:success]
   end
