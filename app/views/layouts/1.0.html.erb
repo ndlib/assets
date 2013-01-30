@@ -58,8 +58,15 @@
           end
           %>
           <div class="<%= number_to_word(content_width) %> columns">
-            <div id="pg-title"><%= page_title %></div>
-
+            <div id="pg-title">
+              <% if content_for?(:content_title_links) %>
+                <div class="pull-right">
+                  <%= content_for(:content_title_links) %>
+                </div>
+              <% end %>
+              <%= content_for(:content_title) %>
+            </div>
+            <%= display_notices %>
             <%= yield %>
           </div>
           <% if content_for?(:right_column) %>
