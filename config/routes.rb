@@ -1,5 +1,6 @@
 Assets::Application.routes.draw do
-  root :to => 'static#index'
-  match ':action' => 'static', as: 'static'
+  root :to => 'style_guide#index'
+  
   match 'bootstrap/:action' => 'bootstrap', as: 'bootstrap'
+  match ':action' => 'style_guide', as: 'style_guide'
 end
