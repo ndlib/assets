@@ -4,6 +4,27 @@ module StyleGuideHelper
     breadcrumb(*crumbs)
   end
 
+  def style_guide_header(title = nil)
+    if title.present?
+      content_title(title)
+    end
+    link_details = [
+      ["Style Guide", :index],
+      ["One Column", :one_column], 
+      ["Two Column Left", :two_column_left], 
+      ["Two Column Right", :two_column_right]
+    ]
+    links = []
+    link_details.each do |name,action|
+      options = {}
+      if params[:controller] == "style_guide" && params[:action] == action.to_s
+        options[:class] = "active"
+      end
+      links << content_tag(:li, link_to(name, style_guide_path(action)), options)
+    end
+    content_for(:content_title_links, content_tag(:ul, raw(links.join(" ")), class: "nav nav-pills"))
+  end
+
   def lorem_ipsum
     "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
   end
