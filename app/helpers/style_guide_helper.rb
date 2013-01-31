@@ -4,25 +4,28 @@ module StyleGuideHelper
     breadcrumb(*crumbs)
   end
 
-  def style_guide_header(title = nil)
-    if title.present?
-      content_title(title)
-    end
-    link_details = [
+  def style_guide_links_ul(ul_options = {})
+    links = [
       ["Style Guide", :index],
       ["One Column", :one_column], 
       ["Two Column Left", :two_column_left], 
       ["Two Column Right", :two_column_right]
     ]
-    links = []
-    link_details.each do |name,action|
+    li_tags = []
+    links.each do |name,action|
       options = {}
       if params[:controller] == "style_guide" && params[:action] == action.to_s
         options[:class] = "active"
       end
-      links << content_tag(:li, link_to(name, style_guide_path(action)), options)
+      li_tags << content_tag(:li, link_to(name, style_guide_path(action)), options)
     end
-    content_for(:content_title_links, content_tag(:ul, raw(links.join(" ")), class: "nav nav-pills"))
+    content_tag(:ul, raw(li_tags.join(" ")), ul_options)
+  end
+
+  def style_guide_header(title = nil)
+    if title.present?
+      content_title(title)
+    end
   end
 
   def lorem_ipsum

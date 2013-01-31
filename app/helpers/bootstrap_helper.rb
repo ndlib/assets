@@ -4,24 +4,27 @@ module BootstrapHelper
     breadcrumb(*crumbs)
   end
 
-  def bootstrap_header(title = nil)
-    if title.present?
-      content_title(title)
-    end
-    link_details = [
+  def bootstrap_links_ul(ul_options = {})
+    links = [
       ["Base CSS", :index],
       ["Components", :components], 
       ["Javascript", :javascript]
     ]
-    links = []
-    link_details.each do |name,action|
+    li_tags = []
+    links.each do |name,action|
       options = {}
       if params[:controller] == "bootstrap" && params[:action] == action.to_s
         options[:class] = "active"
       end
-      links << content_tag(:li, link_to(name, bootstrap_path(action)), options)
+      li_tags << content_tag(:li, link_to(name, bootstrap_path(action)), options)
     end
-    content_for(:content_title_links, content_tag(:ul, raw(links.join(" ")), class: "nav nav-pills"))
+    content_tag(:ul, raw(li_tags.join(" ")), ul_options)
+  end
+
+  def bootstrap_header(title = nil)
+    if title.present?
+      content_title(title)
+    end
   end
 
   def bootstrap_sidebar(&block)
