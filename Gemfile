@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.11'
+gem 'rails', '3.2.12'
 
 gem "twitter-bootstrap-rails"
 
@@ -19,7 +19,7 @@ end
 gem 'jquery-rails', '~> 2.1.4'
 
 group :test, :development do
-  gem 'debugger'
+  gem 'pry-rails'
 end
 
 # To use ActiveModel has_secure_password
