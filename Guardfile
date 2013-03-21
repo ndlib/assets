@@ -9,12 +9,12 @@ guard 'bundler' do
   watch(/^.+\.gemspec/)
 end
 
-# guard 'rails', port: rails_server_port do
-#   watch('Gemfile.lock')
-#   watch(%r{^config/(?!locales/|routes[.]rb|environments/).*})
-#   watch('config/environments/development.rb')
-#   watch(%r{^lib/.*})
-# end
+guard 'rails', root: 'server', port: rails_server_port do
+  watch('Gemfile.lock')
+  watch(%r{^server/config/(?!locales/|routes[.]rb|environments/).*})
+  watch('server/config/environments/development.rb')
+  watch(%r{^lib/.*})
+end
 
 guard 'spork', aggressive_kill: false, rspec_port: spork_rspec_port do
   watch('server/config/application.rb')

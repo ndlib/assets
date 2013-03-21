@@ -19,3 +19,9 @@ gem 'twitter-bootstrap-rails'
 group :test, :development do
   gem 'pry-rails'
 end
+
+group :test do
+  gem 'rb-inotify', :require => false
+  gem 'rb-fsevent', :require => false
+  gem 'rb-fchange', :require => false
+end
