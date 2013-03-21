@@ -129,5 +129,7 @@ PLATFORMS
 
 DEPENDENCIES
   hesburgh_assets!
+  jquery-rails (~> 2.1.4)
   pry-rails
   sqlite3
+  twitter-bootstrap-rails

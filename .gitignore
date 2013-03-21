@@ -9,14 +9,10 @@
 
 # Ignore the default SQLite database.
 /server/db/*.sqlite3
-/tmpserver/db/*.sqlite3
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /server/log/*.log
-/server/tmp
-/tmpserver/log/*.log
-/tmpserver/tmp/
-/tmpserver/.sass-cache
+/server/tmp/
 
 /pkg/
