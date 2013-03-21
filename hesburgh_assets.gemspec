@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 # Maintain your gem's version:
 require "hesburgh_assets/version"
 
-# Describe your gem and declare its dependencies:
+# Describe your s.add_development_dependency and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = "hesburgh_assets"
   s.version     = HesburghAssets::VERSION
@@ -24,4 +24,13 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency 'rspec-rails'
   s.add_development_dependency 'capybara'
+  s.add_development_dependency 'rb-inotify'
+  s.add_development_dependency 'rb-fsevent'
+  s.add_development_dependency 'rb-fchange'
+
+  s.add_development_dependency 'guard-rspec'
+  s.add_development_dependency 'guard-coffeescript'
+  s.add_development_dependency 'guard-rails'
+  s.add_development_dependency 'guard-bundler'
+  s.add_development_dependency 'guard-spork'
 end
