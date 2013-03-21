@@ -1,7 +1,7 @@
 /* Foundation v2.2.1 http://foundation.zurb.com */
 /* Artfully Masterminded by ZURB */
 
-/* -------------------------------------------------- 
+/* --------------------------------------------------
     Table of Contents
 -----------------------------------------------------
 :: Reset & Standards
@@ -15,14 +15,14 @@
 /*	--------------------------------------------------
 	:: Global Reset & Standards
 	-------------------------------------------------- */
-	
-	/* 
+
+	/*
 		Eric Meyer's CSS Reset
-		http://meyerweb.com/eric/tools/css/reset/ 
+		http://meyerweb.com/eric/tools/css/reset/
 		v2.0 | 20110126
    		License: none (public domain)
 	*/
-	
+
 	html, body, div, span, applet, object, iframe,
 	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 	a, abbr, acronym, address, big, cite, code,
@@ -32,8 +32,8 @@
 	dl, dt, dd, ol, ul, li,
 	fieldset, form, label, legend,
 	table, caption, tbody, tfoot, thead, tr, th, td,
-	article, aside, canvas, details, embed, 
-	figure, figcaption, footer, header, hgroup, 
+	article, aside, canvas, details, embed,
+	figure, figcaption, footer, header, hgroup,
 	menu, nav, output, ruby, section, summary,
 	time, mark, audio, video {
 		margin: 0;
@@ -43,10 +43,10 @@
 		vertical-align: baseline;
 	}
 	html {
-		font-size: 62.5%; 
+		font-size: 62.5%;
 	}
 	/* HTML5 display-role reset for older browsers */
-	article, aside, details, figcaption, figure, 
+	article, aside, details, figcaption, figure,
 	footer, header, hgroup, menu, nav, section {
 		display: block;
 	}
@@ -68,18 +68,18 @@
 		border-collapse: collapse;
 		border-spacing: 0;
 	}
-	
+
 	sub {vertical-align: sub;}
 	sup {vertical-align: super;}
-	
+
 	body { background: #fff; font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, "Lucida Grande", sans-serif; font-size: 13px; font-size: 1.3rem; line-height: 18px; color: #555; position: relative; -webkit-font-smoothing: antialiased; }
-	
 
 
 
 
 
-/* -------------------------------------------------- 
+
+/* --------------------------------------------------
 	:: Misc
 ---------------------------------------------------*/
 	/*.left        { float: left; }
@@ -89,13 +89,13 @@
 	.text-center { text-align: center; }
 	.hide        { display: none; }
 	.highlight   { background: #ff0; }
-	
+
 	#googlemap img, object, embed { max-width: none; }
 
 	#map_canvas embed { max-width: none; }
 	#map_canvas img { max-width: none; }
 	#map_canvas object { max-width: none; }*/
-	
+
 /* Artfully Masterminded by ZURB */
 
 
@@ -127,23 +127,23 @@
 
 /* --------------------------------------------------
 	:: Grid
-	
+
 	This is the mobile-friendly, responsive grid that
 	lets Foundation work much of its magic.
-	
+
 	-------------------------------------------------- */
 
 	.container { padding: 0 20px;}
-	
+
 	.row { width: 100%; max-width: 980px; min-width: 727px; margin: 0 auto; }
 	/* To fix the grid into a certain size, set max-width to width */
 	.row .row { min-width: 0; }
-	
+
 	.column, .columns { margin-left: 4.4%; float: left; min-height: 1px; position: relative; }
 	.column:first-child, .columns:first-child, .menu .columns { margin-left: 0 !important; }
 	[class*="column"] + [class*="column"]:last-child { float: right; }
 	[class*="column"] + [class*="column"].end { float: left; }
-	
+
 	.row .one 		{ width: 4.3%; }
 	.row .two 		{ width: 13%; }
 	.row .three 	{ width: 21.679%; }
@@ -156,7 +156,7 @@
 	.row .ten 		{ width: 82.6%; }
 	.row .eleven 	{ width: 91.3%; }
 	.row .twelve 	{ width: 100%;float:none; }
-	
+
 	.row .offset-by-one 	{ margin-left: 13.1%;  }
 	.row .offset-by-two 	{ margin-left: 21.8%;  }
 	.row .offset-by-three 	{ margin-left: 30.5%;  }
@@ -167,7 +167,7 @@
 	.row .offset-by-eight 	{ margin-left: 74.0%;  }
 	.row .offset-by-nine 	{ margin-left: 82.7%;  }
 	.row .offset-by-ten 	{ margin-left: 91.4%;  }
-	
+
 	.row .centered { float: none; margin: 0 auto; }
 
 	.row .offset-by-one:first-child 	{ margin-left: 8.7%;  }
@@ -181,7 +181,7 @@
 	.row .offset-by-nine:first-child 	{ margin-left: 78.3%;  }
 	.row .offset-by-ten:first-child 	{ margin-left: 87%;  }
 	.row .offset-by-eleven:first-child 	{ margin-left: 95.7%;  }
-	
+
 	/* Source Ordering */
 	.push-two 		{ left: 17.4% }
 	.push-three 	{ left: 26.1%; }
@@ -192,7 +192,7 @@
 	.push-eight 	{ left: 69.6%; }
 	.push-nine 		{ left: 78.3%; }
 	.push-ten 		{ left: 87%; }
-	
+
 	.pull-two 		{ right: 17.4% }
 	.pull-three 	{ right: 26.1%; }
 	.pull-four 		{ right: 34.8%; }
@@ -202,50 +202,50 @@
 	.pull-eight 	{ right: 69.6%; }
 	.pull-nine 		{ right: 78.3%; }
 	.pull-ten 		{ right: 87%; }
-	
-	
-	
+
+
+
 	img, object, embed { max-width: 100%; height: auto; }
 	img { -ms-interpolation-mode: bicubic; }
 	#map_canvas img, .map_canvas img {max-width: none!important;}
-	 
+
 	 /* Nicolas Gallagher's micro clearfix */
 	 .row:before, .row:after, .clearfix:before, .clearfix:after { content:""; display:table; }
 	 .row:after, .clearfix:after { clear: both; }
 	 .row, .clearfix { zoom: 1; }
-	 
-	 
-	
-	
+
+
+
+
 /*	--------------------------------------------------
 	:: Block grids
-	
+
 	These are 2-up, 3-up, 4-up and 5-up ULs, suited
 	for repeating blocks of content. Add 'mobile' to
 	them to switch them just like the layout grid
 	(one item per line) on phones
-	
+
 	For IE7/8 compatibility block-grid items need to be
 	the same height. You can optionally uncomment the
 	lines below to support arbitrary height, but know
 	that IE7/8 do not support :nth-child.
 	-------------------------------------------------- */
-	
+
 	.block-grid { display: block; overflow: hidden; }
 	.block-grid>li { display: block; height: auto; float: left; }
-	
+
 	.block-grid.two-up { margin-left: -4% }
 	.block-grid.two-up>li { margin-left: 4%; width: 46%; margin-bottom: 4%;}
 /* 	.block-grid.two-up>li:nth-child(2n+1) {clear: left;} */
-	
+
 	.block-grid.three-up { margin-left: -2% }
 	.block-grid.three-up>li { margin-left: 2%; width: 31.3%; margin-bottom: 2%;}
 /* 	.block-grid.three-up>li:nth-child(3n+1) {clear: left;} */
-	
+
 	.block-grid.four-up { margin-left: -2% }
 	.block-grid.four-up>li { margin-left: 2%; width: 23%; margin-bottom: 2%;}
 /* 	.block-grid.four-up>li:nth-child(4n+1) {clear: left;} */
-	
+
 	.block-grid.five-up { margin-left: -1.5% }
 	.block-grid.five-up>li { margin-left: 1.5%; width: 18.5%; margin-bottom: 1.5%;}
 /* 	.block-grid.five-up>li:nth-child(5n+1) {clear: left;} */
@@ -272,7 +272,7 @@
 /*    --------------------------------------------------
     Tabs
     -------------------------------------------------- */
-	
+
 	dl.tabs { display: block; margin: 0 0 0 0; padding: 0; height: 30px; border-bottom: solid 1px #ddd; }
     dl.tabs dt { display: block; width: auto; height: 30px; padding: 0 9px 0 20px; line-height: 30px; float: left; color: #999; font-size: 11px; text-transform: uppercase; cursor: default; }
     dl.tabs dt:first-child { padding: 0 9px 0 0; }
@@ -284,22 +284,22 @@
 		.nice.tabs dd a { padding: 7px 18px 9px; font-size: 15px; font-size: 1.5rem; color: #555555; background: none; border: none; }
 		.nice.tabs dd a.active { font-weight: bold; color: #333; background: #fff; border-left: 1px solid #eee; border-right: 1px solid #eee; border-top: 3px solid #00a6fc; margin: 0 10px; position: relative; top: -5px; }
 		.nice.tabs dd:first-child a.active { margin-left: 0; }
-		
+
 	dl.tabs.vertical { height: auto; }
 	dl.tabs.vertical dt, dl.tabs.vertical dd, dl.nice.tabs.vertical dt, dl.nice.tabs.vertical dd { float: none; height: auto; }
 	dl.tabs.vertical dd a { display: block; width: auto; height: auto; padding: 15px 20px; line-height: 1; border: solid 0 #ccc; border-width: 1px 1px 0; margin: 0; color: #555; background: #eee; font-size: 15px; font-size: 1.5rem; }
 	dl.tabs.vertical dd a.active { height: auto; margin: 0; border-width: 1px 0 0; background: #fff; }
-	
+
 		.nice.tabs.vertical { border-bottom: solid 1px #eee; height: auto; }
 		.nice.tabs.vertical dd a { padding: 15px 20px; border: none; border-left: 1px solid #eee; border-right: 1px solid #eee; border-top: 1px solid #eee; background: #fff; }
 		.nice.tabs.vertical dd a.active { border: none; background: #00a6fc; color: #fff; margin: 0; position: static; top: 0; height: auto; }
 		.nice.tabs.vertical dd:first-child a.active { margin: 0; }
-    
+
     ul.tabs-content { margin: 0; display: block; }
     ul.tabs-content>li { display: none; }
     .no-js ul.tabs-content>li { display: block; }
     ul.tabs-content>li.active { display: block; }
-    
+
     dl.contained, dl.nice.contained { margin-bottom: 0; }
     dl.contained.tabs dd a { padding: 0 14px; }
     dl.nice.contained.tabs dd a { padding: 7px 18px 9px; }
@@ -308,11 +308,11 @@
 	ul.contained.tabs-content>li { padding: 20px; border: solid 0 #ddd; border-width: 0 1px 1px 1px; }
 	ul.contained.vertical.tabs-content>li { border-width: 1px 1px 1px 1px; }
 	ul.nice.contained.tabs-content>li { border-color: #eee; }
-	
 
- 
- 
- 
+
+
+
+
 /* CONTAINER
    ================================================== */
 
@@ -326,7 +326,7 @@ div.orbit {
     height: 1px;
     position: relative;
     overflow: hidden }
-    
+
 div.orbit.with-bullets {
     margin-bottom: 40px; }
 
@@ -338,7 +338,7 @@ div.orbit .orbit-slide {
 
 div.orbit a.orbit-slide {
     border: none;
-    line-height: 0; 
+    line-height: 0;
     display: none; }
 
 div.orbit div.orbit-slide {
@@ -369,7 +369,7 @@ div.orbit-wrapper span.rotator {
     position: absolute;
     top: 0;
     left: -20px;
-    background: url(/assets/1.0/rotator-black.png) no-repeat;
+    background: url(/assets/hesburgh_assets/1.0/rotator-black.png) no-repeat;
     z-index: 3; }
 
 div.orbit-wrapper span.mask {
@@ -388,7 +388,7 @@ div.orbit-wrapper span.rotator.move {
 div.orbit-wrapper span.mask.move {
     width: 40px;
     left: 0;
-    background: url(/assets/1.0/timer-black.png) repeat 0 0; }
+    background: url(/assets/hesburgh_assets/1.0/timer-black.png) repeat 0 0; }
 
 div.orbit-wrapper span.pause {
     display: block;
@@ -397,12 +397,12 @@ div.orbit-wrapper span.pause {
     position: absolute;
     top: 0;
     left: 0;
-    background: url(/assets/1.0/pause-black.png) no-repeat;
+    background: url(/assets/hesburgh_assets/1.0/pause-black.png) no-repeat;
     z-index: 4;
     opacity: 0; }
 
 div.orbit-wrapper span.pause.active {
-    background: url(/assets/1.0/pause-black.png) no-repeat 0 -40px }
+    background: url(/assets/hesburgh_assets/1.0/pause-black.png) no-repeat 0 -40px }
 
 div.orbit-wrapper div.timer:hover span.pause,
 div.orbit-wrapper span.pause.active {
@@ -447,11 +447,11 @@ div.orbit-wrapper div.slider-nav span {
     cursor: pointer; }
 
 div.orbit-wrapper div.slider-nav span.right {
-    background: url(/assets/1.0/right-arrow.png);
+    background: url(/assets/hesburgh_assets/1.0/right-arrow.png);
     right: 0; }
 
 div.orbit-wrapper div.slider-nav span.left {
-    background: url(/assets/1.0/left-arrow.png);
+    background: url(/assets/hesburgh_assets/1.0/left-arrow.png);
     left: 0; }
 
 /* BULLET NAV
@@ -472,7 +472,7 @@ ul.orbit-bullets li {
     cursor: pointer;
     color: #999;
     text-indent: -9999px;
-    background: url(/assets/1.0/bullets.jpg) no-repeat 4px 0;
+    background: url(/assets/hesburgh_assets/1.0/bullets.jpg) no-repeat 4px 0;
     width: 13px;
     height: 12px;
     overflow: hidden; }
@@ -480,7 +480,7 @@ ul.orbit-bullets li {
 ul.orbit-bullets li.active {
     color: #222;
     background-position: -8px 0; }
-    
+
 ul.orbit-bullets li.has-thumb {
     background: none;
     width: 100px;
@@ -489,7 +489,7 @@ ul.orbit-bullets li.has-thumb {
 ul.orbit-bullets li.active.has-thumb {
     background-position: 0 0;
     border-top: 2px solid #000; }
-    
+
 /* FLUID LAYOUT
    ================================================== */
 div.orbit img.fluid-placeholder {
@@ -515,7 +515,7 @@ ul.orbit-bullets li {
     cursor: pointer;
     color: #999;
     text-indent: -9999px;
-    background: url(/assets/1.0/bullets.jpg) no-repeat 4px 0;
+    background: url(/assets/hesburgh_assets/1.0/bullets.jpg) no-repeat 4px 0;
     width: 13px;
     height: 12px;
     overflow: hidden; }
@@ -532,8 +532,8 @@ ul.orbit-bullets li.active {
 ul.orbit-bullets li.active.has-thumb {
     background-position: 0 0;
     border-top: 2px solid #000; }
-    
-    
+
+
 /* Correct timer in IE */
 	.timer { display: none !important; }
 	div.caption { background:transparent; filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000);zoom: 1; }
@@ -545,25 +545,25 @@ ul.orbit-bullets li.active.has-thumb {
 /*	--------------------------------------------------
 	Reveal Modals
 	-------------------------------------------------- */
-		
-	.reveal-modal-bg { 
-		position: fixed; 
+
+	.reveal-modal-bg {
+		position: fixed;
 		height: 100%;
 		width: 100%;
 		background: #000;
 		z-index: 40;
 		display: none;
 		top: 0;
-		left: 0; 
+		left: 0;
 		}
-	
+
 	.reveal-modal {
 		visibility: hidden;
-		top: 100px; 
+		top: 100px;
 		left: 50%;
 		margin-left: -300px;
 		width: 520px;
-		background: #eee url(/assets/1.0/modal-gloss.png) no-repeat -200px -80px;
+		background: #eee url(/assets/hesburgh_assets/1.0/modal-gloss.png) no-repeat -200px -80px;
 		position: absolute;
 		z-index: 41;
 		padding: 30px 40px 34px;
@@ -574,12 +574,12 @@ ul.orbit-bullets li.active.has-thumb {
 		-webkit-box-shadow: 0 0 10px rgba(0,0,0,.4);
 		box-shadow: 0 0 10px rgba(0,0,0,.4);
 		}
-		
+
 	.reveal-modal.small 		{ width: 200px; margin-left: -140px;}
 	.reveal-modal.medium 		{ width: 400px; margin-left: -240px;}
 	.reveal-modal.large 		{ width: 600px; margin-left: -340px;}
 	.reveal-modal.xlarge 		{ width: 800px; margin-left: -440px;}
-	
+
 	.reveal-modal .close-reveal-modal {
 		font-size: 22px;
 		line-height: .5;
@@ -590,55 +590,55 @@ ul.orbit-bullets li.active.has-thumb {
 		text-shadow: 0 -1px 1px rbga(0,0,0,.6);
 		font-weight: bold;
 		cursor: pointer;
-		} 
-	
+		}
+
 	.reveal-modal .row {
 		min-width: 0;
 	}
-	
+
 	/* Mobile */
-		
+
 		@media handheld, only screen and (max-width: 1023px) {
 			.reveal-modal-bg { position: absolute; }
-			
+
 			.reveal-modal,
 			.reveal-modal.small,
 			.reveal-modal.medium,
 			.reveal-modal.large,
 			.reveal-modal.xlarge { width: 60%; top: 60px; left: 15%; margin-left: 0; padding: 20px; height: auto; }
 		}
-		
+
 		@media handheld, only screen and (max-width: 767px) {
 			.reveal-modal-bg { position: absolute; }
-			
+
 			.reveal-modal,
 			.reveal-modal.small,
 			.reveal-modal.medium,
 			.reveal-modal.large,
 			.reveal-modal.xlarge { width: 80%; top: 15px; left: 5%; margin-left: 0; padding: 20px; height: auto; }
 		}
-	
-	
+
+
 	/*
-			
+
 	NOTES
-	
+
 	Close button entity is &#215;
-	
+
 	Example markup
-	
+
 	<div id="myModal" class="reveal-modal">
 		<h2>Awesome. I have it.</h2>
 		<p class="lead">Your couch.  I it's mine.</p>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices aliquet placerat. Duis pulvinar orci et nisi euismod vitae tempus lorem consectetur. Duis at magna quis turpis mattis venenatis eget id diam. </p>
 		<a class="close-reveal-modal">&#215;</a>
 	</div>
-	
+
 	*/
 /* --------------------------------------------------
 	:: Typography
 	-------------------------------------------------- */
-	
+
 	@media handheld, only screen and (max-width: 767px) {
 		h1 { font-size: 32px; font-size: 3.2rem; line-height: 1.3; }
 		h2 { font-size: 28px; font-size: 2.8rem; line-height: 1.3; }
@@ -653,9 +653,9 @@ ul.orbit-bullets li.active.has-thumb {
 /* --------------------------------------------------
 	:: Grid
 	-------------------------------------------------- */
-	
+
 	/* Mobile */
-	@media only screen and (max-width: 767px) {		
+	@media only screen and (max-width: 767px) {
 		body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; width: 100%; min-width: 0; margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
 		.container { min-width: 0; margin-left: 0; margin-right: 0; }
 		.row { width: 100%; min-width: 0; margin-left: 0; margin-right: 0; }
@@ -665,105 +665,105 @@ ul.orbit-bullets li.active.has-thumb {
 		[class*="column"] + [class*="column"]:last-child { float: none; }
 		.column:before, .columns:before, .column:after, .columns:after { content:""; display:table; }
 		.column:after, .columns:after { clear: both; }
-		
+
 		.offset-by-one, .offset-by-two, .offset-by-three, .offset-by-four, .offset-by-five, .offset-by-six, .offset-by-seven, .offset-by-eight, .offset-by-nine, .offset-by-ten, .offset-by-eleven, .centered { margin-left: 0 !important; }
-		
+
 		.push-two, .push-three, .push-four, .push-five, .push-six, .push-seven, .push-eight, .push-nine, .push-ten { left: auto; }
 		.pull-two, .pull-three, .pull-four, .pull-five, .pull-six, .pull-seven, .pull-eight, .pull-nine, .pull-ten { right: auto; }
-		
+
 		/* Mobile 4-column Grid */
 		.row .phone-one:first-child, .row .phone-two:first-child, .row .phone-three:first-child, .row .phone-four:first-child { margin-left: 0; }
 		.row .phone-one:last-child, .row .phone-two:last-child, .row .phone-three:last-child, .row .phone-four:last-child { float: right; }
-		
+
 		.row .phone-one, .row .phone-two, .row .phone-three, .row .phone-four { margin-left: 4.4%; float: left; min-height: 1px; position: relative; padding: 0; }
-		
+
 		.row .phone-one 	{ width: 21.68% !important; }
 		.row .phone-two 	{ width: 47.8% !important; }
 		.row .phone-three 	{ width: 73.9% !important; }
 		.row .phone-four 	{ width: 100% !important; }
-		
+
 		.row .push-one-phone { left: 26.08%; }
 		.row .push-two-phone { left: 52.2% }
 		.row .push-three-phone { left: 78.3% }
-		
+
 		.row .pull-one-phone { right: 26.08% }
 		.row .pull-two-phone { right: 52.2% }
 		.row .pull-three-phone { right: 78.3%; }
-		
-		
+
+
 	}
-	
-	
+
+
 /* --------------------------------------------------
 	:: Block Grids
-	-------------------------------------------------- */	
-	
+	-------------------------------------------------- */
+
 	@media only screen and (max-width: 767px) {
 		.block-grid.mobile { margin-left: 0; }
 		.block-grid.mobile > li { float: none; width: 100%; margin-left: 0; }
 	}
-	
-	
 
-/* -------------------------------------------------- 
+
+
+/* --------------------------------------------------
 	:: Mobile Visibility Affordances
 ---------------------------------------------------*/
-	
-	
-	.show-on-phones { display: none !important; }	
+
+
+	.show-on-phones { display: none !important; }
 	.show-on-tablets { display: none !important; }
 	.show-on-desktops { display: block !important; }
-	
-	.hide-on-phones { display: block !important; }	
+
+	.hide-on-phones { display: block !important; }
 	.hide-on-tablets { display: block !important; }
 	.hide-on-desktops { display: none !important; }
-	
-	
+
+
 	/* Modernizr-enabled tablet targeting */
 	@media only screen and (max-width: 1280px) and (min-width: 768px) {
 		.touch .hide-on-phones { display: block !important; }
 		.touch .hide-on-tablets { display: none !important; }
 		.touch .hide-on-desktops { display: block !important; }
-		
+
 		.touch .show-on-phones { display: none !important; }
 		.touch .show-on-tablets { display: block !important; }
 		.touch .show-on-desktops { display: none !important; }
 	}
-	
-		
+
+
 	@media only screen and (max-width: 767px) {
 		.hide-on-phones { display: none !important; }
 		.hide-on-tablets { display: block !important; }
 		.hide-on-desktops { display: block !important; }
-		
+
 		.show-on-phones { display: block !important; }
 		.show-on-tablets { display: none !important; }
 		.show-on-desktops { display: none !important; }
 	}
-	
-	
+
+
 	/* Specific overrides for elements that require something other than display: block */
-	
+
 	table.show-on-desktops { display: table !important; }
-	table.hide-on-phones { display: table !important; }	
+	table.hide-on-phones { display: table !important; }
 	table.hide-on-tablets { display: table !important; }
-	
+
 	@media only screen and (max-width: 1280px) and (min-width: 768px) {
 		.touch table.hide-on-phones { display: table !important; }
 		.touch table.hide-on-desktops { display: table !important; }
 		.touch table.show-on-tablets { display: table !important; }
 	}
-	
+
 	@media only screen and (max-width: 767px) {
 		table.hide-on-tablets { display: table !important; }
 		table.hide-on-desktops { display: table !important; }
 		table.show-on-phones { display: table !important; }
 	}
-	
-	
-/* -------------------------------------------------- 
+
+
+/* --------------------------------------------------
 	:: Forms
----------------------------------------------------*/	
+---------------------------------------------------*/
 
 
 	@media only screen and (max-width: 767px) {
@@ -776,39 +776,39 @@ ul.orbit-bullets li.active.has-thumb {
 		form.nice div.form-field.error .large + small, form.nice .large + .error { width: auto; }
 		form.nice div.form-field.error .expand + small, form.nice .expand + .error { width: auto; }
 	}
-	
-	
-/* -------------------------------------------------- 
+
+
+/* --------------------------------------------------
 	:: UI
----------------------------------------------------*/	
-	
+---------------------------------------------------*/
+
 	/* Buttons */
 	@media only screen and (max-width: 767px) {
 		.button { display: block; }
 		button.button, input[type="submit"].button { width: 100%; padding-left: 0; padding-right: 0; margin-bottom: 5px; }
 	}
-	
+
 	/* Tabs */
-	
+
 	@media only screen and (max-width: 767px) {
 		dl.tabs.mobile, dl.nice.tabs.mobile { width: auto; margin: 20px -20px 40px; height: auto; }
 		dl.tabs.mobile dt, dl.tabs.mobile dd, dl.nice.tabs.mobile dt, dl.nice.tabs.mobile dd { float: none; height: auto; }
 
 		dl.tabs.mobile dd a { display: block; width: auto; height: auto; padding: 18px 20px; line-height: 1; border: solid 0 #ccc; border-width: 1px 0 0; margin: 0; color: #555; background: #eee; font-size: 15px; font-size: 1.5rem; }
 		dl.tabs.mobile dd a.active { height: auto; margin: 0; border-width: 1px 0 0; }
-	
+
 		.nice.tabs.mobile { border-bottom: solid 1px #ccc; height: auto; }
 		.nice.tabs.mobile dd a { padding: 18px 20px; border: none; border-left: none; border-right: none; border-top: 1px solid #ccc; background: #fff; }
 		.nice.tabs.mobile dd a.active { border: none; background: #00a6fc; color: #fff; margin: 0; position: static; top: 0; height: auto; }
 		.nice.tabs.mobile dd:first-child a.active { margin: 0; }
-		
+
 		dl.contained.mobile, dl.nice.contained.mobile { margin-bottom: 0; }
 		dl.contained.tabs.mobile dd a { padding: 18px 20px; }
 		dl.nice.contained.tabs.mobile dd a { padding: 18px 20px; }
-		
+
 		dl.tabs.mobile + ul.contained { margin-left: -20px; margin-right: -20px; border-width: 0 0 1px 0; }
 	}
-	
+
 	/* Nav Bar */
 
 	/* Modernizr-enabled tablet targeting */
@@ -825,7 +825,7 @@ ul.orbit-bullets li.active.has-thumb {
 		.nav-bar>li.has-flyout>a.flyout-toggle { position: absolute; right: 0; top: 0; padding: 22px; z-index: 2; border-left: 1px dashed #eee; display: block; }
 		.nav-bar>li.has-flyout>a.flyout-toggle span { content: ""; width: 0; height: 0; border-left: 4px solid transparent;border-right: 4px solid transparent; border-top: 4px solid #2a85e8; display: block; }
 		.nav-bar>li.has-flyout>a.flyout-toggle:hover span { border-top-color: #141414; }
-		
+
 		.flyout { position: relative; width: auto; top: auto; margin-right: -2px; border-width: 1px 1px 0 1px; }
 		.flyout.right { float: none; right: auto; left: -1px; }
 		.flyout.small, .flyout.large { width: auto; }
@@ -848,10 +848,10 @@ ul.orbit-bullets li.active.has-thumb {
     		left: 10px;
 		}
   }
-	
-	
+
+
 	/* Video */
-	
+
 	@media only screen and (max-device-width: 800px), only screen and (device-width: 1024px) and (device-height: 600px), only screen and (width: 1280px) and (orientation: landscape), only screen and (device-width: 800px), only screen and (max-width: 767px) {
 		.flex-video { padding-top: 0; }
 	}

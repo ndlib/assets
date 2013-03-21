@@ -1,9 +1,9 @@
-@font-face{ font-family: 'icons'; 
-    src: url('/assets/1.0/websymbols-regular-webfont.eot'); 
-    src: url('/assets/1.0/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'), 
-        url('/assets/1.0/websymbols-regular-webfont.woff') format('woff'), 
-        url('/assets/1.0/websymbols-regular-webfont.ttf') format('truetype'), 
-        url('/assets/1.0/websymbols-regular-webfont.svg#webfont') format('svg'); }
+@font-face{ font-family: 'icons';
+    src: url('/assets/hesburgh_assets/1.0/websymbols-regular-webfont.eot');
+    src: url('/assets/hesburgh_assets/1.0/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('/assets/hesburgh_assets/1.0/websymbols-regular-webfont.woff') format('woff'),
+        url('/assets/hesburgh_assets/1.0/websymbols-regular-webfont.ttf') format('truetype'),
+        url('/assets/hesburgh_assets/1.0/websymbols-regular-webfont.svg#webfont') format('svg'); }
 
 /* -----------------------------------------
    Primary Library Template Structure
@@ -20,7 +20,7 @@ body {
 }
 
 div.header {
-	background:url(/assets/1.0/header-home.jpg) no-repeat;
+	background:url(/assets/hesburgh_assets/1.0/header-home.jpg) no-repeat;
 	position:relative;
 	height: 90px;
 }
@@ -146,7 +146,7 @@ ul#nav.sf-menu li.left >a{border-left: 1px solid #789cbf;   }
 ul#nav.sf-menu li.last {border-bottom: 1px solid #789cbf;   }
 ul#nav.sf-menu a,
 ul#nav.sf-menu a:visited {font-weight: bold; color:#dde8f4; line-height:1em;} /* visited pseudo selector so IE6 applies text colour*/
-ul#nav.sf-menu li {background:#304962; text-indent:0; margin-left:0; white-space:nowrap;} 
+ul#nav.sf-menu li {background:#304962; text-indent:0; margin-left:0; white-space:nowrap;}
 ul#nav.sf-menu li li {background:#2b5781; border-top: none; border-left: 1px solid #789cbf;  white-space:normal;  }
 ul#nav.sf-menu li li li {background:#3a75af; border-top: none; border-left: 1px solid #789cbf; white-space:normal;  }
 ul#nav.sf-menu li:hover,
@@ -218,7 +218,7 @@ dl.tabs dd a {
     font-size:13px;
     font-weight:bold;
     text-decoration:none;
-    behavior: url(/assets/1.0/PIE.htc);
+    behavior: url(/assets/hesburgh_assets/1.0/PIE.htc);
     margin:0;
 }
 
@@ -243,8 +243,8 @@ ul.contained.tabs-content > li{
     padding: 35px 20px 14px;
     z-index:40;
     position: relative;
-    behavior: url(/assets/1.0/PIE.htc);
-    
+    behavior: url(/assets/hesburgh_assets/1.0/PIE.htc);
+
  }
 
  ul.contained.tabs-content > li#simple1Tab {padding-top: 14px;}
@@ -270,7 +270,7 @@ ul.contained.tabs-content > li{
     Home Page
 ----------------- */
 
-.taupe-bg { background: url(/assets/1.0/taupe_bg.png) #f8f7e9 repeat-y top right ;  border-top: 2px solid #f3ede4;  border-bottom: 2px solid #f3ede4;  z-index:10; }
+.taupe-bg { background: url(/assets/hesburgh_assets/1.0/taupe_bg.png) #f8f7e9 repeat-y top right ;  border-top: 2px solid #f3ede4;  border-bottom: 2px solid #f3ede4;  z-index:10; }
 
 #gallery {
     border: 1px solid #F5F3F2;
@@ -370,7 +370,7 @@ ul.contained.tabs-content > li{
 }
 
 .onesearch span {
-    background-image: url("/assets/1.0/onesearch.png");
+    background-image: url("/assets/hesburgh_assets/1.0/onesearch.png");
     background-position:0px 0px;
     background-repeat: no-repeat;
     height: 0 !important;
@@ -384,7 +384,7 @@ ul.contained.tabs-content > li{
 
 
 .ndcatalog span {
-    background-image: url("/assets/1.0/ndcatalog.png");
+    background-image: url("/assets/hesburgh_assets/1.0/ndcatalog.png");
     background-position:0px 0px;
     background-repeat: no-repeat;
     height: 0 !important;
@@ -414,7 +414,7 @@ ul.contained.tabs-content > li{
 .ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a { cursor: text; }
 .ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a { cursor: pointer; } /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
 .ui-tabs .ui-tabs-hide { display: none !important; }
- 
+
 .ui-tabs ul.ui-tabs-nav li{ margin-right: -1px;  }
 #tab_box ul.ui-tabs-nav li{ margin-right: 0;padding-right:4px;overflow:hidden;  }
 #tab_box.ui-tabs {padding:0; border:none; font-size: 95%; }
@@ -428,7 +428,7 @@ ul.contained.tabs-content > li{
 #tab_box fieldset {margin:0; padding:0; border:none;}
 #tab_box form {margin-bottom:1em;}
 #tab_box p.about-tab {margin-bottom:0; text-align:right; position:absolute; bottom: 15px; right: 15px; border:1px solid #DDD; padding: .3em; }
-#tab_box p.about-tab a {padding:3px 6px 3px 20px; background:url('/assets/1.0/info.gif') 5px center no-repeat; }
+#tab_box p.about-tab a {padding:3px 6px 3px 20px; background:url('/assets/hesburgh_assets/1.0/info.gif') 5px center no-repeat; }
 #tab_box p.about-tab a:hover {background-color:#e9f0f8;}
 #tab_box select {width:190px;}
 #tab_box input.srch-box {padding:.5em 0; width:230px;}
@@ -459,7 +459,7 @@ li.tbi .menu_center,li.tb .menu_center, .tba .menu_center{
     float:left;
     display:block;
     height: 33px;
-    
+
 }
 
 li.tba .menu_center {
@@ -472,7 +472,7 @@ li.tb a{
 }
 
 li.tb .menu_center{
-    background:url(/assets/1.0/center_tab_lb.png) repeat-x;
+    background:url(/assets/hesburgh_assets/1.0/center_tab_lb.png) repeat-x;
 
 }
 
@@ -503,11 +503,11 @@ li.tb .menu_center{
     text-decoration: none;
     color: #666;
     padding-right:13px;
-    background: url(/assets/1.0/off.gif) no-repeat right;
+    background: url(/assets/hesburgh_assets/1.0/off.gif) no-repeat right;
 }
 
 .default a.on, .default .active {
-    background-image: url(/assets/1.0/on.gif);
+    background-image: url(/assets/hesburgh_assets/1.0/on.gif);
 }
 
 .content li a:link {
@@ -533,11 +533,11 @@ li.tb .menu_center{
     -moz-border-radius: 14px;
     border-radius:14px;
     box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.7);
-    behavior: url(/assets/1.0/PIE.htc);
+    behavior: url(/assets/hesburgh_assets/1.0/PIE.htc);
     padding:14px;
     z-index:20;
     margin-bottom:1.12em;
-}   
+}
 
 .yellow {
     background:#ECE3B0;
@@ -545,7 +545,7 @@ li.tb .menu_center{
 }
 
 @media only screen and (max-width: 767px) {
-    
+
     .header h4 a, .header h3 a {width:auto;}
     .sg {
         display:none;
@@ -580,17 +580,17 @@ li.tb .menu_center{
 .gritter-item-wrapper {
     position:relative;
     margin:0 0 10px 0;
-    background:url('/local_images/ie-spacer.gif'); /* ie7/8 fix */ 
+    background:url('/local_images/ie-spacer.gif'); /* ie7/8 fix */
 }
 .gritter-top {
-    background:url(/assets/1.0/gritter.png) no-repeat left -30px;
+    background:url(/assets/hesburgh_assets/1.0/gritter.png) no-repeat left -30px;
     height:10px;
 }
 .hover .gritter-top {
     background-position:right -30px;
 }
 .gritter-bottom {
-    background:url(/assets/1.0/gritter.png) no-repeat left bottom;
+    background:url(/assets/hesburgh_assets/1.0/gritter.png) no-repeat left bottom;
     height:8px;
     margin:0;
 }
@@ -599,7 +599,7 @@ li.tb .menu_center{
 }
 .gritter-item {
     display:block;
-    background:url(/assets/1.0/gritter.png) no-repeat left -40px;
+    background:url(/assets/hesburgh_assets/1.0/gritter.png) no-repeat left -40px;
     color:#eee;
     padding:2px 11px 0px 11px;
     font-size: 11px;
@@ -619,7 +619,7 @@ li.tb .menu_center{
     position:absolute;
     top:5px;
     left:3px;
-    background:url(/assets/1.0/gritter.png) no-repeat left top;
+    background:url(/assets/hesburgh_assets/1.0/gritter.png) no-repeat left top;
     cursor:pointer;
     width:30px;
     height:30px;
@@ -649,7 +649,7 @@ li.tb .menu_center{
 .gritter-light .gritter-bottom,
 .gritter-light .gritter-top,
 .gritter-light .gritter-close {
-    background-image: url(/assets/1.0/gritter-light.png);
+    background-image: url(/assets/hesburgh_assets/1.0/gritter-light.png);
     color: #222;
 }
 .gritter-light .gritter-title {
@@ -661,7 +661,7 @@ td {
     padding: 4px 10px 4px 5px;
 }
 
-/*Tablet Styles*/ 
+/*Tablet Styles*/
 
 @media only screen and (max-width: 990px) {
     dl.tabs dd a {
@@ -708,7 +708,7 @@ td {
         border-width: 1px 0;
         padding:0;
     }
-    
+
     ul.contained.tabs-content li {
         border-radius: 0;
     }
@@ -805,12 +805,12 @@ td {
 
 /*Phone Styles */
 
-@media only screen and (max-width: 480px) { 
+@media only screen and (max-width: 480px) {
 
     .container {
         padding:10px 10px 0;
     }
-    
+
     div.header {
         height:45px;
         background-size:auto 100%;
@@ -833,9 +833,9 @@ td {
         top:45px;
         background:#C0C8D0;
         -webkit-box-shadow: inset 0px 0px 5px 0px #666;
-        box-shadow: inset 0px 0px 5px 0px #666; 
+        box-shadow: inset 0px 0px 5px 0px #666;
         width:100%;
-        
+
         /*box-sizing:border-box;
         -moz-box-sizing:border-box;
         -webkit-box-sizing:border-box;*/
@@ -850,7 +850,7 @@ td {
         padding:5px;
     }
     .header_search #search_field {
-        
+
         width:-moz-calc(100% - 40px) !important;
         width:-webkit-calc(100% - 40px) !important;
         width:calc(100% - 40px) !important;
@@ -869,8 +869,8 @@ td {
 
     }
 
-    
-  
+
+
     .header_search form, .header_search input {
         margin:0;
     }
@@ -908,7 +908,7 @@ td {
         padding-left: 0px;
     }
 
-    
+
     .input-xlarge {
         width:auto;
     }
@@ -917,7 +917,7 @@ td {
         margin-top:10px;
     }
 
-    
+
 
     .column, .columns, .content {position:static;}
 
@@ -929,7 +929,7 @@ td {
         background-image:none;
     }
 
-    
+
 
     h1 {
         font-size:20px;
