@@ -15,5 +15,6 @@
 /tmp/
 /server/log/*.log
 /server/tmp/
+/server/.sass-cache
 
 /pkg/
