@@ -1,9 +1,9 @@
 @font-face{ font-family: 'icons';
-    src: url('/assets/hesburgh_assets/1.0/websymbols-regular-webfont.eot');
-    src: url('/assets/hesburgh_assets/1.0/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'),
-        url('/assets/hesburgh_assets/1.0/websymbols-regular-webfont.woff') format('woff'),
-        url('/assets/hesburgh_assets/1.0/websymbols-regular-webfont.ttf') format('truetype'),
-        url('/assets/hesburgh_assets/1.0/websymbols-regular-webfont.svg#webfont') format('svg'); }
+    src: url('/assets/hesburgh_assets/main/1.0/websymbols-regular-webfont.eot');
+    src: url('/assets/hesburgh_assets/main/1.0/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('/assets/hesburgh_assets/main/1.0/websymbols-regular-webfont.woff') format('woff'),
+        url('/assets/hesburgh_assets/main/1.0/websymbols-regular-webfont.ttf') format('truetype'),
+        url('/assets/hesburgh_assets/main/1.0/websymbols-regular-webfont.svg#webfont') format('svg'); }
 
 /* -----------------------------------------
    Primary Library Template Structure
@@ -20,7 +20,7 @@ body {
 }
 
 div.header {
-	background:url(/assets/hesburgh_assets/1.0/header-home.jpg) no-repeat;
+	background:url(/assets/hesburgh_assets/main/1.0/header-home.jpg) no-repeat;
 	position:relative;
 	height: 90px;
 }
@@ -218,7 +218,7 @@ dl.tabs dd a {
     font-size:13px;
     font-weight:bold;
     text-decoration:none;
-    behavior: url(/assets/hesburgh_assets/1.0/PIE.htc);
+    behavior: url(/assets/hesburgh_assets/main/1.0/PIE.htc);
     margin:0;
 }
 
@@ -243,7 +243,7 @@ ul.contained.tabs-content > li{
     padding: 35px 20px 14px;
     z-index:40;
     position: relative;
-    behavior: url(/assets/hesburgh_assets/1.0/PIE.htc);
+    behavior: url(/assets/hesburgh_assets/main/1.0/PIE.htc);
 
  }
 
@@ -270,7 +270,7 @@ ul.contained.tabs-content > li{
     Home Page
 ----------------- */
 
-.taupe-bg { background: url(/assets/hesburgh_assets/1.0/taupe_bg.png) #f8f7e9 repeat-y top right ;  border-top: 2px solid #f3ede4;  border-bottom: 2px solid #f3ede4;  z-index:10; }
+.taupe-bg { background: url(/assets/hesburgh_assets/main/1.0/taupe_bg.png) #f8f7e9 repeat-y top right ;  border-top: 2px solid #f3ede4;  border-bottom: 2px solid #f3ede4;  z-index:10; }
 
 #gallery {
     border: 1px solid #F5F3F2;
@@ -370,7 +370,7 @@ ul.contained.tabs-content > li{
 }
 
 .onesearch span {
-    background-image: url("/assets/hesburgh_assets/1.0/onesearch.png");
+    background-image: url("/assets/hesburgh_assets/main/1.0/onesearch.png");
     background-position:0px 0px;
     background-repeat: no-repeat;
     height: 0 !important;
@@ -384,7 +384,7 @@ ul.contained.tabs-content > li{
 
 
 .ndcatalog span {
-    background-image: url("/assets/hesburgh_assets/1.0/ndcatalog.png");
+    background-image: url("/assets/hesburgh_assets/main/1.0/ndcatalog.png");
     background-position:0px 0px;
     background-repeat: no-repeat;
     height: 0 !important;
@@ -428,7 +428,7 @@ ul.contained.tabs-content > li{
 #tab_box fieldset {margin:0; padding:0; border:none;}
 #tab_box form {margin-bottom:1em;}
 #tab_box p.about-tab {margin-bottom:0; text-align:right; position:absolute; bottom: 15px; right: 15px; border:1px solid #DDD; padding: .3em; }
-#tab_box p.about-tab a {padding:3px 6px 3px 20px; background:url('/assets/hesburgh_assets/1.0/info.gif') 5px center no-repeat; }
+#tab_box p.about-tab a {padding:3px 6px 3px 20px; background:url('/assets/hesburgh_assets/main/1.0/info.gif') 5px center no-repeat; }
 #tab_box p.about-tab a:hover {background-color:#e9f0f8;}
 #tab_box select {width:190px;}
 #tab_box input.srch-box {padding:.5em 0; width:230px;}
@@ -472,7 +472,7 @@ li.tb a{
 }
 
 li.tb .menu_center{
-    background:url(/assets/hesburgh_assets/1.0/center_tab_lb.png) repeat-x;
+    background:url(/assets/hesburgh_assets/main/1.0/center_tab_lb.png) repeat-x;
 
 }
 
@@ -503,11 +503,11 @@ li.tb .menu_center{
     text-decoration: none;
     color: #666;
     padding-right:13px;
-    background: url(/assets/hesburgh_assets/1.0/off.gif) no-repeat right;
+    background: url(/assets/hesburgh_assets/main/1.0/off.gif) no-repeat right;
 }
 
 .default a.on, .default .active {
-    background-image: url(/assets/hesburgh_assets/1.0/on.gif);
+    background-image: url(/assets/hesburgh_assets/main/1.0/on.gif);
 }
 
 .content li a:link {
@@ -533,7 +533,7 @@ li.tb .menu_center{
     -moz-border-radius: 14px;
     border-radius:14px;
     box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.7);
-    behavior: url(/assets/hesburgh_assets/1.0/PIE.htc);
+    behavior: url(/assets/hesburgh_assets/main/1.0/PIE.htc);
     padding:14px;
     z-index:20;
     margin-bottom:1.12em;
@@ -583,14 +583,14 @@ li.tb .menu_center{
     background:url('/local_images/ie-spacer.gif'); /* ie7/8 fix */
 }
 .gritter-top {
-    background:url(/assets/hesburgh_assets/1.0/gritter.png) no-repeat left -30px;
+    background:url(/assets/hesburgh_assets/main/1.0/gritter.png) no-repeat left -30px;
     height:10px;
 }
 .hover .gritter-top {
     background-position:right -30px;
 }
 .gritter-bottom {
-    background:url(/assets/hesburgh_assets/1.0/gritter.png) no-repeat left bottom;
+    background:url(/assets/hesburgh_assets/main/1.0/gritter.png) no-repeat left bottom;
     height:8px;
     margin:0;
 }
@@ -599,7 +599,7 @@ li.tb .menu_center{
 }
 .gritter-item {
     display:block;
-    background:url(/assets/hesburgh_assets/1.0/gritter.png) no-repeat left -40px;
+    background:url(/assets/hesburgh_assets/main/1.0/gritter.png) no-repeat left -40px;
     color:#eee;
     padding:2px 11px 0px 11px;
     font-size: 11px;
@@ -619,7 +619,7 @@ li.tb .menu_center{
     position:absolute;
     top:5px;
     left:3px;
-    background:url(/assets/hesburgh_assets/1.0/gritter.png) no-repeat left top;
+    background:url(/assets/hesburgh_assets/main/1.0/gritter.png) no-repeat left top;
     cursor:pointer;
     width:30px;
     height:30px;
@@ -649,7 +649,7 @@ li.tb .menu_center{
 .gritter-light .gritter-bottom,
 .gritter-light .gritter-top,
 .gritter-light .gritter-close {
-    background-image: url(/assets/hesburgh_assets/1.0/gritter-light.png);
+    background-image: url(/assets/hesburgh_assets/main/1.0/gritter-light.png);
     color: #222;
 }
 .gritter-light .gritter-title {
