@@ -10,8 +10,6 @@ require 'spec_helper'
 #     end
 #   end
 # end
-module HesburghAssets
-  describe BootstrapHelper do
-    pending "add some examples to (or delete) #{__FILE__}"
-  end
+describe BootstrapHelper do
+  pending "add some examples to (or delete) #{__FILE__}"
 end

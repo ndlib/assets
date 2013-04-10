@@ -16,7 +16,7 @@ guard 'rails', root: 'server', port: rails_server_port do
   watch(%r{^lib/.*})
 end
 
-guard 'spork', aggressive_kill: false, rspec_port: spork_rspec_port do
+guard 'spork', aggressive_kill: false, :rspec_env => { 'RAILS_ENV' => 'test' }, rspec_port: spork_rspec_port do
   watch('server/config/application.rb')
   watch('server/config/environment.rb')
   watch(%r{^server/config/environments/.+\.rb$})
@@ -38,6 +38,11 @@ guard 'rspec', cli: "-f doc --drb --drb-port #{spork_rspec_port}", all_on_start:
   watch(%r{^spec/support/(.+)\.rb$})                  { "spec" }
   watch('config/routes.rb')                           { "spec/routing" }
   watch('app/controllers/application_controller.rb')  { "spec/controllers" }
+
+  # Dummy server
+  watch(%r{^server/app/(.+)\.rb$})                           { |m| "spec/#{m[1]}_spec.rb" }
+  watch(%r{^server/app/(.*)(\.erb|\.haml)$})                 { |m| "spec/#{m[1]}#{m[2]}_spec.rb" }
+  watch(%r{^server/app/controllers/(.+)_(controller)\.rb$})  { |m| ["spec/routing/#{m[1]}_routing_spec.rb", "spec/#{m[2]}s/#{m[1]}_#{m[2]}_spec.rb", "spec/acceptance/#{m[1]}_spec.rb"] }
 
   # Capybara features specs
   watch(%r{^app/views/(.+)/.*\.(erb|haml)$})          { |m| "spec/features/#{m[1]}_spec.rb" }
