@@ -5,5 +5,9 @@ Rails.application.routes.draw do
 
   match 'bootstrap' => 'bootstrap#index'
   match 'bootstrap/:action' => 'bootstrap', as: 'bootstrap'
+
+  match 'admin' => 'admin#index'
+  match 'admin/:action' => 'admin', as: 'admin'
+
   match ':action' => 'style_guide', as: 'style_guide'
 end

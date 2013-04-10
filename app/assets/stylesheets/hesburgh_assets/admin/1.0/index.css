@@ -1,0 +1,8 @@
+/*
+ * Manifest file for version 1 styles.
+ *
+ *= require_self
+ *= require ./foundation-3.2.5.css
+ *= require ./bootstrap-2.3.1.css
+ *= require ./bootstrap_overrides-2.3.1.css
+ */
