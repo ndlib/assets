@@ -3,6 +3,8 @@ jQuery(function($) {
   /* Creates the dropdown menu navigation */
   if (jQuery('ul.sf-menu').superfish) {
     jQuery('ul.sf-menu').superfish({
+      delay:       0,                           
+      speed:       'fast' 
     });
   }
        
