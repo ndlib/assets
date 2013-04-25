@@ -18,6 +18,6 @@ end
 namespace :deploy do
   desc "Precompile assets"
   task :precompile do
-    run "#{rake} app:assets:precompile"
+    run "#{rake} app:assets:precompile:primary"
   end
 end
