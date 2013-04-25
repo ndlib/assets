@@ -1,0 +1,5 @@
+require 'capistrano/common'
+require 'capistrano/environments'
+require 'capistrano/deploy'
+require 'capistrano/db'
+require 'capistrano/prompt_branch'
