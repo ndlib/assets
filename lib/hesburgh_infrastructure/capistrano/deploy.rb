@@ -70,7 +70,7 @@ Capistrano::Configuration.instance(:must_exist).load do
   namespace :bundle do
     desc "Install gems in Gemfile"
     task :install, :roles => :app do
-      run "#{bundle} install --binstubs='#{binstubs_path}' --shebang '#{ruby}' --gemfile='#{release_path}/Gemfile' --without development test --deployment"
+      run "#{bundler} install --binstubs='#{binstubs_path}' --shebang '#{ruby}' --gemfile='#{release_path}/Gemfile' --without development test --deployment"
     end
   end
 end

@@ -26,6 +26,7 @@ Capistrano::Configuration.instance(:must_exist).load do
     task :clear_defaults do
       unset :rails_env
       unset :deploy_to
+      unset :rake
     end
 
     desc "Default configuration for the pre_production environment"
@@ -49,9 +50,9 @@ Capistrano::Configuration.instance(:must_exist).load do
       _cset :deploy_to,     "#{home_path}/data/app_home/#{application}"
       _cset :ruby_bin,      "#{home_path}/#{relative_ruby_path}"
       _cset :ruby,          File.join(ruby_bin, 'ruby')
-      _cset :bundle,        File.join(ruby_bin, 'bundle')
+      _cset :bundler,        File.join(ruby_bin, 'bundle')
       _cset :binstubs_path,  File.join(shared_path, 'vendor/bundle/bin')
-      _cset :rake,      "cd #{current_path}; #{bundle} exec #{File.join(binstubs_path, 'rake')} RAILS_ENV=#{rails_env}"
+      _cset :rake,      "cd #{current_path}; #{bundler} exec #{File.join(binstubs_path, 'rake')} RAILS_ENV=#{rails_env}"
 
       server "#{user}@#{domain}", :app, :web, :db, :primary => true
     end
