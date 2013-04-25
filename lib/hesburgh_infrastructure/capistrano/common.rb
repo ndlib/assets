@@ -1,9 +1,8 @@
 Capistrano::Configuration.instance(:must_exist).load do
 
   # Settings
-
-  _cset(:application) { abort "Please specify the application: set :application, 'my_app'" }
-  _cset :repository,  "git@git.library.nd.edu:#{application}"
+  unset(:repository)
+  _cset(:repository) { "git@git.library.nd.edu:#{application}" }
   _cset :use_sudo, false
 
   # SCM settings
