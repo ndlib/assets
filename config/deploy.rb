@@ -12,4 +12,4 @@ task :production do
   set :home_path, "/shared/asset_prod"
 end
 
-require 'hesburgh_infrastructure/deploy'
+require "#{File.dirname(__FILE__)}/../lib/hesburgh_infrastructure/deploy"
