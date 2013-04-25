@@ -21,3 +21,10 @@ namespace :deploy do
     run "#{rake} app:assets:precompile:primary"
   end
 end
+
+namespace :db do
+  desc "Run the migrate rake task."
+  task :migrate, :roles => :app do
+    # No database for the assets application
+  end
+end
