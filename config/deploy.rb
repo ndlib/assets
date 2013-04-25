@@ -1,3 +1,5 @@
+require "#{File.dirname(__FILE__)}/../lib/hesburgh_infrastructure/deploy"
+
 set :application, 'assets'
 
 desc "Setup for the Pre-Production environment"
@@ -13,4 +15,9 @@ task :production do
   set :home_path, "/shared/asset_prod"
 end
 
-require "#{File.dirname(__FILE__)}/../lib/hesburgh_infrastructure/deploy"
+namespace :deploy do
+  desc "Precompile assets"
+  task :precompile do
+    run "#{rake} app:assets:precompile"
+  end
+end

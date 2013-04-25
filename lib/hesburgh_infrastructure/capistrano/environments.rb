@@ -8,16 +8,12 @@ Capistrano::Configuration.instance(:must_exist).load do
   before 'pre_production', 'environments:clear_defaults'
   before 'production', 'environments:clear_defaults'
 
-  unless tasks[:pre_production]
-    desc "Setup for the Pre-Production environment"
-    task :pre_production do
-    end
+  desc "Setup for the Pre-Production environment"
+  task :pre_production do
   end
 
-  unless tasks[:production]
-    desc "Setup for the production environment"
-    task :production do
-    end
+  desc "Setup for the production environment"
+  task :production do
   end
 
   namespace :environments do
