@@ -52,7 +52,7 @@ Capistrano::Configuration.instance(:must_exist).load do
       _cset :ruby,          File.join(ruby_bin, 'ruby')
       _cset :bundler,        File.join(ruby_bin, 'bundle')
       _cset :binstubs_path,  File.join(shared_path, 'vendor/bundle/bin')
-      _cset :rake,      "cd #{current_path}; #{bundler} exec #{File.join(binstubs_path, 'rake')} RAILS_ENV=#{rails_env}"
+      _cset :rake,      "cd #{release_path}; #{bundler} exec #{File.join(binstubs_path, 'rake')} RAILS_ENV=#{rails_env}"
 
       server "#{user}@#{domain}", :app, :web, :db, :primary => true
     end

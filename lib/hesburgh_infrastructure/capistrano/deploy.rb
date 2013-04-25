@@ -19,7 +19,7 @@ Capistrano::Configuration.instance(:must_exist).load do
 
   desc "Restart Application"
   task :restart_passenger do
-    run "touch #{current_path}/tmp/restart.txt"
+    run "touch #{release_path}/tmp/restart.txt"
   end
 
   #############################################################
