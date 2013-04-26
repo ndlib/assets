@@ -1,5 +1,3 @@
-require "hesburgh_infrastructure/capistrano"
-
 set :application, 'assets'
 
 desc "Setup for the Pre-Production environment"
