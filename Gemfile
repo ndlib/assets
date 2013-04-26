@@ -13,10 +13,11 @@ gemspec
 # To use debugger
 # gem 'debugger'
 
+gem "hesburgh_infrastructure", git: 'git@git.library.nd.edu:hesburgh_infrastructure'
 gem 'therubyracer', '~> 0.10.0'
 
 group :test do
-  gem 'rb-inotify', :require => false
-  gem 'rb-fsevent', :require => false
-  gem 'rb-fchange', :require => false
+  gem 'rb-inotify', require: false
+  gem 'rb-fsevent', require: false
+  gem 'rb-fchange', require: false
 end

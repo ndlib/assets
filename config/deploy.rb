@@ -1,4 +1,4 @@
-require "#{File.dirname(__FILE__)}/../lib/hesburgh_infrastructure/deploy"
+require "hesburgh_infrastructure/capistrano"
 
 set :application, 'assets'
 
