@@ -1,6 +1,6 @@
 GIT
   remote: git@git.library.nd.edu:hesburgh_infrastructure
-  revision: c0654e5ab43d543aaca6176fd9f53c1689e5edee
+  revision: 2698ab88bd9198ac030af39f60439bb2974547cf
   specs:
     hesburgh_infrastructure (0.0.1)
       capistrano (~> 2.15.0)
