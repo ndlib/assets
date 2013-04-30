@@ -65,25 +65,24 @@ div.header {
 	background:url(/assets/hesburgh_assets/main/1.0/header-home.jpg) no-repeat;
 	position:relative;
 	height: 90px;
-    h4, h3 {
-        margin:0;
-    }
-    a {
-        @include header-link; 
-    }
-    h4 a {
-        top:0;
-        height:62px;
-    }
-    h3 a {
-        top:62px;
-        height:25px;
-    }
-    .sg {
-        position:absolute;
-        top:3px;
-        right:30%;
-    }
+  h4, h3 {
+      margin:0;
+  }
+  h4 a {
+    @include header-link;
+    top:0;
+    height:62px;
+  }
+  h3 a {
+    @include header-link;
+    top:62px;
+    height:25px;
+  }
+  .sg {
+    position:absolute;
+    top:3px;
+    right:30%;
+  }
 }
 
 .header_search {
@@ -103,7 +102,7 @@ div.header {
     }
     input, button {
         float: left;
-        vertical-align: top; 
+        vertical-align: top;
     }
 }
 
@@ -296,32 +295,32 @@ ul.contained.tabs-content > li {
     padding-top:50px;
 }
 
-#quicklinks { 
-    padding: .5em 0em 0em .5em; 
-    background-color:#fae9a7;  
-    background: #fbfcfd; 
+#quicklinks {
+    padding: .5em 0em 0em .5em;
+    background-color:#fae9a7;
+    background: #fbfcfd;
     h4 {
-        margin-bottom: 1em; 
-        font-weight: bold;  
-        clear:both; 
+        margin-bottom: 1em;
+        font-weight: bold;
+        clear:both;
         border-bottom:2px solid #fdd456;
     }
     ul {
-        font-size:90%; 
-        margin: 0 0 .7em 0; 
-        padding-left:0;  
-        list-style-type:none; 
-        float:left; 
+        font-size:90%;
+        margin: 0 0 .7em 0;
+        padding-left:0;
+        list-style-type:none;
+        float:left;
         li {
-            display:block; 
-            width:auto; 
-            margin-left: 1.2em; 
+            display:block;
+            width:auto;
+            margin-left: 1.2em;
             text-indent:-1em;
             a {
-                font-weight:bold; 
-                color:#2c5882; 
-            } 
-        } 
+                font-weight:bold;
+                color:#2c5882;
+            }
+        }
     }
 }
 
@@ -543,7 +542,7 @@ li.tb .menu_center{
 
 
 .box {
-    @include box; 
+    @include box;
     z-index:20;
     margin-bottom:1.12em;
 }
@@ -857,11 +856,11 @@ td {
         overflow:hidden;
         text-align:right;
         height:auto;
-        
+
         fieldset {
             padding:5px;
         }
-        
+
         #search_field {
             width:-moz-calc(100% - 40px) !important;
             width:-webkit-calc(100% - 40px) !important;
