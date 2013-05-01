@@ -1,0 +1,27 @@
+#tab_box {
+
+  .default {
+    position: absolute;
+    top:0px;
+    right: 7px;
+
+    a {
+      background: url("/assets/hesburgh_assets/main/1.0/off.gif") no-repeat scroll left center transparent;
+      color:#696969;
+      text-decoration: none;
+      padding: 13px 0 0.5em;
+      height:0;
+      width: 13px;
+      overflow:hidden;
+      display: block;
+      border:none;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    a.act, .active {
+      background-image: url(/assets/hesburgh_assets/main/1.0/on.gif);
+    }
+
+  }
+}

@@ -6,6 +6,7 @@
  *= require ./bootstrap.css
  *= require ./bootstrap_overrides.css
  *= require ./hesburgh.css
+ *= require ./tabs.css
  *= require ./prettify.css
  *= require ./superfish.css
  *= require ./colorbox.css
