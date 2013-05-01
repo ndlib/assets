@@ -246,6 +246,7 @@ ul.contained.tabs-content {
 
 ul.contained.tabs-content > li {
     @include box;
+    padding: 35px 20px 14px;
     z-index:40;
     position: relative;
     border-top-left-radius: 0;
