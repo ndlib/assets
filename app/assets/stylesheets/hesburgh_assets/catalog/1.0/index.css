@@ -7,4 +7,5 @@
  *= require ../../main/1.0/bootstrap_overrides.css
  *= require ../../main/1.0/prettify.css
  *= require ./catalog.css
+ *= require ./search.css
  */
