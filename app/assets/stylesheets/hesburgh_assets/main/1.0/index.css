@@ -2,7 +2,11 @@
  * Manifest file for version 1 styles.
  *
  *= require_self
- *= require ../../branch/1.0/index.css
+ *= require ../../common/foundation-2.2.1.css
+ *= require ../../common/bootstrap-2.0.3.css
+ *= require ../../common/prettify.css
+ *= require ../../common/superfish.css
+ *= require ../../common/colorbox.css
  *= require ./bootstrap_overrides.css
  *= require ./hesburgh.css
  *= require ./homepage.css
