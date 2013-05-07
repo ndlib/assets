@@ -68,7 +68,7 @@ div.header {
     h4, h3 {
         margin:0;
     }
-    a {
+    h4 a, h3 a {
         @include header-link; 
     }
     h4 a {
@@ -183,6 +183,7 @@ dl.tabs {
         margin-left:0px;
         overflow: hidden;
         padding-right: 4px;
+        position: relative;
         a {
             color:#2B5781;
             border: 1px solid #B1C6D3;
@@ -212,8 +213,11 @@ dl.tabs {
             background: -ms-linear-gradient(top, #afcae4 0%,#b7cfe7 60%,#c5d9ec 60%,#c9dbed 100%); /* IE10+ */
             background: linear-gradient(top, #afcae4 0%,#b7cfe7 60%,#c5d9ec 60%,#c9dbed 100%); /* W3C */
         }
+
     }
 }
+
+
 
 
 .home-page dl.tabs {
@@ -250,14 +254,15 @@ ul.contained.tabs-content > li {
     z-index:40;
     position: relative;
     border-top-left-radius: 0;
+    padding:35px 20px 14px;
  }
 
  ul.contained.tabs-content > li#simple1Tab {padding-top: 14px;}
 
- .home-page ul.contained.tabs-content > li {
+.home-page ul.contained.tabs-content > li {
     float: left;
     width: 95%;
- }
+}
 
 #search_box {
     margin-bottom: 40px;
@@ -267,9 +272,9 @@ ul.contained.tabs-content > li {
     z-index: 1;
 }
 
- .content .container:first-child {
+.content .container:first-child {
     padding-bottom:1em;
- }
+}
 
 /* -------------
     Home Page
@@ -283,17 +288,16 @@ ul.contained.tabs-content > li {
     visibility: hidden;
 }
 
-.home-page .inner-left {
-
-    padding-left:34px;
-    padding-top:50px;
-    padding-bottom:50px;
-}
-
-.home-page .inner-right {
-
-    padding-left:13px;
-    padding-top:50px;
+.home-page {
+    .inner-left {
+        padding-left:34px;
+        padding-top:50px;
+        padding-bottom:50px;
+    }
+    .inner-right {
+        padding-left:13px;
+        padding-top:50px;
+    }
 }
 
 #quicklinks { 
@@ -494,7 +498,7 @@ li.tb .menu_center{
     .tabs {
         z-index:100;
         position: absolute;
-        left:34px;}
+    }
     .btn {
         margin-bottom:9px;
     }
@@ -511,16 +515,26 @@ li.tb .menu_center{
     z-index: 40;
 }
 
-.default {
+#tab_box div.default {
     font-size: 10px;
     position: absolute;
-    top:10px;
-    right:15px;
+    right: 7px;
+    top: 0;
     a {
         text-decoration: none;
         color: #666;
-        padding-right:13px;
         background: url(/assets/hesburgh_assets/main/1.0/off.gif) no-repeat right;
+        padding-bottom: 6px;
+        padding-top:13px;
+        height:0;
+        overflow:hidden;
+        box-shadow: none;
+        border-radius: 0;
+        border:none;
+        width: 13px;
+        display: block;
+        padding-left:0;
+        padding-right:0;
     }
 }
 

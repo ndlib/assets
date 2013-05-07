@@ -1,12 +1,12 @@
 //Scripts related to the interface of the entire site
 jQuery(function($) {
   /* Creates the dropdown menu navigation */
-  if (jQuery('ul.sf-menu').superfish) {
-    jQuery('ul.sf-menu').superfish({
-      delay:       0,                           
-      speed:       'fast' 
-    });
-  }
+  //if (jQuery('ul.sf-menu').superfish) {
+  //  jQuery('ul.sf-menu').superfish({
+  //    delay:       0,                           
+  //    speed:       'fast' 
+  //  });
+  //}
        
   $('input.srch-box').focus(function(){
     $(this).val('');

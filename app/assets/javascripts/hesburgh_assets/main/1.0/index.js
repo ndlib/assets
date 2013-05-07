@@ -12,4 +12,6 @@
 //= require ./superfish.js
 //= require ./jquery.mobilemenu.min.js
 //= require ./mobile.js
-//= require_tree .
+//= require ./main.js
+//= require ./mainupdate.js
+/*//= require_tree .
