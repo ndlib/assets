@@ -1,4 +1,22 @@
+<ul class="search-tabs">
+  <li class="onesearch selected">
+    <a title="Search Articles, ND LIbraries and Area Library holdings" href="<%= primo_search_url(tab: 'onesearch') %>">
+      <span>OneSearch</span>
+    </a>
+  </li>
+  <li class="catalog">
+    <a title="Search materials held by all Notre Dame campus libraries" href="<%= primo_search_url(tab: 'nd_campus') %>">
+      <span>ND Campus</span>
+    </a>
+  </li>
+  <li class="libraries">
+    <a title="Search materials held by NDU, SMC, HCC and BC" href="<%= primo_search_url(tab: 'malc') %>">
+      <span>Area Libraries</span>
+    </a>
+  </li>
+</ul>
+
 <%= form_tag(".", method: :get, class: "form-inline") do %>
-  <%= text_field_tag('q') %>
+  <%= text_field_tag('q', params[:q] || 'stoppard') %>
   <%= button_tag('Search', class: 'btn') %>
 <% end %>
