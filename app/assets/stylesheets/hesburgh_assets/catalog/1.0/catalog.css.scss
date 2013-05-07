@@ -1,0 +1,55 @@
+.row {
+  max-width: none;
+}
+
+.container {
+  padding: 0;
+}
+
+.header {
+    height: 100px;
+    position: relative;
+    background: url("/assets/hesburgh_assets/catalog/1.0/header.jpg") no-repeat scroll center top #2B5681;
+}
+
+.menu {
+  height: 18px;
+  background-color: #133250;
+}
+
+.search-row {
+  height: 140px;
+  background-color: #133250;
+
+  .search-box {
+    width: 710px;
+    margin: 30px auto 0;
+
+    input[type="text"],
+    input[type="search"] {
+      width: 611px;
+      font-size: 20px;
+      height: 36px;
+    }
+
+    .btn {
+      font-size: 14px;
+      height: 36px;
+      text-transform: uppercase;
+      color: #fff;
+      background-color: #CBB53F;
+      background-image: none;
+      text-shadow: none;
+    }
+
+
+  }
+}
+
+.content {
+  padding-top: 9px;
+}
+
+.content .container {
+  padding: 0 20px;
+}

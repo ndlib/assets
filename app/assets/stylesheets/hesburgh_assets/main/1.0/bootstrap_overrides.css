@@ -107,15 +107,24 @@ blockquote p {
  textarea,
  select,
 .uneditable-input {
-  width: 100%;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
   box-sizing:border-box;
-    -moz-box-sizing:border-box;
-    -webkit-box-sizing:border-box;
 }
 
 input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="url"],
+input[type="password"],
 select {
   height: 28px;
+}
+
+input[type="search"] {
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  box-sizing:border-box;
 }
 
 .five select {

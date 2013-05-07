@@ -2,45 +2,40 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Admin CSS</title>
+    <title>Hesburgh Libraries // University of Notre Dame</title>
     <meta name="description" content="Information resources and collections of the Hesburgh Libraries, University of Notre Dame." />
     <link rel="shortcut icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width" />
 
-    <%= stylesheet_link_tag    "hesburgh_assets/admin/1.0/", :media => "all" %>
+    <%= stylesheet_link_tag    "hesburgh_assets/catalog/1.0/", :media => "all" %>
     <!--[if lte IE 9]>
-      <%= stylesheet_link_tag    "hesburgh_assets/admin/1.0/ie.css", :media => "all" %>
+      <%= stylesheet_link_tag    "hesburgh_assets/main/1.0/ie.css", :media => "all" %>
     <![endif]-->
-    <%= javascript_include_tag "hesburgh_assets/admin/1.0/" %>
-
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "hesburgh_assets/catalog/1.0/" %>
+    <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
-  <body>
-    <div class="frame" id="frame">
+  <body <%= body_class %>>
+    <div class="container">
       <div class="row header">
         <div class="twelve columns">
           <%= render partial: 'layouts/hesburgh_assets/asset_server_navigation' %>
-          <h2>Libraries<em>Admin</em></h2>
         </div>
       </div>
       <div class="row menu">
         <div class="twelve columns">
-          Menu
         </div>
       </div>
-
-      <div class="row content">
-        <div class="frame">
-          <div class="row breadcrumb hide-on-phones">
-            <%
-              if !content_for?(:breadcrumb)
-                breadcrumb()
-              end
-            %>
-            <div class="twelve columns">
-              <p><%= content_for(:breadcrumb) %></p>
-            </div>
+      <div class="row search-row">
+        <div class="twelve columns">
+          <div class="search-box">
+            <%= content_for(:search_box) %>
           </div>
+        </div>
+      </div>
+      <div class="row content">
+        <div class="container">
           <% if content_for?(:left_column) %>
             <div class="three columns">
               <%= content_for(:left_column) %>
@@ -82,11 +77,6 @@
           <% end %>
         </div>
       </div>
-
-
-
-
-
     </div>
   </body>
 </html>

@@ -9,7 +9,8 @@ module StyleGuideHelper
       ["Style Guide", :index],
       ["One Column", :one_column],
       ["Two Column Left", :two_column_left],
-      ["Two Column Right", :two_column_right]
+      ["Two Column Right", :two_column_right],
+      ["Homepage", :homepage]
     ]
     li_tags = []
     links.each do |name,action|

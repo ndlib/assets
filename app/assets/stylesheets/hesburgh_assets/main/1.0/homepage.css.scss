@@ -1,0 +1,144 @@
+// -------------
+//  Home Page
+// -------------
+
+@mixin image-tab {
+  background-position:0px 0px;
+  background-repeat: no-repeat;
+  height: 0 !important;
+  overflow: hidden !important;
+  padding-bottom: 0 !important;
+  padding-top: 29px !important;
+  text-decoration: none;
+}
+
+.taupe-bg,
+.home-page > .container > .content {
+  background: url(/assets/hesburgh_assets/main/1.0/taupe_bg.png) #f8f7e9 repeat-y top right;
+  border-top: 2px solid #f3ede4;
+  border-bottom: 2px solid #f3ede4;
+  z-index:10;
+}
+
+#gallery {
+    border: 1px solid #F5F3F2;
+    margin-bottom: 1em;
+    visibility: hidden;
+}
+
+.home-page {
+  .breadcrumb {
+    display: none !important;
+  }
+
+  #pg-title {
+    display: none;
+  }
+
+  .inner-left {
+    padding-top:50px;
+    padding-bottom:50px;
+  }
+
+  .inner-right {
+
+    padding-left:20px;
+    padding-top:50px;
+    padding-bottom:50px;
+  }
+
+  ul.contained.tabs-content > li {
+    float: left;
+    z-index: 0;
+  }
+
+  .tabs {
+    z-index:100;
+    position: absolute;
+  }
+
+  .btn {
+    margin-bottom:9px;
+  }
+
+}
+
+.extra-links { list-style-type:none; padding-left:0 !important; float:left;margin-left: 0; }
+.extra-links li { display:inline; padding-right: 1em;  float:left; }
+
+.new img {
+    border: medium none !important;
+    margin-top: -5px;
+    padding: 0 4px 0 0 !important;
+    vertical-align: top;
+}
+.new.about-tab a {
+    background: none repeat scroll 0 0 transparent !important;
+    padding: 0 !important;
+}
+.new.about-tab {
+    border: medium none !important;
+    padding-bottom: 1em !important;
+    position: static !important;
+    text-align: left !important;
+}
+.feedback {
+    display: block;
+    margin-top: -22px;
+    padding-bottom: 8px;
+    padding-left: 76px;
+}
+
+
+/* Home Page Chat Window Update */
+
+#chat {
+    position:relative;
+    background-color: #F5F3E2;
+    border: 2px solid #FCFBF5;
+    float: left;
+    padding: 0 0 0 1px;
+    width: 261px;
+}
+
+#chat-head {
+    cursor: pointer;
+    float: left;
+    font-weight: bold;
+    padding-left: 15px;
+}
+
+#chat-widget {
+    position:absolute;
+    left:-2px;
+    top:19px;
+    margin-top:0;
+    padding-top:5px;
+    width:258px;
+    background:#F5F3E2;
+    border:2px solid #FCFBF5;
+    border-top:none;
+    display: none;
+    float: left;
+}
+
+#hours {
+    background-color: #F5F3E2;
+    border: 2px solid #FCFBF5;
+    float: left;
+    margin: 2em 0 0;
+    padding: 0.75em;
+    width: 242px;
+}
+
+.onesearch span {
+    background-image: url("/assets/hesburgh_assets/main/1.0/onesearch.png");
+    @include image-tab;
+    width: 80px !important;
+}
+
+.ndcatalog span {
+    background-image: url("/assets/hesburgh_assets/main/1.0/ndcatalog.png");
+    @include image-tab;
+    width: 73px !important;
+}

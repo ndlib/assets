@@ -1,13 +1,7 @@
 //Scripts related to the interface of the entire site
 jQuery(function($) {
   /* Creates the dropdown menu navigation */
-  //if (jQuery('ul.sf-menu').superfish) {
-  //  jQuery('ul.sf-menu').superfish({
-  //    delay:       0,                           
-  //    speed:       'fast' 
-  //  });
-  //}
-       
+
   $('input.srch-box').focus(function(){
     $(this).val('');
   });
@@ -18,17 +12,17 @@ jQuery(function($) {
 
   /* general */
   $("#catplus_search").val($("#catplus_search").siblings('.legend').text());
-  
+
   /* handles all tab behavior */
-  
+
   /* get tab name from url if exists */
   var re = /#[\w]+[\W]?$/;   // This will match the anchor tag in the URL i.e. http://here.com/page#anchor
   var doc_loc = document.location.toString();
   var tab_match = re.exec(doc_loc);
 
-  
+
   // tab styling
-  
+
   $(".menu-tabs").addClass('ui-tabs ');
   $(".menu-tabs .tabs").addClass('ui-tabs-nav ui-helper-reset ui-helper-clearfix');
 
@@ -39,22 +33,22 @@ jQuery(function($) {
     tabcs = tabcs.replace("#", ".");
     $( tabcs).addClass('ui-tabs-hide ui-tabs-panel');
   });
-    
+
   // these two functions manage tab behavior for hover and click
-  
+
   var cl = false;
   var tb_state = 'tbi';
-  
+
   tab_links.click(function(){
     var currUrl = location.href;
     currUrl = currUrl.substr(currUrl.lastIndexOf("/")+ 1);
-    
+
     var anc = $(this);
     var tbid = $(this).attr('href');
-    var tbexist = $(anc).attr('href'); 
+    var tbexist = $(anc).attr('href');
     tbexist = tbexist.substr(tbexist.indexOf("#"))+ "_l";
     // check to see if tab stays on same page
-    
+
     var smpg = true;
     if(tbid.indexOf("/")>= 0){ smpg = false;  }
 
@@ -65,15 +59,15 @@ jQuery(function($) {
 
       if(optb != undefined){
         optb = optb.replace("#", ".");
-        $(optb).addClass('ui-tabs-hide'); 
+        $(optb).addClass('ui-tabs-hide');
       }
-      
+
       $("." + tbids).removeClass('ui-tabs-hide');
 
       $('.tba').attr('class', 'tbi');
       $("#" + tbids + "_l").parents('li').attr('class', 'tba');
       if($(anc).parents('div').attr('class') == 'menu_center'){
-        cl = true; 
+        cl = true;
       }
 
     } else if(tbid.indexOf("#") != 0 ){
@@ -82,26 +76,26 @@ jQuery(function($) {
     }
 
   });
-      
+
   $('.tbi, .tba').hover(
-    function() { 
-      tb_state = $(this).attr('class').substr(0 , 3); if(tb_state != 'tba'){ $(this).attr('class', 'tb'); } 
+    function() {
+      tb_state = $(this).attr('class').substr(0 , 3); if(tb_state != 'tba'){ $(this).attr('class', 'tb'); }
     },
-    function() { 
+    function() {
       if(!cl){
-        $(this).attr('class', tb_state);  
+        $(this).attr('class', tb_state);
       } else {
         cl = false;
       }
     }
   );
-    
-    
+
+
   // for deep linking and default setting
-  
+
   if(tab_match){
     $('.tba').attr('class', 'tbi');
-    $(tab_match +'_l').parents('div').parents('li').attr('class', 'tba'); 
+    $(tab_match +'_l').parents('div').parents('li').attr('class', 'tba');
 
     var tma = tab_match.toString();
     tma = tma.replace("#", ".");
@@ -110,33 +104,33 @@ jQuery(function($) {
 
     var at = $('.tba div.menu_center a').attr('href');
 
-    if(at != undefined && at.indexOf("#") == 0){ 
+    if(at != undefined && at.indexOf("#") == 0){
       at = at.replace("#", ".");
-      $(at).removeClass('ui-tabs-hide'); 
+      $(at).removeClass('ui-tabs-hide');
     }
   }
-    
-    
+
+
   // toggle image
 
-  $('.toggle-click').click(function() {   
+  $('.toggle-click').click(function() {
     $('.toggle-view', this).slideToggle(250);
-    if($(this).children('img').attr('src') == '/images/plus.gif'){
-      $(this).children('img').attr('src', '/images/minus.gif');
+    if($(this).children('img').attr('src') == '/assets/hesburgh_assets/main/1.0/plus.gif'){
+      $(this).children('img').attr('src', '/assets/hesburgh_assets/main/1.0/minus.gif');
     }else{
-      $(this).children('img').attr('src', '/images/plus.gif');
+      $(this).children('img').attr('src', '/assets/hesburgh_assets/main/1.0/plus.gif');
     };
   });
-  
+
   // manages chat flyout
   $('#chat-head').click(function(){
     $('#chat-widget').slideToggle();
-    if($('#chat-head img').attr('src') == '/images/blue_arrow_horiz.png'){
-      $('#chat-head img').attr('src', '/images/blue_arrow_vert.png');
+    if($('#chat-head img').attr('src') == '/assets/hesburgh_assets/main/1.0/blue_arrow_horiz.png'){
+      $('#chat-head img').attr('src', '/assets/hesburgh_assets/main/1.0/blue_arrow_vert.png');
     }else{
-      $('#chat-head img').attr('src', '/images/blue_arrow_horiz.png');
+      $('#chat-head img').attr('src', '/assets/hesburgh_assets/main/1.0/blue_arrow_horiz.png');
     };
-      
+
   });
 
 });

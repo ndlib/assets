@@ -88,5 +88,15 @@ module HesburghAssets
       crumbs.unshift(link_to("Hesburgh Libraries", "https://www.library.nd.edu"))
       content_for(:breadcrumb, raw(crumbs.join(" &gt; ")))
     end
+
+    def body_class
+      if @body_class.present?
+        raw "class=\"#{@body_class.html_safe}\""
+      end
+    end
+
+    def set_body_class(new_class)
+      @body_class = new_class
+    end
   end
 end

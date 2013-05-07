@@ -40,16 +40,6 @@ $content-bg: #F8F7E9;
     width: 460px;
 }
 
-@mixin image-tab {
-    background-position:0px 0px;
-    background-repeat: no-repeat;
-    height: 0 !important;
-    overflow: hidden !important;
-    padding-bottom: 0 !important;
-    padding-top: 29px !important;
-    text-decoration: none;
-}
-
 
 body {
 	background-color: #2B5781;
@@ -65,6 +55,7 @@ div.header {
 	background:url(/assets/hesburgh_assets/main/1.0/header-home.jpg) no-repeat;
 	position:relative;
 	height: 90px;
+
     h4, h3 {
         margin:0;
     }
@@ -84,6 +75,7 @@ div.header {
         top:3px;
         right:30%;
     }
+
 }
 
 .header_search {
@@ -103,7 +95,7 @@ div.header {
     }
     input, button {
         float: left;
-        vertical-align: top; 
+        vertical-align: top;
     }
 }
 
@@ -251,11 +243,13 @@ ul.contained.tabs-content {
 
 ul.contained.tabs-content > li {
     @include box;
+    padding: 35px 20px 14px;
     z-index:40;
     position: relative;
     border-top-left-radius: 0;
     padding:35px 20px 14px;
  }
+
 
  ul.contained.tabs-content > li#simple1Tab {padding-top: 14px;}
 
@@ -263,6 +257,7 @@ ul.contained.tabs-content > li {
     float: left;
     width: 95%;
 }
+
 
 #search_box {
     margin-bottom: 40px;
@@ -272,146 +267,8 @@ ul.contained.tabs-content > li {
     z-index: 1;
 }
 
-.content .container:first-child {
-    padding-bottom:1em;
-}
-
-/* -------------
-    Home Page
------------------ */
-
-.taupe-bg { background: url(/assets/hesburgh_assets/main/1.0/taupe_bg.png) #f8f7e9 repeat-y top right ;  border-top: 2px solid #f3ede4;  border-bottom: 2px solid #f3ede4;  z-index:10; }
-
-#gallery {
-    border: 1px solid #F5F3F2;
-    margin-bottom: 1em;
-    visibility: hidden;
-}
-
-.home-page {
-    .inner-left {
-        padding-left:34px;
-        padding-top:50px;
-        padding-bottom:50px;
-    }
-    .inner-right {
-        padding-left:13px;
-        padding-top:50px;
-    }
-}
-
-#quicklinks { 
-    padding: .5em 0em 0em .5em; 
-    background-color:#fae9a7;  
-    background: #fbfcfd; 
-    h4 {
-        margin-bottom: 1em; 
-        font-weight: bold;  
-        clear:both; 
-        border-bottom:2px solid #fdd456;
-    }
-    ul {
-        font-size:90%; 
-        margin: 0 0 .7em 0; 
-        padding-left:0;  
-        list-style-type:none; 
-        float:left; 
-        li {
-            display:block; 
-            width:auto; 
-            margin-left: 1.2em; 
-            text-indent:-1em;
-            a {
-                font-weight:bold; 
-                color:#2c5882; 
-            } 
-        } 
-    }
-}
-
-
-/* new quicklinks styling */
-#quicklinks a { font-weight:normal; font-size:115%; text-decoration:none;}
-#quicklinks a:hover { text-decoration:underline;}
-
-.extra-links { list-style-type:none; padding-left:0 !important; float:left;margin-left: 0; }
-.extra-links li { display:inline; padding-right: 1em;  float:left; }
-
-.new img {
-    border: medium none !important;
-    margin-top: -5px;
-    padding: 0 4px 0 0 !important;
-    vertical-align: top;
-}
-.new.about-tab a {
-    background: none repeat scroll 0 0 transparent !important;
-    padding: 0 !important;
-}
-.new.about-tab {
-    border: medium none !important;
-    padding-bottom: 1em !important;
-    position: static !important;
-    text-align: left !important;
-}
-.feedback {
-    display: block;
-    margin-top: -22px;
-    padding-bottom: 8px;
-    padding-left: 76px;
-}
-
-
-/* Home Page Chat Window Update */
-
-#chat {
-    position:relative;
-    background-color: #F5F3E2;
-    border: 2px solid #FCFBF5;
-    float: left;
-    padding: 0 0 0 1px;
-    width: 261px;
-}
-
-#chat-head {
-    cursor: pointer;
-    float: left;
-    font-weight: bold;
-    padding-left: 15px;
-}
-
-#chat-widget {
-    position:absolute;
-    left:-2px;
-    top:19px;
-    margin-top:0;
-    padding-top:5px;
-    width:258px;
-    background:#F5F3E2;
-    border:2px solid #FCFBF5;
-    border-top:none;
-    display: none;
-    float: left;
-}
-
-#hours {
-    background-color: #F5F3E2;
-    border: 2px solid #FCFBF5;
-    float: left;
-    margin: 2em 0 0;
-    padding: 0.75em;
-    width: 242px;
-}
-
-.onesearch span {
-    background-image: url("/assets/hesburgh_assets/main/1.0/onesearch.png");
-    @include image-tab;
-    width: 80px !important;
-}
-
-.ndcatalog span {
-    background-image: url("/assets/hesburgh_assets/main/1.0/ndcatalog.png");
-    @include image-tab;
-    width: 73px !important;
+.content .container:first-child {  
+  padding-bottom:1em;
 }
 
 /* Tabs (temp) */
@@ -493,18 +350,57 @@ li.tb .menu_center{
 
 }
 
+#quicklinks {
+  @include box;
+  clear:both;
+  float: left;
 
-.home-page {
-    .tabs {
-        z-index:100;
-        position: absolute;
+
+  h4 {
+    margin-bottom: 1em;
+    font-weight: bold;
+    clear:both;
+    border-bottom:2px solid #fdd456;
+  }
+  ul {
+    font-size:90%;
+    margin: 0 0 .7em 0;
+    padding-left:0;
+    list-style-type:none;
+    float:left;
+    li {
+      display:block;
+      width:auto;
+      margin-left: 1.2em;
+      text-indent:-1em;
+      a {
+        font-size:115%;
+        text-decoration:none;
+        color:#2c5882;
+      }
+
+      a:hover {
+        text-decoration:underline;
+      }
+
     }
-    .btn {
-        margin-bottom:9px;
-    }
+  }
 }
 
-.home-page ul.contained.tabs-content > li {z-index: 0;}
+.w27pct {
+    padding: 0;
+    width: 29%;
+}
+
+.w39pct {
+    padding: 0 0 0 10px;
+    width: 37%;
+}
+
+.w32pct {
+    padding: 0;
+    width: 32%;
+}
 
 .shim {
     height:3px;
@@ -557,7 +453,7 @@ li.tb .menu_center{
 
 
 .box {
-    @include box; 
+    @include box;
     z-index:20;
     margin-bottom:1.12em;
 }
@@ -871,11 +767,11 @@ td {
         overflow:hidden;
         text-align:right;
         height:auto;
-        
+
         fieldset {
             padding:5px;
         }
-        
+
         #search_field {
             width:-moz-calc(100% - 40px) !important;
             width:-webkit-calc(100% - 40px) !important;
