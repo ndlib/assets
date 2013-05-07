@@ -12,6 +12,30 @@
   text-decoration: none;
 }
 
+.home-page dl.tabs {
+  height:33px;
+  dd {
+    margin:0;
+    padding-right:4px;
+    overflow: hidden;
+    position: relative;
+    height: 33px;
+    a {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        height: 25px;
+        line-height: 24px;
+    }
+  }
+  span {
+    margin:0;
+    padding-right:4px;
+    overflow: hidden;
+    position: relative;
+    display: block;
+  }
+}
+
 .taupe-bg,
 .home-page > .container > .content {
   background: url(/assets/hesburgh_assets/main/1.0/taupe_bg.png) #f8f7e9 repeat-y top right;
@@ -61,6 +85,32 @@
     margin-bottom:9px;
   }
 
+}
+
+#tab_box {
+  .default {
+    position: absolute;
+    top:0px;
+    right: 7px;
+
+    a {
+      background: url("/assets/hesburgh_assets/main/1.0/off.gif") no-repeat scroll left center transparent;
+      color:#696969;
+      text-decoration: none;
+      padding: 13px 0 0.5em;
+      height:0;
+      width: 13px;
+      overflow:hidden;
+      display: block;
+      border:none;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    a.act, .active {
+      background-image: url(/assets/hesburgh_assets/main/1.0/on.gif);
+    }
+  }
 }
 
 .extra-links { list-style-type:none; padding-left:0 !important; float:left;margin-left: 0; }
@@ -141,4 +191,55 @@
     background-image: url("/assets/hesburgh_assets/main/1.0/ndcatalog.png");
     @include image-tab;
     width: 73px !important;
+}
+
+#quicklinks {
+  clear:both;
+  float: left;
+
+
+  h4 {
+    margin-bottom: 1em;
+    font-weight: bold;
+    clear:both;
+    border-bottom:2px solid #fdd456;
+  }
+  ul {
+    font-size:90%;
+    margin: 0 0 .7em 0;
+    padding-left:0;
+    list-style-type:none;
+    float:left;
+    li {
+      display:block;
+      width:auto;
+      margin-left: 1.2em;
+      text-indent:-1em;
+      a {
+        font-size:115%;
+        text-decoration:none;
+        color:#2c5882;
+      }
+
+      a:hover {
+        text-decoration:underline;
+      }
+
+    }
+  }
+}
+
+.w27pct {
+    padding: 0;
+    width: 29%;
+}
+
+.w39pct {
+    padding: 0 0 0 10px;
+    width: 37%;
+}
+
+.w32pct {
+    padding: 0;
+    width: 32%;
 }
