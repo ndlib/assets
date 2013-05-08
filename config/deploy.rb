@@ -45,7 +45,7 @@ namespace :deploy do
   desc "Precompile assets"
   task :precompile do
     # The asset precompile task is scoped under app for the dummy server
-    run "#{rake} app:assets:precompile:primary"
+    run "#{rake} app:hesburgh_assets:precompile"
   end
 end
 

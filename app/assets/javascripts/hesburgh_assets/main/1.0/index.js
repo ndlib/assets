@@ -14,4 +14,3 @@
 //= require ./mobile.js
 //= require ./main.js
 //= require ./mainupdate.js
-/*//= require_tree .
