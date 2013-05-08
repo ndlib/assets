@@ -13,6 +13,9 @@ set :application, 'assets'
 # Define symlinks for files or directories that need to persist between deploys.
 # /log, /vendor/bundle, and /config/database.yml are automatically symlinked
 # set :application_symlinks, ["/path/to/file"]
+set :application_symlinks, [
+  {"/log" => "/server/log"}
+]
 
 #############################################################
 #  Environment settings
@@ -40,6 +43,11 @@ end
 #############################################################
 
 # Define any addional tasks or callbacks here
+
+desc "Restart Application"
+task :restart_passenger do
+  run "touch #{release_path}/tmp/restart.txt"
+end
 
 namespace :deploy do
   desc "Precompile assets"
