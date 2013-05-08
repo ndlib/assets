@@ -15,8 +15,11 @@
     </a>
   </li>
 </ul>
+<div class="worldcat">
+  <%= link_to(image_tag("hesburgh_assets/catalog/1.0/worldcat.png"), "http://www.worldcat.org/search?#{{q: params[:q]}.to_query}", target: '_blank') %>
+</div>
 
 <%= form_tag(".", method: :get, class: "form-inline") do %>
-  <%= text_field_tag('q', params[:q] || 'stoppard') %>
+  <%= text_field_tag('q', params[:q]) %>
   <%= button_tag('Search', class: 'btn') %>
 <% end %>
