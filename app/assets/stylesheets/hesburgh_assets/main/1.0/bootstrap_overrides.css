@@ -185,15 +185,6 @@ table {
   background-color: #DCD5B6;
 }
 
-[class^="icon-"],
-[class*=" icon-"] {
-  background-image: url("/assets/hesburgh_assets/main/1.0/glyphicons-halflings.png");
-}
-
-.icon-white {
-  background-image: url("/assets/hesburgh_assets/main/1.0/glyphicons-halflings-white.png");
-}
-
 #nav a.icon-person {
   background: none;
   height: auto;

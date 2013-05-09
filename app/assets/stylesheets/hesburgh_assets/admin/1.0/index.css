@@ -4,6 +4,5 @@
  *= require_self
  *= require ../../common/foundation-3.2.5.css
  *= require ../../common/bootstrap-2.3.1.css
- *= require ./bootstrap_overrides-2.3.1.css
  *= require ./admin.css
  */
