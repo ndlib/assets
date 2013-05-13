@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.description = %q{hesburgh_assets provides an up-to-date source for Hesburgh Library
                       assets and layouts - images, stylesheets, javascripts and layout files}
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
 
   s.add_dependency "rails", "~> 3.2.13"
   s.add_dependency "jquery-rails", '~> 2.1.4'
