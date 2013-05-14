@@ -31,7 +31,24 @@ $(document).ready(function(){
 	$("#databases_search").val($("#databases_search").siblings('.legend').text());
 	$("#ebooks_search").val($("#ebooks_search").siblings('.legend').text());
 
+	$(".header_search #search_field").val($("#search_field").siblings('.legend').text());
+  	$(".header_search #search_field").focus(function() {
+  	  $(this).animate({
+  	    width: "250px",
+  	    opacity: 1
+  	  }, 500);
+  	});
+  	$(".header_search #search_field").focusout(function() {
+  	  $(this).animate({
+  	    width: "143px",
+  	    opacity: 0.7
+  	  }, 500);
+  	});
 
+  	$('ul.sf-menu').superfish({ 
+    	delay:       0,                           
+    	speed:       'fast'                        
+  	});
 
 
 });
