@@ -1,5 +1,5 @@
 jQuery ($) ->
-  $(".search-toggle").click ->
+  $(".search-toggle").click (div) ->
     $("div.header_search").toggleClass("closed")
     $("div.header").toggleClass("open")
 
