@@ -2,11 +2,6 @@
 
 $(document).ready(function(){
 
-
-	$(".search-toggle").click(function(){
-		$(".header_search").toggleClass("closed");
-		$(".header").toggleClass("open");
-	});
 	var pathnameArr = window.location.pathname.split('/');
 	switch (pathnameArr[1]) {
     case 'styleguide':

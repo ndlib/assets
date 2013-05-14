@@ -528,6 +528,10 @@ td {
 
 @media only screen and (max-width: 480px) {
 
+    .btn-toolbar {
+        display:none;
+    }
+
     .container {
         padding:10px 10px 0;
     }
@@ -535,9 +539,7 @@ td {
     div.header {
         height:45px;
         background-size:auto 100%;
-        .open {
-            margin-bottom:38px;
-        }
+
         h4 {
             margin:0;
             a {
@@ -548,6 +550,10 @@ td {
                 height:0;
             }
         }
+    }
+
+    div.header.open {
+        margin-bottom:38px;
     }
 
     .header_search {
