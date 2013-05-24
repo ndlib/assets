@@ -46,6 +46,7 @@ Capistrano::Configuration.instance(:must_exist).load do
         destination_path = File.join( release_path, destination)
         destination_directory = File.dirname(destination_path)
 
+        run "rm -rf #{destination_path}"
         run "mkdir -p #{destination_directory}"
         run "ln -nvfs #{File.join( shared_path, source)} #{destination_path}"
       end
