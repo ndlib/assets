@@ -136,6 +136,34 @@ div.header {
     }
 }
 
+.librarieslogo, .ndulogo {
+    display:block;
+    height:0;
+    overflow:hidden;
+}
+
+.librarieslogo {
+    background:url(/assets/hesburgh_assets/main/1.0/hesburgh_mark.png);
+    width:200px;
+    padding-top:49px;
+    margin-left: 25px;
+}
+
+.ndulogo {
+    background:url(/assets/hesburgh_assets/main/1.0/ndmark.png);
+    width: 150px;
+    padding-top: 35px;
+    float:right;
+    margin-right: 25px
+}
+
+.intranet {
+    padding-right:21px;
+    background:url(/assets/hesburgh_assets/main/1.0/lock.gif) no-repeat right;
+    overflow: visible;
+    padding-bottom: 3px;
+}
+
 /* -----------------------------------------
    Main Menu
 ----------------------------------------- */
@@ -500,6 +528,10 @@ td {
 
 @media only screen and (max-width: 480px) {
 
+    .btn-toolbar {
+        display:none;
+    }
+
     .container {
         padding:10px 10px 0;
     }
@@ -507,9 +539,7 @@ td {
     div.header {
         height:45px;
         background-size:auto 100%;
-        .open {
-            margin-bottom:38px;
-        }
+
         h4 {
             margin:0;
             a {
@@ -520,6 +550,10 @@ td {
                 height:0;
             }
         }
+    }
+
+    div.header.open {
+        margin-bottom:38px;
     }
 
     .header_search {
