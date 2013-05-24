@@ -36,6 +36,7 @@ task :production do
   # Customize production configuration
   set :user,      'aprod'
   set :home_path, "/shared/asset_prod"
+  set :domain, "asset.library.nd.edu"
 end
 
 #############################################################
