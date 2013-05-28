@@ -115,10 +115,10 @@ jQuery(function($) {
 
   $('.toggle-click').click(function() {
     $('.toggle-view', this).slideToggle(250);
-    if($(this).children('img').attr('src') == '/assets/hesburgh_assets/main/1.0/plus.gif'){
-      $(this).children('img').attr('src', '/assets/hesburgh_assets/main/1.0/minus.gif');
+    if($(this).children('img').attr('src') == '//asset.library.nd.edu/assets/hesburgh_assets/main/1.0/plus.gif'){
+      $(this).children('img').attr('src', '//asset.library.nd.edu/assets/hesburgh_assets/main/1.0/minus.gif');
     }else{
-      $(this).children('img').attr('src', '/assets/hesburgh_assets/main/1.0/plus.gif');
+      $(this).children('img').attr('src', '//asset.library.nd.edu/assets/hesburgh_assets/main/1.0/plus.gif');
     };
   });
 
