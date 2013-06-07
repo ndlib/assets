@@ -71,6 +71,7 @@ module Assets
       hesburgh_assets/architecture_library/1.0/index.css
       hesburgh_assets/business_library/1.0/index.css
       hesburgh_assets/chemistry_library/1.0/index.css
+      hesburgh_assets/engineering_library/1.0/index.css
       hesburgh_assets/catalog/1.0/index.js
       hesburgh_assets/catalog/1.0/index.css
       hesburgh_assets/admin/1.0/index.css
