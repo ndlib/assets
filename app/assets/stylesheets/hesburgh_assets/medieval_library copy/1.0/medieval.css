@@ -1,0 +1,10 @@
+div.header {
+  background: url(/assets/hesburgh_assets/medieval/1.0/header-home.jpg) no-repeat;
+}
+
+.header_search,
+.search-toggle {
+  display:none;
+  display:none;
+}
+
