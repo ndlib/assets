@@ -75,6 +75,8 @@ module Assets
       hesburgh_assets/kkic_library/1.0/index.css
       hesburgh_assets/mathematics_library/1.0/index.css
       hesburgh_assets/medieval_library/1.0/index.css
+      hesburgh_assets/radlab_library/1.0/index.css
+      hesburgh_assets/vrc_library/1.0/index.css
       hesburgh_assets/catalog/1.0/index.js
       hesburgh_assets/catalog/1.0/index.css
       hesburgh_assets/admin/1.0/index.css
