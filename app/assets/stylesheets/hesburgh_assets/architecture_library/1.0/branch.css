@@ -26,3 +26,8 @@ td .hours { margin-bottom: .25em; }
 #hours hr {
   height: 1px;
 }
+
+div.header h4 a {
+    height: 33px;
+    top: 0;
+}
