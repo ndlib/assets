@@ -70,13 +70,21 @@ module Assets
       hesburgh_assets/main/1.0/ie.css
       hesburgh_assets/architecture_library/1.0/index.js
       hesburgh_assets/architecture_library/1.0/index.css
+      hesburgh_assets/business_library/1.0/index.js
       hesburgh_assets/business_library/1.0/index.css
+      hesburgh_assets/chemistry_library/1.0/index.js
       hesburgh_assets/chemistry_library/1.0/index.css
+      hesburgh_assets/engineering_library/1.0/index.js
       hesburgh_assets/engineering_library/1.0/index.css
+      hesburgh_assets/kkic_library/1.0/index.js
       hesburgh_assets/kkic_library/1.0/index.css
+      hesburgh_assets/mathematics_library/1.0/index.js
       hesburgh_assets/mathematics_library/1.0/index.css
+      hesburgh_assets/medieval_library/1.0/index.js
       hesburgh_assets/medieval_library/1.0/index.css
+      hesburgh_assets/radlab_library/1.0/index.js
       hesburgh_assets/radlab_library/1.0/index.css
+      hesburgh_assets/vrc_library/1.0/index.js
       hesburgh_assets/vrc_library/1.0/index.css
       hesburgh_assets/catalog/1.0/index.js
       hesburgh_assets/catalog/1.0/index.css

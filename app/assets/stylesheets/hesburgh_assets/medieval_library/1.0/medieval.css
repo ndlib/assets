@@ -8,3 +8,12 @@ div.header {
   display:none;
 }
 
+div.header h4 a {
+    height: 33px;
+    top: 0;
+}
+
+div.header h3 a {
+    height: 50px !important;
+    top: 35px !important;
+}
