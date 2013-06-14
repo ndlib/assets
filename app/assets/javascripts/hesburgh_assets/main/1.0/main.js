@@ -7,7 +7,7 @@ jQuery(function($) {
   });
 
   /* handles colorbox */
-  $("p.about-tab>a").colorbox({iframe:false, innerWidth:525, innerHeight:344, speed:250});
+  //$("p.about-tab>a").colorbox({iframe:false, innerWidth:525, innerHeight:344, speed:250});
   $("p#acceptable-use-note>a").colorbox({iframe:true, innerWidth:525, innerHeight:424, speed:250});
 
   /* general */
