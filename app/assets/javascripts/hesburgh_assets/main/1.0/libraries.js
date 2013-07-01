@@ -14,7 +14,7 @@ $(document).ready(function(){
   	}
  	else {
     if ($("#gallerycs").length > 0) {
-    	$("#gallerycs").after('<div id="chat"><div id="chat-head">Click to Chat with a Librarian <img src="/assets/hesburgh_assets/main/1.0/blue_arrow_horiz.png" /></div><div id="chat-widget"><div class="libraryh3lp" jid="nd-ask-a-lib@chat.libraryh3lp.com"><iframe src="http://libraryh3lp.com/chat/nd-ask-a-lib@chat.libraryh3lp.com?skin=10273&amp;theme=gota&amp;title=Ask%20a%20Librarian&amp;identity=asklib" frameborder="0" style="width: 257px; height: 300px; border: 0px inset #2a4480;"></iframe></div></div></div>');
+    	$("#gallerycs").after('<div id="chat"><div id="chat-head">Click to Chat with a Librarian <img src="//asset.library.nd.edu/assets/hesburgh_assets/main/1.0/blue_arrow_horiz.png" /></div><div id="chat-widget"><div class="libraryh3lp" jid="nd-ask-a-lib@chat.libraryh3lp.com"><iframe src="http://libraryh3lp.com/chat/nd-ask-a-lib@chat.libraryh3lp.com?skin=10273&amp;theme=gota&amp;title=Ask%20a%20Librarian&amp;identity=asklib" frameborder="0" style="width: 257px; height: 300px; border: 0px inset #2a4480;"></iframe></div></div></div>');
     }
  	}
 

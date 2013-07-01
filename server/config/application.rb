@@ -90,6 +90,7 @@ module Assets
       hesburgh_assets/catalog/1.0/index.css
       hesburgh_assets/admin/1.0/index.css
       hesburgh_assets/admin/1.0/index.js
+      hesburgh_assets/primo/1.0/index.js
     )
 
     config.assets.initialize_on_precompile = false
