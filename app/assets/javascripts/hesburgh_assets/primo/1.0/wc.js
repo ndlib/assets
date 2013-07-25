@@ -2,8 +2,6 @@
 //Robin Schaaf, 1/9/2013
 
 
-
-
 $(document).ready(function() {
 	//advanced search
 	if ($('#exlidAdvancedSearchRibbon').length){
@@ -54,7 +52,7 @@ $(document).ready(function() {
 			$('.EXLSearchTabsContainer').css('width','100%');
 
 			//add the worldcat link
-			$('.EXLSearchTabsContainer').append('<div id="WorldCatAdvancedDiv"><a onclick="javascript:window.open(\'http://www.worldcat.org/search?q=' + searchString + '\');" href="javascript:void(0);"><img src="../images/worldcat.png" /></a></div>');
+			$('.EXLSearchTabsContainer').append('<div id="WorldCatAdvancedDiv"><a onclick="javascript:window.open(\'http://www.worldcat.org.proxy.library.nd.edu/search?q=' + searchString + '\');" href="javascript:void(0);"><img src="../images/worldcat.png" /></a></div>');
 		}
 
 	}else{ //basic search
@@ -71,7 +69,7 @@ $(document).ready(function() {
 			$('.EXLSearchTabsContainer').css('width','100%');
 
 			//add the worldcat link
-			$('.EXLSearchTabsContainer').append('<div id="WorldCatBasicDiv"><a onclick="javascript:window.open(\'http://www.worldcat.org/search?q=' + searchTerm + '\');" href="javascript:void(0);"><img src="../images/worldcat.png" /></a></div>');
+			$('.EXLSearchTabsContainer').append('<div id="WorldCatBasicDiv"><a onclick="javascript:window.open(\'http://www.worldcat.org.proxy.library.nd.edu/search?q=' + searchTerm + '\');" href="javascript:void(0);"><img src="../images/worldcat.png" /></a></div>');
 
 
 		}
