@@ -1,4 +1,4 @@
-.home-page ul.contained.tabs-content > li  {
+.home-page-test ul.contained.tabs-content > li  {
 	border-radius: 0;
 	box-shadow: none;
 	position: relative;
@@ -6,7 +6,7 @@
 	padding:16px;
 }
 
-ul.contained.tabs-content > li:before, ul.contained.tabs-content > li:after 
+.home-page-test ul.contained.tabs-content > li:before, .home-page-test ul.contained.tabs-content > li:after 
 {
   z-index: -1; 
   position: absolute; 
@@ -27,7 +27,7 @@ ul.contained.tabs-content > li:before, ul.contained.tabs-content > li:after
   transform: rotate(-3deg);
 }
 
-ul.contained.tabs-content > li:after 
+.home-page-test ul.contained.tabs-content > li:after 
 {
   -webkit-transform: rotate(3deg);
   -moz-transform: rotate(3deg);
@@ -38,19 +38,19 @@ ul.contained.tabs-content > li:after
   left: auto;
 }
 
-dl.tabs dd a {
+.home-page-test dl.tabs dd a {
 	border-radius:4px 4px 0 0;
 	background:#CECEBF;
 	border:none;
 	box-shadow: inset -0px -5px 3px #888;
 }
 
-dl.tabs dd a.active {
+.home-page-test dl.tabs dd a.active {
 	box-shadow: none;
 	border:solid 1px #B1C6D3;
 }
 
-#tab_box input.srch-box.long {
+.home-page-test #tab_box input.srch-box.long {
 	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 	-moz-box-sizing: border-box;
     height: 36px;
@@ -59,7 +59,7 @@ dl.tabs dd a.active {
     border-radius: 0;
 }
 
-#search_box .btn {
+.home-page-test #search_box .btn {
 	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 	background-color: #CBB53F;
     background-image: none;
@@ -73,54 +73,54 @@ dl.tabs dd a.active {
     font-size: 14px;
 }
 
-#tab_box form {
+.home-page-test #tab_box form {
 	margin-bottom:.0;
 }
 
-ul.tabs-content ul {
+.home-page-test ul.tabs-content ul {
 	margin-bottom:0;
 }
 
-#tab_box p.about-tab {
+.home-page-test #tab_box p.about-tab {
 	border:none;
 	right:0;
 	bottom:0;
 }
 
-#tab_box p.about-tab a {
+.home-page-test #tab_box p.about-tab a {
 	font-size:10px;
 }
 
-#tab_box p.about-tab:hover, #tab_box p.about-tab a:hover {
+.home-page-test #tab_box p.about-tab:hover, .home-page-test #tab_box p.about-tab a:hover {
 	background-color: transparent !important;
 }
 
-.home-page dl.tabs dd a {
+.home-page-test dl.tabs dd a {
   padding-top:8px;
 }
 
-#search_box {
+.home-page-test #search_box {
   margin-top:36px;
 }
 
-.home-page dl.tabs {
+.home-page-test dl.tabs {
   height:36px;
 }
 
-.home-page dl.tabs dd {
+.home-page-test dl.tabs dd {
   height: 37px;
 }
 
-dl.tabs dd a {
+.home-page-test dl.tabs dd a {
   color:#777777;
 }
 
-dl.tabs dd a:hover {
+.home-page-test dl.tabs dd a:hover {
   background: #E6E6DF;
     text-decoration: none;
 }
 
-dl.tabs dd a.active {
+.home-page-test dl.tabs dd a.active {
  border-style: solid; 
  border-width: 8px 15px 15px 8px; 
  -moz-border-image: url(/local_images/corner.png) 8 15 15 8 round; 
@@ -135,13 +135,13 @@ dl.tabs dd a.active {
  color:#2B5781;
 }
 
-dl.tabs dd a.active:active {
+.home-page-test dl.tabs dd a.active:active {
   background-image: none;
   background-color:transparent;
   box-shadow: none;
 }
 
-dl.tabs dd a.active:hover, dl.tabs dd a.active:active {
+.home-page-test dl.tabs dd a.active:hover, .home-page-test dl.tabs dd a.active:active {
   background:transparent;
 
 }
@@ -151,25 +151,25 @@ dl.tabs dd a.active:hover, dl.tabs dd a.active:active {
 }*/
 
 
-html[data-useragent*='MSIE 10.0'] dl.tabs dd a.active {
+html[data-useragent*='MSIE 10.0'] .home-page-test dl.tabs dd a.active {
   border-width: 0;
   padding:8px 15px 15px 14px;
   border-right:solid 1px #B1C6D3;
   background:#fff url(/local_images/ie.corner.gif) top left;
 }
 
-.onesearch span {
+.home-page-test .onesearch span {
   background-image: url(/local_images/onesearch.off.png);
 }
 
-.onesearch.active span {
+.home-page-test .onesearch.active span {
   background-image: url(/local_images/onesearch.png);
 }
 
-.ndcatalog span {
+.home-page-test .ndcatalog span {
   background-image: url(/local_images/ndcatalog.off.png);
 }
 
-.ndcatalog.active span {
+.home-page-test .ndcatalog.active span {
   background-image: url(/local_images/ndcatalog.png);
 }
