@@ -4,3 +4,4 @@
 //= require ./jquery.simpledialog.0.1.min.js
 //= require ./jquery.tablesorter.js
 //= require ./malc.js
+//= require ./wc.js
