@@ -123,10 +123,10 @@
 .home-page-test dl.tabs dd a.active {
  border-style: solid; 
  border-width: 8px 15px 15px 8px; 
- -moz-border-image: url(http://librarypprd.library.nd.edu/local_imagescorner.png) 8 15 15 8 round; 
- -webkit-border-image: url(http://librarypprd.library.nd.edu/local_imagescorner.png) 8 15 15 8 round; 
- -o-border-image: url(http://librarypprd.library.nd.edu/local_imagescorner.png) 8 15 15 8 round; 
- border-image: url(http://librarypprd.library.nd.edu/local_imagescorner.png) 8 15 15 8 fill round;
+ -moz-border-image: url(http://librarypprd.library.nd.edu/local_images/corner.png) 8 15 15 8 round; 
+ -webkit-border-image: url(http://librarypprd.library.nd.edu/local_images/corner.png) 8 15 15 8 round; 
+ -o-border-image: url(http://librarypprd.library.nd.edu/local_images/corner.png) 8 15 15 8 round; 
+ border-image: url(http://librarypprd.library.nd.edu/local_images/corner.png) 8 15 15 8 fill round;
  padding-top:0;
  padding-right:0;
  padding-left:6px;
@@ -155,21 +155,21 @@ html[data-useragent*='MSIE 10.0'] .home-page-test dl.tabs dd a.active {
   border-width: 0;
   padding:8px 15px 15px 14px;
   border-right:solid 1px #B1C6D3;
-  background:#fff url(http://librarypprd.library.nd.edu/local_imagesie.corner.gif) top left;
+  background:#fff url(http://librarypprd.library.nd.edu/local_images/ie.corner.gif) top left;
 }
 
 .home-page-test .onesearch span {
-  background-image: url(http://librarypprd.library.nd.edu/local_imagesonesearch.off.png);
+  background-image: url(http://librarypprd.library.nd.edu/local_images/onesearch.off.png);
 }
 
 .home-page-test .onesearch.active span {
-  background-image: url(http://librarypprd.library.nd.edu/local_imagesonesearch.png);
+  background-image: url(http://librarypprd.library.nd.edu/local_images/onesearch.png);
 }
 
 .home-page-test .ndcatalog span {
-  background-image: url(http://librarypprd.library.nd.edu/local_imagesndcatalog.off.png);
+  background-image: url(http://librarypprd.library.nd.edu/local_images/ndcatalog.off.png);
 }
 
 .home-page-test .ndcatalog.active span {
-  background-image: url(http://librarypprd.library.nd.edu/local_imagesndcatalog.png);
+  background-image: url(http://librarypprd.library.nd.edu/local_images/ndcatalog.png);
 }
