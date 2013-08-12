@@ -7,6 +7,7 @@
 //= require ./libraries.js
 //= require ./prettify.js
 //= require ./jquery.colorbox-min.js
+//= require ./jquery.gritter.js
 //= require ./hoverIntent.js
 //= require ./simplegallery.js
 //= require ./superfish.js
@@ -14,3 +15,4 @@
 //= require ./mobile.js
 //= require ./main.js
 //= require ./mainupdate.js
+//= require ./tabset.js

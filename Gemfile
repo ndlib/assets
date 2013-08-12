@@ -12,7 +12,7 @@ gemspec
 
 # To use debugger
 # gem 'debugger'
-
+gem "jquery-rails", '~> 2.1.4'
 gem "hesburgh_infrastructure", git: 'git@git.library.nd.edu:hesburgh_infrastructure'
 gem 'therubyracer', '~> 0.10.0'
 

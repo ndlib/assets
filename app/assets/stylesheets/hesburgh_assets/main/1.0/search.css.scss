@@ -144,9 +144,9 @@
     color:#777777;
   }
 
-  dl.tabs dd a:hover {
+  dl.tabs dd > a:hover {
     background: #E6E6DF;
-      text-decoration: none;
+    text-decoration: none;
   }
 
   dl.tabs dd > a.active {
@@ -165,13 +165,13 @@
 
   }
 
-  dl.tabs dd a.active:active {
+  dl.tabs dd > a.active:active {
     background-image: none;
     background-color:transparent;
     box-shadow: none;
   }
 
-  dl.tabs dd a.active:hover, dl.tabs dd a.active:active {
+  dl.tabs dd > a.active:hover, dl.tabs dd > a.active:active {
     background:transparent;
 
   }
