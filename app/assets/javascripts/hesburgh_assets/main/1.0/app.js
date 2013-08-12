@@ -9,7 +9,7 @@ jQuery(document).ready(function ($) {
 	function activateTab($tab) {
 		var $activeTab = $tab.closest('dl').find('a.active'),
 				contentLocation = $tab.attr("href") + 'Tab';
-				
+
 		// Strip off the current url that IE adds
 		contentLocation = contentLocation.replace(/^.+#/, '#');
 
@@ -94,5 +94,5 @@ jQuery(document).ready(function ($) {
 
 	/* DISABLED BUTTONS ------------- */
 	/* Gives elements with a class of 'disabled' a return: false; */
-  
+
 });

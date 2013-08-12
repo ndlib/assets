@@ -1,0 +1,219 @@
+.search-appliance {
+  ul.contained.tabs-content > li  {
+    float: left;
+  	border-radius: 0;
+  	box-shadow: none;
+  	position: relative;
+  	z-index: auto;
+  	padding:16px;
+  }
+
+  ul.contained.tabs-content > li:before, ul.contained.tabs-content > li:after
+  {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 15px;
+    left: 10px;
+    width: 50%;
+    top: 80%;
+    max-width:300px;
+    background: rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 0 15px 10px rgba(0,0,0, 0.7);
+    -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+  }
+
+  ul.contained.tabs-content > li:after
+  {
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    transform: rotate(3deg);
+    right: 10px;
+    left: auto;
+  }
+
+  .tabs {
+    z-index: 100;
+    position: absolute;
+  }
+
+  dl.tabs dd a {
+  	border-radius:4px 4px 0 0;
+  	background:#CECEBF;
+  	border:none;
+  	box-shadow: inset -0px -5px 3px #888;
+    padding-bottom: 0.5em;
+    height: 25px;
+    line-height: 24px;
+
+    span {
+      margin: 0;
+      padding-right: 4px;
+      overflow: hidden;
+      position: relative;
+      display: block;
+    }
+  }
+
+  dl.tabs dd a.active {
+  	box-shadow: none;
+  	border:solid 1px #B1C6D3;
+  }
+
+  input.srch-box.long {
+  	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  	-moz-box-sizing: border-box;
+      height: 36px;
+      padding: 4px 30px 4px 12px;
+      border:none;
+      border-radius: 0;
+  }
+
+  #search_box .btn {
+  	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  	background-color: #CBB53F;
+      background-image: none;
+      font-weight: normal;
+      text-transform: uppercase;
+      border-radius: 0;
+      height: 36px;
+      border:none;
+      color:#fff;
+      text-shadow:none;
+      font-size: 14px;
+    margin-bottom: 9px;
+  }
+
+  form {
+  	margin-bottom:.0;
+  }
+
+  ul.tabs-content ul {
+  	margin-bottom:0;
+  }
+
+  .about-tab {
+  	border:none;
+  	right:0;
+  	bottom:0;
+
+    a {
+      font-weight: bold;
+      font-size:10px;
+    }
+  }
+
+  .about-tab:hover, .about-tab a:hover {
+  	background-color: transparent;
+  }
+
+  dl.tabs dd {
+
+    a {
+      padding-top:8px;
+    }
+
+    .default {
+      position: absolute;
+      top:0px;
+      right: 7px;
+
+      a {
+        background: url("search_appliance/off.gif") no-repeat scroll left center transparent;
+        color:#696969;
+        text-decoration: none;
+        padding: 13px 0 0.5em;
+        height:0;
+        width: 13px;
+        overflow:hidden;
+        display: block;
+        border:none;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      .act {
+        background-image: url(search_appliance/on.gif);
+      }
+    }
+  }
+
+  #search_box {
+    margin-top:36px;
+  }
+
+  dl.tabs {
+    height:36px;
+  }
+
+  dl.tabs dd {
+    height: 37px;
+  }
+
+  dl.tabs dd a {
+    color:#777777;
+  }
+
+  dl.tabs dd > a:hover {
+    background: #E6E6DF;
+    text-decoration: none;
+  }
+
+  dl.tabs dd > a.active {
+   border-style: solid;
+   border-width: 8px 15px 15px 8px;
+   -moz-border-image: url(search_appliance/corner.png) 8 15 15 8 round;
+   -webkit-border-image: url(search_appliance/corner.png) 8 15 15 8 round;
+   -o-border-image: url(search_appliance/corner.png) 8 15 15 8 round;
+   border-image: url(search_appliance/corner.png) 8 15 15 8 fill round;
+   padding-top:0;
+   padding-right:0;
+   padding-left:6px;
+   background-image: none;
+   background-color:transparent;
+   color:#2B5781;
+
+  }
+
+  dl.tabs dd > a.active:active {
+    background-image: none;
+    background-color:transparent;
+    box-shadow: none;
+  }
+
+  dl.tabs dd > a.active:hover, dl.tabs dd > a.active:active {
+    background:transparent;
+
+  }
+
+  .onesearch span {
+    background-image: url(search_appliance/onesearch.off.png);
+  }
+
+  .onesearch.active span {
+    background-image: url(search_appliance/onesearch.png);
+  }
+
+  .ndcatalog span {
+    background-image: url(search_appliance/ndcatalog.off.png);
+  }
+
+  .ndcatalog.active span {
+    background-image: url(search_appliance/ndcatalog.png);
+  }
+}
+
+html[data-useragent*='MSIE 10.0'] .search-appliance dl.tabs dd a.active {
+  border-width: 0;
+  padding:8px 15px 15px 14px;
+  border-right:solid 1px #B1C6D3;
+  background:#fff url(search_appliance/ie.corner.gif) top left;
+}
