@@ -1,5 +1,6 @@
 .search-appliance {
   ul.contained.tabs-content > li  {
+    float: left;
   	border-radius: 0;
   	box-shadow: none;
   	position: relative;
@@ -39,11 +40,27 @@
     left: auto;
   }
 
+  .tabs {
+    z-index: 100;
+    position: absolute;
+  }
+
   dl.tabs dd a {
   	border-radius:4px 4px 0 0;
   	background:#CECEBF;
   	border:none;
   	box-shadow: inset -0px -5px 3px #888;
+    padding-bottom: 0.5em;
+    height: 25px;
+    line-height: 24px;
+
+    span {
+      margin: 0;
+      padding-right: 4px;
+      overflow: hidden;
+      position: relative;
+      display: block;
+    }
   }
 
   dl.tabs dd a.active {
@@ -72,6 +89,7 @@
       color:#fff;
       text-shadow:none;
       font-size: 14px;
+    margin-bottom: 9px;
   }
 
   form {
