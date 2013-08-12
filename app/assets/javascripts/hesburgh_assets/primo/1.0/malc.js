@@ -424,8 +424,7 @@ function getLocations(element, tabType){
       var dn = EXLTA_recordId(element);
       var resp = '';
       var ddud = 'pnxId=' + dn + '&primary=ndu_aleph';
-      var ddui = '/primo_library/libweb/tiles/local/location_rs.jsp';
-      //var ddui = '/primo_library/libweb/tiles/local/location.jsp';
+      var ddui = '/primo_library/libweb/tiles/local/location.jsp';
       $.ajax({type: "get", url: ddui, dataType: "html", data: ddud,  success: function(data){
 
 		        var p = $(element).parents('.EXLResult').find('.'+tabType+'-Container').children('.EXLTabContent').children('#ndLocation');
