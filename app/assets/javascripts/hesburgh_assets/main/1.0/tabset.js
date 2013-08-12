@@ -79,7 +79,7 @@ $(document).ready(function(){
   var page = window.location.hostname;
 
   if (defaultTab && !window.location.hash ) {
-    window.location = "http://" + page + defaultTab;
+    window.location.hash = defaultTab;
     if (window.location.hash) {
       activateTab($('a[href="' + window.location.hash + '"]'));
     }
