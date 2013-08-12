@@ -434,7 +434,7 @@ td {
         border-radius: 0;
     }
 
-    #tab_box input.srch-box.long {
+    input.srch-box.long {
         width:95%;
     }
     #search_box {
@@ -471,10 +471,10 @@ td {
         float: left;
     }
 
-    #tab_box p.about-tab {
-        bottom:10px;
-        right:10px;
-        display: none;
+    .about-tab {
+      bottom:10px;
+      right:10px;
+      display: none;
     }
 }
 

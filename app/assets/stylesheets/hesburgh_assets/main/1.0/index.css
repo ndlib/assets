@@ -8,9 +8,9 @@
  *= require ../../common/superfish.css
  *= require ../../common/colorbox.css
  *= require ./bootstrap_overrides.css
+ *= require ./tabs.css
  *= require ./hesburgh.css
  *= require ./homepage.css
  *= require ./hours.css
- *= require ./tabs.css
  *= require ./search.css
  */
