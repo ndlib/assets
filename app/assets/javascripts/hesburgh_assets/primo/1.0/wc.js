@@ -133,10 +133,10 @@ $(document).ready(function() {
 		//For Doc Delivery
       
 
-	var dd_url = "https://nd.illiad.oclc.org/illiad/IND/illiad.dll?Action=10&Form=30&url_ver=Z39.88-2004&ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&rfr_id=info:sid/ND:primocentral_docdel&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&"
-        var dd_href = $(this).closest('.EXLSummary').find('.EXLViewOnlineTab a').attr('href');
-        var dd_href = dd_href.replace("http://findtext.library.nd.edu:8889/ndu_local?",unescape(dd_url));
-	$(this).parents('.EXLResult').append('<li id="docDelUrl" class="EXLReviewsTab EXLResultTab">' + dd_href + '</li>');
+	//var dd_url = "https://nd.illiad.oclc.org/illiad/IND/illiad.dll?Action=10&Form=30&url_ver=Z39.88-2004&ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&rfr_id=info:sid/ND:primocentral_docdel&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&"
+        //var dd_href = $(this).closest('.EXLSummary').find('.EXLViewOnlineTab a').attr('href');
+        //var dd_href = dd_href.replace("http://findtext.library.nd.edu:8889/ndu_local?",unescape(dd_url));
+	//$(this).parents('.EXLResult').append('<li id="docDelUrl" class="EXLReviewsTab EXLResultTab">' + dd_href + '</li>');
 
 
            }
