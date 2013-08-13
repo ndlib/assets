@@ -16,3 +16,4 @@
 //= require ./main.js
 //= require ./mainupdate.js
 //= require ./tabset.js
+//= require ./search-appliance.js

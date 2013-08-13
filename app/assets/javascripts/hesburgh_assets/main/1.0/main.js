@@ -2,16 +2,11 @@
 jQuery(function($) {
   /* Creates the dropdown menu navigation */
 
-  $('input.srch-box').focus(function(){
-    $(this).val('');
-  });
-
   /* handles colorbox */
   //$("p.about-tab>a").colorbox({iframe:false, innerWidth:525, innerHeight:344, speed:250});
   $("p#acceptable-use-note>a").colorbox({iframe:true, innerWidth:525, innerHeight:424, speed:250});
 
   /* general */
-  $("#catplus_search").val($("#catplus_search").siblings('.legend').text());
 
   /* handles all tab behavior */
 
