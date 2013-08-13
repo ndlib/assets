@@ -77,23 +77,39 @@
       border-radius: 0;
   }
 
-  #search_box .btn {
+  .btn {
   	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
   	background-color: #CBB53F;
-      background-image: none;
-      font-weight: normal;
-      text-transform: uppercase;
-      border-radius: 0;
-      height: 36px;
-      border:none;
-      color:#fff;
-      text-shadow:none;
-      font-size: 14px;
+    background-image: none;
+    font-weight: normal;
+    text-transform: uppercase;
+    border-radius: 0;
+    height: 36px;
+    border:none;
+    color:#fff;
+    text-shadow:none;
+    font-size: 14px;
     margin-bottom: 9px;
   }
 
   form {
-  	margin-bottom:.0;
+  	margin-bottom: 0;
+  }
+
+  select {
+    height: 36px;
+  }
+
+  .form-inline {
+    margin-bottom: 9px;
+
+    .btn {
+      margin-bottom: 0;
+    }
+
+    .pull-left .btn {
+      margin-left: 4px;
+    }
   }
 
   ul.tabs-content ul {
