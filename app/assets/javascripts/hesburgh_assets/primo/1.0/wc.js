@@ -125,6 +125,7 @@ $(document).ready(function() {
 					//element, tabName,tabType,url,tabSelectorCopy,tabUrlReplace,tabUrlReplaceValue,firstTab,evaluator,evaluatorVar
 
                                 }});
+			}
 
 
                  }});
