@@ -126,6 +126,16 @@ $(document).ready(function() {
 
                                 }});
 
+				// For Doc Delivery
+                                var ddud = 'pnxId=' + pnxResult;
+                                var ddui = '/primo_library/libweb/tiles/local/docdel.jsp';
+                                $.ajax({type: "get", url: ddui, dataType: "html", data: ddud,  success: function(data){
+                                        var dre = /http/;
+                                        if(data.match(dre)){
+                                                rt.after('<li id="docDelUrl" class="EXLReviewsTab EXLResultTab">' + data + '</li>');
+                                        }
+                                        }});
+
 
 			}
 
@@ -351,70 +361,3 @@ function getWCIndex(exSearch){
 
 
 
-
-
-
-
-
-
-
-var pnxRecord = null;
-var defaultInstitutionCode = 'NDU'; // <--- UPDATE this when used locally
-
-function loadPNXRecord(recordId, institutionCode) {
-	var result = "";
-    var search = "local, scope:(NDU)";
-
-
-    //search local or remote
-    if ((recordId.substring(0, 2) == 'TN')) {
-        search = "adaptor,primo_central_multiple_fe";
-        recordId = recordId.substring(3);
-    }
-
-
-    var q = 'any,contains,' + recordId;
-    var xmlpnx = $.ajax({
-        url: '/PrimoWebServices/xservice/search/brief',
-        dataType: 'xml',
-        data: {
-            institution: 'NDU',
-            query: q,
-            onCampus: 'false',
-            indx: 1,
-            bulkSize: 1,
-            lang: 'eng',
-            loc: search
-        },
-        async: false,
-        error: function(request, status, error) {
-            // TODO: Catch empty responses due to firewall or configuration restrictions
-            alert('Ooops: ' + request.statusText + ' --> ' + request.responseText);
-        }
-    }).responseXML;
-
-    pnxRecord = $(xmlpnx).find('record').eq(0);
-
-    //PRIMO CENTRAL records have a namespace prefix. Local PNX records don't
-    if (pnxRecord.size() == 0){
-        pnxRecord = $(xmlpnx).find('[nodeName="prim:record"]').eq(0);
-        if(pnxRecord.size() == 0) { //some jQuery versions refuse the above query
-           pnxRecord = $(xmlpnx).find('prim\\:record').eq(0);
-        }
-    }
-
-    if (pnxRecord.size() > 0) {
-        if (window.ActiveXObject) {
-            result = pnxRecord[0].xml;
-        }
-        else {
-            result = (new XMLSerializer()).serializeToString(pnxRecord[0]);
-        }
-
-        result = result.replace(/\</g, '&lt;').replace(/\>/g, '&gt;');
-    } else {
-        result = "No data loaded";
-    }
-
-	return result;
-}
