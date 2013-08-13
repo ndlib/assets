@@ -130,19 +130,13 @@ $(document).ready(function() {
                  }});
 
 		//For Doc Delivery
-      var dd_url = "https://nd.illiad.oclc.org/illiad/IND/illiad.dll?Action=10&Form=30&url_ver=Z39.88-2004&ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&rfr_id=info:sid/ND:primocentral_docdel&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&"
-      try {
+      
+
+	var dd_url = "https://nd.illiad.oclc.org/illiad/IND/illiad.dll?Action=10&Form=30&url_ver=Z39.88-2004&ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&rfr_id=info:sid/ND:primocentral_docdel&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&"
         var dd_href = $(this).closest('.EXLSummary').find('.EXLViewOnlineTab a').attr('href');
-       var dd_modifiedHref = dd_href.replace(/display\.do/,"expand.do").replace(/renderMode=poppedOut/,'renderMode=prefetchXml');
-        var dd_xml = $.ajax({url: dd_modifiedHref ,global: false,async: false,error:function(){log('DocDel sfx retrieval error')}}).responseXML;
-        var dd_htmlText = $(dd_xml).find('element').text();
-        var dd_url = dd_htmlText.match(/href="([^"]*)"/)[1].replace(http://findtext.library.nd.edu:8889/ndu_local?",unescape(dd_base));
+        var dd_url = dd_href.replace(http://findtext.library.nd.edu:8889/ndu_local?",unescape(dd_base));
 	rt.after('<li id="docDelUrl" class="EXLReviewsTab EXLResultTab">' + dd_url + '</li>');
 
-      }
-     // catch(dd_err) {
-        //log('Could not insert DocDel link: ' + dd_err);
-      //}
 
            }
 
