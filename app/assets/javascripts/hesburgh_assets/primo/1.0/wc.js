@@ -138,8 +138,11 @@ $(document).ready(function() {
                 $.ajax({type: "get", url: ddui, dataType: "html", data: dd_params,  success: function(data){
                 	var dre = /http/;
                 	if(data.match(dre)){
-				var el = $(this).find('.EXLResultTabs');
-				$(el).parents('.EXLResult').find('.EXLReviewsTab').after('<li id="docDelUrl" class="EXLReviewsTab EXLResultTab">' + data + '</li>');
+console.log($(this).find('.EXLResultTabs'));
+console.log($(this).find('.EXLResultTabs').parents('.EXLResult'));
+console.log($(this).find('.EXLResultTabs').parents('.EXLResult').find('.EXLReviewsTab'));
+
+				$(this).find('.EXLResultTabs').parents('.EXLResult').find('.EXLReviewsTab').after('<li id="docDelUrl" class="EXLReviewsTab EXLResultTab">' + data + '</li>');
                 	}
                 }});
 
