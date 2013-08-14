@@ -130,7 +130,7 @@ $(document).ready(function() {
 		//For Doc Delivery
       
 
-	        var dd_href = $(this).closest('.EXLSummary').find('.EXLViewOnlineTab a').attr('href');
+	        var dd_href = $(this).find('.EXLViewOnlineTab a').attr('href');
        		var dd_params = dd_href.substring( dd_href.indexOf('?') + 1 );
                 //var ddui = '/primo_library/libweb/tiles/local/docdel.jsp';
                 //$.ajax({type: "get", url: ddui, dataType: "html", data: ddud,  success: function(data){
@@ -140,7 +140,8 @@ $(document).ready(function() {
                 ///}
                 //}});
 
-
+console.log(dd_href);
+console.log(dd_params);
 
 		$(this).find('.EXLResultTabs').append('<li id="docDelUrl" class="EXLReviewsTab EXLResultTab">' + dd_params + '</li>');
 
