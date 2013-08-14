@@ -143,7 +143,7 @@ $(document).ready(function() {
 console.log(dd_href);
 console.log(dd_params);
 
-		$(this).find('.EXLResultTabs').append('<li id="docDelUrl" class="EXLReviewsTab EXLResultTab">' + dd_params + '</li>');
+		$(this).find('.EXLReviewsTab').after('<li id="docDelUrl" class="EXLReviewsTab EXLResultTab">' + dd_params + '</li>');
 
 
            }
