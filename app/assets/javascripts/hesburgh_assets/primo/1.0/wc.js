@@ -131,19 +131,19 @@ $(document).ready(function() {
       
 
 	        var dd_href = $(this).find('.EXLViewOnlineTab a').attr('href');
-       		var dd_params = dd_href.substring( dd_href.indexOf('?') + 1 );
-                //var ddui = '/primo_library/libweb/tiles/local/docdel.jsp';
-                //$.ajax({type: "get", url: ddui, dataType: "html", data: ddud,  success: function(data){
-                //var dre = /http/;
-                //if(data.match(dre)){
-                //rt.after('<li id="docDelUrl" class="EXLReviewsTab EXLResultTab">' + data + '</li>');
-                ///}
-                //}});
-
-console.log(dd_href);
+       		var dd_params = dd_href.substring( dd_href.indexOf('rft.') );
+		var dd_param_array = dd_params.split("&");
 console.log(dd_params);
 
-		$(this).find('.EXLReviewsTab').after('<li id="docDelUrl" class="EXLReviewsTab EXLResultTab">' + dd_params + '</li>');
+                var ddui = '/primo_library/libweb/tiles/local/docdel_openurl.jsp';
+                $.ajax({type: "get", url: ddui, dataType: "html", data: dd_params,  success: function(data){
+                	var dre = /http/;
+                	if(data.match(dre)){
+				$(this).find('.EXLReviewsTab').after('<li id="docDelUrl" class="EXLReviewsTab EXLResultTab">' + data + '</li>');
+                	}
+                }});
+
+
 
 
            }
