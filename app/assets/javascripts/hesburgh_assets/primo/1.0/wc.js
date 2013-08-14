@@ -120,9 +120,6 @@ $(document).ready(function() {
 						//add this tab!
         					EXLTA_addTab_TN(res, 'Request','NewTNRequestTab',location.href,'EXLDetailsTab','detailsTab','requestTab',false,'NewTNLocationTab');
                                        }
-					
-					//ADD LOCATION TAB!
-					//element, tabName,tabType,url,tabSelectorCopy,tabUrlReplace,tabUrlReplaceValue,firstTab,evaluator,evaluatorVar
 
                                 }});
 			}
@@ -133,10 +130,19 @@ $(document).ready(function() {
 		//For Doc Delivery
       
 
-	//var dd_url = "https://nd.illiad.oclc.org/illiad/IND/illiad.dll?Action=10&Form=30&url_ver=Z39.88-2004&ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&rfr_id=info:sid/ND:primocentral_docdel&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&"
-        //var dd_href = $(this).closest('.EXLSummary').find('.EXLViewOnlineTab a').attr('href');
-        //var dd_href = dd_href.replace("http://findtext.library.nd.edu:8889/ndu_local?",unescape(dd_url));
-	//$(this).parents('.EXLResult').append('<li id="docDelUrl" class="EXLReviewsTab EXLResultTab">' + dd_href + '</li>');
+	        var dd_href = $(this).closest('.EXLSummary').find('.EXLViewOnlineTab a').attr('href');
+       		var dd_params = dd_href.substring( dd_href.indexOf('?') + 1 );
+                //var ddui = '/primo_library/libweb/tiles/local/docdel.jsp';
+                //$.ajax({type: "get", url: ddui, dataType: "html", data: ddud,  success: function(data){
+                //var dre = /http/;
+                //if(data.match(dre)){
+                //rt.after('<li id="docDelUrl" class="EXLReviewsTab EXLResultTab">' + data + '</li>');
+                ///}
+                //}});
+
+
+
+		$(this).find('.EXLResultTabs').append('<li id="docDelUrl" class="EXLReviewsTab EXLResultTab">' + dd_params + '</li>');
 
 
            }
