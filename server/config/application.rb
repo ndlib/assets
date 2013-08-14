@@ -68,6 +68,8 @@ module Assets
       hesburgh_assets/main/1.0/index.js
       hesburgh_assets/main/1.0/index.css
       hesburgh_assets/main/1.0/ie.css
+      hesburgh_assets/main/1.0/search-appliance.css
+      hesburgh_assets/main/1.0/search-appliance.js
       hesburgh_assets/architecture_library/1.0/index.js
       hesburgh_assets/architecture_library/1.0/index.css
       hesburgh_assets/business_library/1.0/index.js

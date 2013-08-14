@@ -9,36 +9,7 @@
    Primary Library Template Structure
 ----------------------------------------- */
 
-$body-blue: #304962;
-$header-blue: #0F3255;
-$helvetica: "Helvetica Neue",Helvetica,Verdana,Arial,Helvetica,sans-serif;
-$content-bg: #F8F7E9;
-
-@mixin box {
-    -moz-box-sizing:border-box;
-    -webkit-box-sizing:border-box;
-    box-sizing:border-box;
-    background: none repeat scroll 0 0 #FFFFFF;
-    border: 1px solid #B1C6D3;
-    -webkit-border-radius: 14px;
-    -moz-border-radius: 14px;
-    border-radius:14px;
-    box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.7);
-    behavior: url(/assets/hesburgh_assets/main/1.0/PIE.htc);
-    padding:14px;
-    width:100%;
-}
-
-@mixin header-link {
-    border: medium none;
-    display: block;
-    position:absolute;
-    left:0;
-    margin: 0;
-    overflow: hidden;
-    text-indent: -9999px;
-    width: 460px;
-}
+@import "mixins.css.scss";
 
 
 body {
@@ -200,7 +171,6 @@ ul.contained.tabs-content > li {
   z-index:40;
   position: relative;
   border-top-left-radius: 0;
-  padding:35px 20px 14px;
 }
 
 
