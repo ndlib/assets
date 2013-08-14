@@ -134,6 +134,7 @@ $(document).ready(function() {
        		var dd_params = dd_href.substring( dd_href.indexOf('rft.') );
 		var dd_param_array = dd_params.split("&");
                 var ddui = '/primo_library/libweb/tiles/local/docdel_openurl.jsp';
+console.log('OK!');
 
                 $.ajax({type: "get", url: ddui, dataType: "html", data: dd_params,  success: function(data){
                 	var dre = /http/;
