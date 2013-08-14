@@ -1,4 +1,14 @@
-/*
- *= require_self
- *= require_tree .
-*/
+@import url("http://recommender.service.exlibrisgroup.com/utils/css/bx.css");
+
+caption.tblCaption span img {
+  display:none;
+}
+a#recommendations-about {
+  display:none;
+}
+td.thumbsUp {
+  display: none;
+}
+td.thumbsDown {
+  display: none;
+}

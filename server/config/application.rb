@@ -93,6 +93,7 @@ module Assets
       hesburgh_assets/admin/1.0/index.css
       hesburgh_assets/admin/1.0/index.js
       hesburgh_assets/primo/1.0/index.js
+      hesburgh_assets/primo/1.0/index.css
       hesburgh_assets/primo_malc/1.0/index.js
     )
 

@@ -120,26 +120,27 @@ $(document).ready(function() {
 						//add this tab!
         					EXLTA_addTab_TN(res, 'Request','NewTNRequestTab',location.href,'EXLDetailsTab','detailsTab','requestTab',false,'NewTNLocationTab');
                                        }
-					
-					//ADD LOCATION TAB!
-					//element, tabName,tabType,url,tabSelectorCopy,tabUrlReplace,tabUrlReplaceValue,firstTab,evaluator,evaluatorVar
 
                                 }});
-
-				// For Doc Delivery
-                                var ddud = 'pnxId=' + pnxResult;
-                                var ddui = '/primo_library/libweb/tiles/local/docdel.jsp';
-                                $.ajax({type: "get", url: ddui, dataType: "html", data: ddud,  success: function(data){
-                                        var dre = /http/;
-                                        if(data.match(dre)){
-                                                rt.after('<li id="docDelUrl" class="EXLReviewsTab EXLResultTab">' + data + '</li>');
-                                        }
-                                        }});
-
-
 			}
 
+
                  }});
+
+		//For Doc Delivery
+      
+
+	        var dd_href = $(this).find('.EXLViewOnlineTab a').attr('href');
+       		var dd_params = dd_href.substring( dd_href.indexOf('rft.') );
+		var dd_param_array = dd_params.split("&");
+console.log(dd_params);
+                var ddui = '/primo_library/libweb/tiles/local/docdel_openurl.jsp';
+                $.ajax({type: "get", url: ddui, dataType: "html", data: dd_params,  success: function(data){
+                	var dre = /http/;
+                	if(data.match(dre)){
+				$(this).find('.EXLReviewsTab').after('<li id="docDelUrl" class="EXLReviewsTab EXLResultTab">' + data + '</li>');
+                	}
+                }});
 
 
            }
