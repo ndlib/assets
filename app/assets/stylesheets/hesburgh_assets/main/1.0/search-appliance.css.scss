@@ -1,11 +1,91 @@
+@import "mixins.css.scss";
+
 .search-appliance {
+
+  // From Foundation
+  div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    border: 0 none;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+  }
+
+  dl.tabs { display: block; margin: 0 0 0 0; padding: 0; height: 30px; border-bottom: solid 1px #ddd; }
+  dl.tabs dt { display: block; width: auto; height: 30px; padding: 0 9px 0 20px; line-height: 30px; float: left; color: #999; font-size: 11px; text-transform: uppercase; cursor: default; }
+  dl.tabs dt:first-child { padding: 0 9px 0 0; }
+  dl.tabs dd { display: block; width: auto; height: 30px; padding: 0; float: left; }
+  dl.tabs dd a { display: block; width: auto; height: 29px; padding: 0 9px; line-height: 30px; border: solid 1px #ddd; margin: 0 -1px 0 0; color: #555; background: #eee; }
+
+  dl.contained.tabs dd a {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+  // End Foundation
+
+  input, select, textarea {
+    margin: 0;
+    font-size: 100%;
+    vertical-align: middle;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 18px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display: inline-block;
+    padding: 4px !important;
+    margin-bottom: 9px;
+    font-size: 13px;
+    line-height: 18px;
+    color: #555555;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    -webkit-border-radius: 3px;
+       -moz-border-radius: 3px;
+            border-radius: 3px;
+  }
+
+  .extra-links { list-style-type:none; padding-left:0 !important; float:left;margin-left: 0; }
+  .extra-links li { display:inline; padding-right: 1em;  float:left; }
+
+
+
+  select {
+    padding: 8px 4px !important ;
+  }
+
+  input.srch-box {
+    padding:.5em 0 !important;
+    width:230px;
+  }
+  input.srch-box.long {
+    width:424px;
+  }
+
+  dl.tabs {
+    @include tabs;
+  }
+
+  ul.tabs-content {
+    display: block;
+    margin: 0;
+  }
+
+  ul.contained.tabs-content {
+    list-style: none outside none !important;
+    margin-bottom: 1.12em;
+    padding: 0;
+  }
+
   ul.contained.tabs-content > li  {
+    @include box;
+    position: relative;
     float: left;
   	border-radius: 0;
   	box-shadow: none;
-  	position: relative;
   	z-index: auto;
-  	padding:16px;
+  	padding:16px !important;
+    margin: 0 !important;
+    list-style: none outside none !important;
   }
 
   ul.contained.tabs-content > li:before, ul.contained.tabs-content > li:after
@@ -40,7 +120,7 @@
     left: auto;
   }
 
-  .tabs {
+  dl.tabs {
     z-index: 100;
     position: absolute;
   }
@@ -71,10 +151,10 @@
   input.srch-box.long {
   	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
   	-moz-box-sizing: border-box;
-      height: 36px;
-      padding: 4px 30px 4px 12px;
-      border:none;
-      border-radius: 0;
+    height: 36px;
+    padding: 4px 30px 4px 12px !important;
+    border:none;
+    border-radius: 0;
   }
 
   .btn {
@@ -116,14 +196,21 @@
   	margin-bottom:0;
   }
 
-  .about-tab {
+  p.about-tab {
   	border:none;
   	right:0;
   	bottom:0;
+    padding: .3em;
 
     a {
+      padding:3px 6px 3px 20px;
+      background:url('info.gif') 5px center no-repeat;
       font-weight: bold;
       font-size:10px;
+    }
+
+    a:hover {
+      background-color:#e9f0f8;
     }
   }
 
@@ -132,9 +219,21 @@
   }
 
   dl.tabs dd {
+    margin-left: 0 !important;
+    overflow: hidden;
+    padding-right: 4px;
+    position: relative;
+    display: block;
+    float: left;
 
     a {
       padding-top:8px;
+      font-size: 13px;
+      font-weight: bold;
+      margin: 0;
+      position: relative;
+      text-decoration: none;
+      z-index: 2;
     }
 
     .default {
@@ -164,6 +263,10 @@
 
   #search_box {
     margin-top:36px;
+    float: left;
+    margin-bottom: 20px;
+    width: 100%;
+    z-index: 1;
   }
 
   dl.tabs {
@@ -210,8 +313,19 @@
 
   }
 
+  .onesearch span, .ndcatalog span {
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    height: 0 !important;
+    overflow: hidden !important;
+    padding-bottom: 0 !important;
+    padding-top: 29px !important;
+    text-decoration: none;
+  }
+
   .onesearch span {
     background-image: url(search_appliance/onesearch.off.png);
+    width: 80px !important;
   }
 
   .onesearch.active span {
@@ -220,6 +334,7 @@
 
   .ndcatalog span {
     background-image: url(search_appliance/ndcatalog.off.png);
+    width: 73px !important;
   }
 
   .ndcatalog.active span {

@@ -15,6 +15,11 @@
       <li class="active tab_jou" id="tab_jouTab">
         <form accept-charset="UTF-8" action="<%= library_url("/search/ejournals") %>" method="get">
           <fieldset>
+            <select title="Targeted search options" name="search_field" id="search_field" class="search_field input-small">
+              <option value="all_fields">All Fields</option>
+              <option value="title">Title</option>
+              <option value="issn">ISSN</option>
+            </select>
             <input class="srch-box long" id="q" name="q" placeholder="Find a specific journal" type="text" value="Science" />
             <button type="submit" class="btn btn-primary search-btn" id="search">Search</button>
           </fieldset>
