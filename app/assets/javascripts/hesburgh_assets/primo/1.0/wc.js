@@ -133,7 +133,10 @@ $(document).ready(function() {
 		if (lookupPNX == ''){
 		//if (($(exlResult_test).contains('.NewTNRequestTab') == false) && ($(exlResult_test).contains('.EXLRequestTab') == false)){
 	        	var dd_href = $(this).find('.EXLViewOnlineTab a').attr('href');
-			if(dd_href.indexOf('findtext') > 0){
+			//if(dd_href.indexOf('findtext') > 0){
+console.log($(this).find('.EXLViewOnlineTab a'));
+
+			if($(this).find('.EXLViewOnlineTab a').find('.findtext')){
        				var dd_params = dd_href.substring( dd_href.indexOf('?') + 1 );
 				var dd_param_array = dd_params.split("&");
                 		var ddui = '/primo_library/libweb/tiles/local/docdel_openurl.jsp';
