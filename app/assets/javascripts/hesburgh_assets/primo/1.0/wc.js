@@ -131,7 +131,7 @@ $(document).ready(function() {
 		//var exlOnlineTab = $(res).find('.EXLResultTabs').parents('.EXLResult').find('.EXLViewOnlineTab');
 
 		//if (($(".EXLViewOnlineTab:contains('").hasClass("EXLViewOnlineTabDisable")) && ($(".EXLViewOnlineTab").hasClass("EXLViewOnlineTabDisable"))){
-	        	var dd_href = $(this).find('.EXLViewOnlineTab:contains('findtext') a').attr('href');
+	        	var dd_href = $(this).find('.EXLViewOnlineTab:contains("findtext") a').attr('href');
 			if(dd_href){
        				var dd_params = dd_href.substring( dd_href.indexOf('?') + 1 );
 				var dd_param_array = dd_params.split("&");
