@@ -128,11 +128,13 @@ $(document).ready(function() {
                  }});
 
 		//For Doc Delivery/ILL
-		//var exlOnlineTab = $(res).find('.EXLResultTabs').parents('.EXLResult').find('.EXLViewOnlineTab');
+		var exlResult_test = $(res).find('.EXLResultTabs').parents('.EXLResult');
 
 		//if (($(".EXLViewOnlineTab:contains('").hasClass("EXLViewOnlineTabDisable")) && ($(".EXLViewOnlineTab").hasClass("EXLViewOnlineTabDisable"))){
-	        	var dd_href = $(this).find('.EXLViewOnlineTab:contains("findtext") a').attr('href');
-			if(dd_href){
+		
+		if ((exlResult_test.contains('.NewTNRequestTab') == false) && (exlResult_test.contains('.EXLRequestTab') == false)){
+	        	var dd_href = $(this).find('.EXLViewOnlineTab a').attr('href');
+			if(dd_href.indexOf('findtext') > 0){
        				var dd_params = dd_href.substring( dd_href.indexOf('?') + 1 );
 				var dd_param_array = dd_params.split("&");
                 		var ddui = '/primo_library/libweb/tiles/local/docdel_openurl.jsp';
@@ -144,7 +146,7 @@ $(document).ready(function() {
                 			}
                 		}});
 			}
-		//}
+		}
 
            }
 
