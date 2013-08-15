@@ -132,10 +132,10 @@ $(document).ready(function() {
 
 		//if (($(".EXLViewOnlineTab:contains('").hasClass("EXLViewOnlineTabDisable")) && ($(".EXLViewOnlineTab").hasClass("EXLViewOnlineTabDisable"))){
 	
-console.log(exlResult_test);
-console.log(exlResult_test.contains('.NewTNRequestTab'));
+console.log($(exlResult_test));
+console.log($(exlResult_test).contains('.NewTNRequestTab'));
 	
-		if ((exlResult_test.contains('.NewTNRequestTab') == false) && (exlResult_test.contains('.EXLRequestTab') == false)){
+		if (($(exlResult_test).contains('.NewTNRequestTab') == false) && ($(exlResult_test).contains('.EXLRequestTab') == false)){
 	        	var dd_href = $(this).find('.EXLViewOnlineTab a').attr('href');
 console.log(dd_href);
 console.log(dd_href.indexOf('findtext') > 0);
