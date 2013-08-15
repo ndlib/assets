@@ -131,7 +131,7 @@ $(document).ready(function() {
       
 
 	        var dd_href = $(this).find('.EXLViewOnlineTab a').attr('href');
-       		var dd_params = dd_href.substring( dd_href.indexOf('rft.') );
+       		var dd_params = dd_href.substring( dd_href.indexOf('?') + 1 );
 		var dd_param_array = dd_params.split("&");
                 var ddui = '/primo_library/libweb/tiles/local/docdel_openurl.jsp';
 
