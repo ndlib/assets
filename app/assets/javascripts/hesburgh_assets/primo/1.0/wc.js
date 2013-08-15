@@ -131,9 +131,14 @@ $(document).ready(function() {
 		var exlResult_test = $(res).find('.EXLResultTabs').parents('.EXLResult');
 
 		//if (($(".EXLViewOnlineTab:contains('").hasClass("EXLViewOnlineTabDisable")) && ($(".EXLViewOnlineTab").hasClass("EXLViewOnlineTabDisable"))){
-		
+	
+console.log(exlResult_test);
+console.log(exlResult_test.contains('.NewTNRequestTab'));
+	
 		if ((exlResult_test.contains('.NewTNRequestTab') == false) && (exlResult_test.contains('.EXLRequestTab') == false)){
 	        	var dd_href = $(this).find('.EXLViewOnlineTab a').attr('href');
+console.log(dd_href);
+console.log(dd_href.indexOf('findtext') > 0));
 			if(dd_href.indexOf('findtext') > 0){
        				var dd_params = dd_href.substring( dd_href.indexOf('?') + 1 );
 				var dd_param_array = dd_params.split("&");
