@@ -90,6 +90,9 @@ $(document).ready(function(){
 		var t = $(this).children('.EXLSummaryContainer').children('.EXLSummaryFields').children('.EXLResultAvailability').children('.EXLResultStatusAvailable');
 		var tt = t.html();
 		var l = $(this).children('.EXLTabsRibbon').children('div').children('.EXLResultTabs').children('.EXLLocationsTab').html();
+console.log(l);
+console.log(tt);
+console.log(tm);
 		var lt = false;	
 		if(l != null){
 			lt = true;
