@@ -1,84 +1,8 @@
-//Javascript to develop/test worldcat search link in primo
+//Javascript to perform metadata lookups
 //Robin Schaaf, 1/9/2013
 
 
 $(document).ready(function() {
-	//advanced search
-	if ($('#exlidAdvancedSearchRibbon').length){
-
-		var searchString='';
-
-		//loop through each advanced search row
-		$('.EXLAdvancedSearchFormRow').each(function(index) {
-			//as long as free text is entered
-			if( ($('#input_freeText' + index).length) && ($('#input_freeText' + index).val() !== '')){
-				//the dropdowns start with 1
-				ddIndex = index + 1;
-				//convert the search type from what's in the dropdown
-				//to worldcat's term
-				wcIndex = getWCIndex($('#exlidInput_scope_' + ddIndex).val());
-	
-				//for 'constains'search
-				var operator = '%3A';
-				//for 'exact' search
-				if ($('#exlidInput_precisionOperator_' + ddIndex).val() == 'exact'){
-					operator = '%3D';
-				}
-				
-				//construct search string
-				searchString += wcIndex + operator + $('#input_freeText' + index).val() + ' ';
-			}
-		});
-
-
-		//also language search
-		if ($('#exlidInput_language_').val() != 'all_items'){
-			searchString += 'ln' + '%3A' + $('#exlidInput_language_').val() + ' ';
-		}
-
-
-		if (searchString !== ''){
-			//replace space with +
-			searchString = searchString.replace(/ /g, '+');
-			
-			//remove last "+"
-			searchString = searchString.substring(0,searchString.length-1); 
-
-			//escape quotes
-			searchString = searchString.replace(/\"/g, '&quot;');
-			searchString = searchString.replace(/\'/g, "\\'");
-			
-			//expand width of parent container
-			$('.EXLSearchTabsContainer').css('width','100%');
-
-			//add the worldcat link
-			$('.EXLSearchTabsContainer').append('<div id="WorldCatAdvancedDiv"><a onclick="javascript:window.open(\'http://www.worldcat.org.proxy.library.nd.edu/search?q=' + searchString + '\');" href="javascript:void(0);"><img src="../images/worldcat.png" /></a></div>');
-		}
-
-	}else{ //basic search
-
-		if ($('#search_field').val() != ''){
-			var searchTerm = $('#search_field').val();
-
-			//escape quotes
-			searchTerm = searchTerm.replace(/\"/g, '&quot;');
-			searchTerm = searchTerm.replace(/\'/g, "\\'");
-			
-			
-			//expand width of parent container
-			$('.EXLSearchTabsContainer').css('width','100%');
-
-			//add the worldcat link
-			$('.EXLSearchTabsContainer').append('<div id="WorldCatBasicDiv"><a onclick="javascript:window.open(\'http://www.worldcat.org.proxy.library.nd.edu/search?q=' + searchTerm + '\');" href="javascript:void(0);"><img src="../images/worldcat.png" /></a></div>');
-
-
-		}
-
-	}
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////
-
 
        $('.EXLSummary').each(function(){
            var res = $(this);
@@ -112,7 +36,7 @@ $(document).ready(function() {
         				res.parents('.EXLResult').find('.EXLResultRecordId').attr('lookup-id', lookupPNX);
 				}
 
-				//Add request tab first so we can make it first, and then add the locations tab to make it second
+				//Add request tab after locations tab
                                 var rrud = 'pnxId=' + lookupPNX + '&institution=NDU';
                                 var rrui = '/primo_library/libweb/tiles/local/request.jsp';
                                 $.ajax({type: "get", url: rrui, dataType: "html", data: rrud,  success: function(req){
@@ -128,13 +52,13 @@ $(document).ready(function() {
 
                  }});
 
-		//For Doc Delivery/ILL
-	
+		//For Doc Delivery/ILL tab
 		if (lookupPNX == ''){
 		//if (($(exlResult_test).contains('.NewTNRequestTab') == false) && ($(exlResult_test).contains('.EXLRequestTab') == false)){
 	        	var dd_href = $(this).find('.EXLViewOnlineTab a').attr('href');
-			//if(dd_href.indexOf('findtext') > 0){
-console.log($(this).find('.EXLViewOnlineTab a'));
+
+
+console.log($(this).find('.EXLViewOnlineTab').html());
 
 			if($(this).find('.EXLViewOnlineTab a').find('.findtext')){
        				var dd_params = dd_href.substring( dd_href.indexOf('?') + 1 );
@@ -151,6 +75,22 @@ console.log($(this).find('.EXLViewOnlineTab a'));
 		}
 
            }
+
+                var t = $(this).children('.EXLSummaryContainer').children('.EXLSummaryFields').children('.EXLResultAvailability');
+                var tt = t.html();
+                var l = $(this).children('.EXLTabsRibbon').children('div').children('.EXLResultTabs').children('.EXLLocationsTab').html();
+                var lt = false;
+                if(l != null){
+                        lt = true;
+                }
+                var re = new RegExp("Online access available");
+                var tm = re.test(tt);
+                if(tm && lt){
+                        t.append(" <span class=\"inprint\">(also in print, see locations for details)</span>");
+                }
+                });
+
+
 
 
        });
