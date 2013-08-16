@@ -88,7 +88,7 @@ $(document).ready(function(){
 	$('.EXLSummary').each(function(){
 		var t = $(this).children('.EXLSummaryContainer').children('.EXLSummaryFields').children('.EXLResultAvailability');
 		var tt = t.html();
-		var l = $(this).children('.EXLTabsRibbon').children('div').children('.EXLResultTabs').children('.EXLLocationsTab').innerHTML();
+		var l = $(this).children('.EXLTabsRibbon').children('div').children('.EXLResultTabs').children('.EXLLocationsTab').html();
 		var lt = false;	
 		if(l != null){
 			lt = true;
