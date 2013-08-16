@@ -59,16 +59,14 @@ $(document).ready(function() {
                 var ft = re.test($(summary).find('.EXLViewOnlineTab').html());
 		var rt = $(summary).find('.EXLResultTabs').find('.NewTNRequestTab');
 
-console.log($(summary).find('.EXLViewOnlineTab').html());
-console.log(ft);
-console.log(rt);
+console.log(rt.length);
 
 
 		//For Doc Delivery/ILL tab
-		if ((ft) && !(rt)){
-	        	var dd_href = summary.find('.EXLViewOnlineTab a').attr('href');
+		if ((ft) && (rt.length == "0")){
+	        	var dd_href = $(summary).find('.EXLViewOnlineTab a').attr('href');
 
-
+console.log(dd_href);
 
 			if($(this).find('.EXLViewOnlineTab a').find('.findtext')){
        				var dd_params = dd_href.substring( dd_href.indexOf('?') + 1 );
