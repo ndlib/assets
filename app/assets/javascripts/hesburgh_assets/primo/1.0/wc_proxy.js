@@ -52,13 +52,16 @@ $(document).ready(function() {
 
                  }});
 
-		//For Doc Delivery/ILL tab
-		if (lookupPNX == ''){
-		//if (($(exlResult_test).contains('.NewTNRequestTab') == false) && ($(exlResult_test).contains('.EXLRequestTab') == false)){
-	        	var dd_href = $(this).find('.EXLViewOnlineTab a').attr('href');
 
 
 console.log($(this).find('.EXLViewOnlineTab').html());
+
+		//For Doc Delivery/ILL tab
+		if (res.find('.EXLResultTabs').find('.NewTNRequestTab') == null){
+	        	var dd_href = res.find('.EXLViewOnlineTab a').attr('href');
+
+
+console.log(res.find('.EXLViewOnlineTab').html());
 
 			if($(this).find('.EXLViewOnlineTab a').find('.findtext')){
        				var dd_params = dd_href.substring( dd_href.indexOf('?') + 1 );
@@ -249,12 +252,9 @@ function EXLTA_addTab_TN(summaryElement, tabName,tabType,url,tabSelectorCopy,tab
                                  $(element).addClass('EXLResultFirstTab');
                                  $(element).prepend(customTab);
                  }else{
-                                 //$(element).find('li').removeClass('EXLResultLastTab');
-                                 //$(customTab).addClass('EXLResultLastTab');
                                  $(element).parents('.EXLResult').find('.' + appendAfter).after(customTab);
                   }
 
-                 //      $(this).parents('.EXLResult').find('.EXLSummary').append(customTabContainer);
                  var result = $(element).parents('.EXLResult');
 
                  if (!EXLTA_isFullDisplay()){//Solves full display bug where container isn't added to page.
