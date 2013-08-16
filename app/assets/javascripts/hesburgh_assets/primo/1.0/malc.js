@@ -87,12 +87,12 @@ $(document).ready(function(){
 
 
 	$('.EXLSummary').each(function(){
-		var t = $(this).children('.EXLSummaryContainer').children('.EXLSummaryFields').children('.EXLResultAvailability').children('.EXLResultStatusAvailable');
+		var t = $(this).children('.EXLSummaryContainer').children('.EXLSummaryFields').children('.EXLResultAvailability').children('em');
 		var tt = t.html();
 		var l = $(this).children('.EXLTabsRibbon').children('div').children('.EXLResultTabs').children('.EXLLocationsTab').html();
-console.log(l);
+console.log(t);
 console.log(tt);
-console.log(tm);
+console.log(l);
 		var lt = false;	
 		if(l != null){
 			lt = true;
