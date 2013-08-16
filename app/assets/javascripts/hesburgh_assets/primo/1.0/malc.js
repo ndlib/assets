@@ -61,7 +61,6 @@ $(document).ready(function(){
 	var tab = $(location).attr('href').match(/tab=(\w*)/);
 	if ( vid == "vid=NDUPC"  ) {
 		jQuery.getJSON('/primo_library/libweb/current_session.jsp', function(data){
-			console.log(data);
 			var on_campus = data.on_campus ;
 			var logged_in = data.logged_in ;
 			var logURL = $('.EXLSignOut a').attr('href');
@@ -90,7 +89,6 @@ $(document).ready(function(){
 		var t = $(this).children('.EXLSummaryContainer').children('.EXLSummaryFields').children('.EXLResultAvailability');
 		var tt = t.html();
 		var l = $(this).children('.EXLTabsRibbon').children('div').children('.EXLResultTabs').children('.EXLLocationsTab').innerHTML();
-console.log(l);
 		var lt = false;	
 		if(l != null){
 			lt = true;
