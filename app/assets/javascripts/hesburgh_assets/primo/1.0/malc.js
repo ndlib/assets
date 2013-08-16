@@ -90,9 +90,7 @@ $(document).ready(function(){
 		var t = $(this).children('.EXLSummaryContainer').children('.EXLSummaryFields').children('.EXLResultAvailability');
 		var tt = t.html();
 		//var l = $(this).children('.EXLTabsRibbon').children('div').children('.EXLResultTabs').children('.EXLLocationsTab').html();
-		var l = $(this).children('.EXLTabsRibbon').children('div').children('.EXLResultTabs').children('.NewLocationTab').html();
-console.log(t);
-console.log(tt);
+		var l = $(this).children('.EXLTabsRibbon').children('div').children('.EXLResultTabs');
 console.log(l);
 		var lt = false;	
 		if(l != null){
