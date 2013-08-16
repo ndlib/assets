@@ -86,8 +86,8 @@ module Assets
       hesburgh_assets/medieval_library/1.0/index.css
       hesburgh_assets/radlab_library/1.0/index.js
       hesburgh_assets/radlab_library/1.0/index.css
-      hesburgh_assets/rome/1.0/index.js
-      hesburgh_assets/rome/1.0/index.css
+      hesburgh_assets/rome_library/1.0/index.js
+      hesburgh_assets/rome_library/1.0/index.css
       hesburgh_assets/vrc_library/1.0/index.js
       hesburgh_assets/vrc_library/1.0/index.css
       hesburgh_assets/catalog/1.0/index.js
