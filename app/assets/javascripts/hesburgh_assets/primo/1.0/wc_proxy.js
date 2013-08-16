@@ -76,19 +76,8 @@ console.log($(this).find('.EXLViewOnlineTab').html());
 
            }
 
-                var t = $(this).children('.EXLSummaryContainer').children('.EXLSummaryFields').children('.EXLResultAvailability');
-                var tt = t.html();
-                var l = $(this).children('.EXLTabsRibbon').children('div').children('.EXLResultTabs').children('.EXLLocationsTab').html();
-                var lt = false;
-                if(l != null){
-                        lt = true;
-                }
-                var re = new RegExp("Online access available");
-                var tm = re.test(tt);
-                if(tm && lt){
-                        t.append(" <span class=\"inprint\">(also in print, see locations for details)</span>");
-                }
-                });
+                //var re = new RegExp("Online access available");
+                //var tm = re.test(tt);
 
 
 
