@@ -70,7 +70,6 @@ $(document).ready(function() {
                 	$.ajax({type: "get", url: ddui, dataType: "html", data: dd_params,  success: function(data){
                 		var dre = /http/;
                 		if(data.match(dre)){
-console.log("here");
 					$(summary).find('.EXLResultTabs').parents('.EXLResult').find('.EXLReviewsTab').after('<li id="docDelUrl" class="EXLReviewsTab EXLResultTab">' + data + '</li>');
                 		}
                 	}});
