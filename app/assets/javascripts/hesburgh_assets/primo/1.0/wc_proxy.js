@@ -5,7 +5,7 @@
 $(document).ready(function() {
 
        $('.EXLSummary').each(function(){
-           var res = $(this);
+           var summary = $(this);
            var dn = EXLTA_recordId($(this));
 	   var lookupPNX = "";
 		
@@ -27,13 +27,13 @@ $(document).ready(function() {
 
 			if (lookupPNX != ''){
 
-        			EXLTA_addTab_TN(res, 'Locations','NewTNLocationTab',location.href,'EXLDetailsTab','detailsTab','newLocationsTab',true);
+        			EXLTA_addTab_TN(summary, 'Locations','NewTNLocationTab',location.href,'EXLDetailsTab','detailsTab','newLocationsTab',true);
 
         			
       				if (EXLTA_isFullDisplay()){
-					res.parents('.EXLResultsList').find('.EXLResultRecordId').attr('lookup-id', lookupPNX);
+					summary.parents('.EXLResultsList').find('.EXLResultRecordId').attr('lookup-id', lookupPNX);
 				}else{
-        				res.parents('.EXLResult').find('.EXLResultRecordId').attr('lookup-id', lookupPNX);
+        				summary.parents('.EXLResult').find('.EXLResultRecordId').attr('lookup-id', lookupPNX);
 				}
 
 				//Add request tab after locations tab
@@ -43,7 +43,7 @@ $(document).ready(function() {
                                         var dre = /<div id="requestable">yes<\/div>/;
                                         if(req.match(dre)){
 						//add this tab!
-        					EXLTA_addTab_TN(res, 'Request','NewTNRequestTab',location.href,'EXLDetailsTab','detailsTab','requestTab',false,'NewTNLocationTab');
+        					EXLTA_addTab_TN(summary, 'Request','NewTNRequestTab',location.href,'EXLDetailsTab','detailsTab','requestTab',false,'NewTNLocationTab');
                                        }
 
                                 }});
@@ -54,14 +54,21 @@ $(document).ready(function() {
 
 
 
-console.log($(this).find('.EXLViewOnlineTab').html());
+                
+		var re = new RegExp("FindText");
+                var ft = re.test($(summary).find('.EXLViewOnlineTab').html());
+		var rt = $(summary).find('.EXLResultTabs').find('.NewTNRequestTab');
+
+console.log($(summary).find('.EXLViewOnlineTab').html());
+console.log(ft);
+console.log(rt);
+
 
 		//For Doc Delivery/ILL tab
-		if (res.find('.EXLResultTabs').find('.NewTNRequestTab') == null){
-	        	var dd_href = res.find('.EXLViewOnlineTab a').attr('href');
+		if ((ft) && !(rt)){
+	        	var dd_href = summary.find('.EXLViewOnlineTab a').attr('href');
 
 
-console.log(res.find('.EXLViewOnlineTab').html());
 
 			if($(this).find('.EXLViewOnlineTab a').find('.findtext')){
        				var dd_params = dd_href.substring( dd_href.indexOf('?') + 1 );
@@ -71,7 +78,7 @@ console.log(res.find('.EXLViewOnlineTab').html());
                 		$.ajax({type: "get", url: ddui, dataType: "html", data: dd_params,  success: function(data){
                 			var dre = /http/;
                 			if(data.match(dre)){
-						$(res).find('.EXLResultTabs').parents('.EXLResult').find('.EXLReviewsTab').after('<li id="docDelUrl" class="EXLReviewsTab EXLResultTab">' + data + '</li>');
+						$(summary).find('.EXLResultTabs').parents('.EXLResult').find('.EXLReviewsTab').after('<li id="docDelUrl" class="EXLReviewsTab EXLResultTab">' + data + '</li>');
                 			}
                 		}});
 			}
@@ -79,8 +86,6 @@ console.log(res.find('.EXLViewOnlineTab').html());
 
            }
 
-                //var re = new RegExp("Online access available");
-                //var tm = re.test(tt);
 
 
 
