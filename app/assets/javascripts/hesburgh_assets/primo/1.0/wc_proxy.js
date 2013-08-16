@@ -59,27 +59,20 @@ $(document).ready(function() {
                 var ft = re.test($(summary).find('.EXLViewOnlineTab').html());
 		var rt = $(summary).find('.EXLResultTabs').find('.NewTNRequestTab');
 
-console.log(rt.length);
-
-
 		//For Doc Delivery/ILL tab
+		//only if there's no "request" tab and no online access
 		if ((ft) && (rt.length == "0")){
 	        	var dd_href = $(summary).find('.EXLViewOnlineTab a').attr('href');
+       			var dd_params = dd_href.substring( dd_href.indexOf('?') + 1 );
+			var dd_param_array = dd_params.split("&");
+                	var ddui = '/primo_library/libweb/tiles/local/docdel_openurl.jsp';
 
-console.log(dd_href);
-
-			if($(this).find('.EXLViewOnlineTab a').find('.findtext')){
-       				var dd_params = dd_href.substring( dd_href.indexOf('?') + 1 );
-				var dd_param_array = dd_params.split("&");
-                		var ddui = '/primo_library/libweb/tiles/local/docdel_openurl.jsp';
-
-                		$.ajax({type: "get", url: ddui, dataType: "html", data: dd_params,  success: function(data){
-                			var dre = /http/;
-                			if(data.match(dre)){
-						$(summary).find('.EXLResultTabs').parents('.EXLResult').find('.EXLReviewsTab').after('<li id="docDelUrl" class="EXLReviewsTab EXLResultTab">' + data + '</li>');
-                			}
-                		}});
-			}
+                	$.ajax({type: "get", url: ddui, dataType: "html", data: dd_params,  success: function(data){
+                		var dre = /http/;
+                		if(data.match(dre)){
+					$(summary).find('.EXLResultTabs').parents('.EXLResult').find('.EXLReviewsTab').after('<li id="docDelUrl" class="EXLReviewsTab EXLResultTab">' + data + '</li>');
+                		}
+                	}});
 		}
 
            }
