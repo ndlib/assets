@@ -7,4 +7,3 @@
 //= require ./ndu.js
 //= require ./wc.js
 //= require ./wc_proxy.js
-//= require ./primo_search.js
