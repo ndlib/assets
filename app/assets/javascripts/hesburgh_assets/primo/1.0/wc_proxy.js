@@ -62,7 +62,7 @@ $(document).ready(function() {
 		//For Doc Delivery/ILL tab
 		//only if there's no "locations" (not possible if no pnxid) tab and no online access
 		//if ((ft) && (rt.length == "0")){
-		if ((ft) && (lookupPNX === false)){
+		if ((ft) && (lookupPNX == "")){
 	        	var dd_href = $(summary).find('.EXLViewOnlineTab a').attr('href');
        			var dd_params = dd_href.substring( dd_href.indexOf('?') + 1 );
 			var dd_param_array = dd_params.split("&");
