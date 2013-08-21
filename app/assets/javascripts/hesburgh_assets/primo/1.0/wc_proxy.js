@@ -63,25 +63,25 @@ $(document).ready(function() {
 		//only if there's no "locations" (not possible if no pnxid) tab and no online access
 		
 
-		//if there's a findtext menu
+		//if there's a findtext menu (not available online)
 		if (ft){
 			var dd_href = $(summary).find('.EXLViewOnlineTab a').attr('href');
                         var dd_params = dd_href.substring( dd_href.indexOf('?') + 1 );
                         var dd_param_array = dd_params.split("&");
-		}
 
-		if (lookupPNX == ""){
-                	var ddui = '/primo_library/libweb/tiles/local/ill_request.jsp';
-		} else if(rt.length == "0"){
-                        var ddui = '/primo_library/libweb/tiles/local/docdel_openurl.jsp';
-		}
+			if (lookupPNX == ""){
+                		var ddui = '/primo_library/libweb/tiles/local/ill_request.jsp';
+			} else if(rt.length == "0"){
+                	        var ddui = '/primo_library/libweb/tiles/local/docdel_openurl.jsp';
+			}
 	
-                $.ajax({type: "get", url: ddui, dataType: "html", data: dd_params,  success: function(data){
-                          var dre = /http/;
-                          if(data.match(dre)){
-                                $(summary).find('.EXLResultTabs').parents('.EXLResult').find('.EXLReviewsTab').after('<li id="docDelUrl" class="EXLReviewsTab EXLResultTab">' + data + '</li>');
-                          }
-                }}); 
+                	$.ajax({type: "get", url: ddui, dataType: "html", data: dd_params,  success: function(data){
+                	          var dre = /http/;
+                          	if(data.match(dre)){
+                                	$(summary).find('.EXLResultTabs').parents('.EXLResult').find('.EXLReviewsTab').after('<li id="docDelUrl" class="EXLReviewsTab EXLResultTab">' + data + '</li>');
+                          	}
+                	}}); 
+		}
            }
 
 
