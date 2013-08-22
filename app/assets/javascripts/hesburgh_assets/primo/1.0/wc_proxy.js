@@ -44,8 +44,10 @@ $(document).ready(function() {
                                         if(req.match(dre)){
 						//add this tab!
         					EXLTA_addTab_TN(summary, 'Request','NewTNRequestTab',location.href,'EXLDetailsTab','detailsTab','requestTab',false,'NewTNLocationTab');
+console.log('added tab ' + lookupPNX);
                                         }else{ //not requestable so we add a docdel link if also not available online
 
+console.log('docdel tab ' + lookupPNX);
 						var re = new RegExp("FindText");
                 				var ft = re.test($(summary).find('.EXLViewOnlineTab').html());
 
@@ -79,6 +81,7 @@ $(document).ready(function() {
 
 			//if there's a findtext menu (not available online)
 			if (ft){
+console.log('ft found ' + lookupPNX);
 				var dd_href = $(summary).find('.EXLViewOnlineTab a').attr('href');
                        		var dd_params = dd_href.substring( dd_href.indexOf('?') + 1 );
 
@@ -90,6 +93,7 @@ $(document).ready(function() {
                 		$.ajax({type: "get", url: ddui, dataType: "html", data: dd_params,  success: function(data){
                 	          var dre = /http/;
                  	         	if(data.match(dre)){
+console.log('ill found ' + lookupPNX);
                   		              	$(summary).find('.EXLResultTabs').parents('.EXLResult').find('.EXLReviewsTab').after('<li id="docDelUrl" class="EXLReviewsTab EXLResultTab">' + data + '</li>');
                  	         	}
                 		}}); 
