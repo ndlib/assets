@@ -45,23 +45,18 @@ $(document).ready(function() {
 						//add this tab!
         					EXLTA_addTab_TN(summary, 'Request','NewTNRequestTab',location.href,'EXLDetailsTab','detailsTab','requestTab',false,'NewTNLocationTab');
                                         }else{ //not requestable so we add a docdel link if also not available online
-console.log('not requestable' + lookupPNX);
 						var re = new RegExp("FindText");
                 				var ft = re.test($(summary).find('.EXLViewOnlineTab').html());
 						
-						//var rt = $(summary).find('.EXLResultTabs').find('.NewTNLocationTab');
-
 						//make sure there's a findtext link
 						if(ft){
 							var dd_href = $(summary).find('.EXLViewOnlineTab a').attr('href');
-console.log('findtextlink found' + lookupPNX);
                        					var dd_params = dd_href.substring( dd_href.indexOf('?') + 1 );
 							var ddui = '/primo_library/libweb/tiles/local/docdel_openurl.jsp';
                 					$.ajax({type: "get", url: ddui, dataType: "html", data: dd_params,  success: function(data){
                 	          				var dre = /http/;
                  	         				if(data.match(dre)){
                   		              				$(summary).find('.EXLResultTabs').parents('.EXLResult').find('.EXLReviewsTab').after('<li id="docDelUrl" class="EXLReviewsTab EXLResultTab">' + data + '</li>');
-console.log('docdel eligible' + lookupPNX);
                  	         				}
                 					}}); 
 
@@ -83,7 +78,6 @@ console.log('docdel eligible' + lookupPNX);
 			//if there's a findtext menu (not available online)
 			// If there's no location tab or pnx it means we don't have it in print
 			if ((ft) && (lt.length == "0") && (lookupPNX == "")){
-console.log('ILL test - eligible ' + lookupPNX);
 				var dd_href = $(summary).find('.EXLViewOnlineTab a').attr('href');
                        		var dd_params = dd_href.substring( dd_href.indexOf('?') + 1 );
                			var ddui = '/primo_library/libweb/tiles/local/ill_request.jsp';
@@ -91,7 +85,7 @@ console.log('ILL test - eligible ' + lookupPNX);
                 		$.ajax({type: "get", url: ddui, dataType: "html", data: dd_params,  success: function(data){
                 	          var dre = /http/;
                  	         	if(data.match(dre)){
-//                  		              	$(summary).find('.EXLResultTabs').parents('.EXLResult').find('.EXLReviewsTab').after('<li id="docDelUrl" class="EXLReviewsTab EXLResultTab">' + data + '</li>');
+                  		              	$(summary).find('.EXLResultTabs').parents('.EXLResult').find('.EXLReviewsTab').after('<li id="docDelUrl" class="EXLReviewsTab EXLResultTab">' + data + '</li>');
                  	         	}
                 		}}); 
 			}
