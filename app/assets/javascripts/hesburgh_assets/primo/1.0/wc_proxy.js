@@ -44,7 +44,27 @@ $(document).ready(function() {
                                         if(req.match(dre)){
 						//add this tab!
         					EXLTA_addTab_TN(summary, 'Request','NewTNRequestTab',location.href,'EXLDetailsTab','detailsTab','requestTab',false,'NewTNLocationTab');
-                                       }
+                                        }else{ //not requestable so we add a docdel link if also not available online
+
+						var re = new RegExp("FindText");
+                				var ft = re.test($(summary).find('.EXLViewOnlineTab').html());
+
+						//make sure there's a findtext link
+						if(ft){
+							var dd_href = $(summary).find('.EXLViewOnlineTab a').attr('href');
+                       					var dd_params = dd_href.substring( dd_href.indexOf('?') + 1 );
+                	        	
+							var ddui = '/primo_library/libweb/tiles/local/docdel_openurl.jsp';
+                					$.ajax({type: "get", url: ddui, dataType: "html", data: dd_params,  success: function(data){
+                	          				var dre = /http/;
+                 	         				if(data.match(dre)){
+                  		              				$(summary).find('.EXLResultTabs').parents('.EXLResult').find('.EXLReviewsTab').after('<li id="docDelUrl" class="EXLReviewsTab EXLResultTab">' + data + '</li>');
+                 	         				}
+                					}}); 
+
+						}
+
+					}
 
                                 }});
 			}
@@ -55,21 +75,16 @@ $(document).ready(function() {
 			var re = new RegExp("FindText");
                 	var ft = re.test($(summary).find('.EXLViewOnlineTab').html());
 
-			var rt = $(summary).find('.EXLResultTabs').find('.NewTNRequestTab');
 			var lt = $(summary).find('.EXLResultTabs').find('.NewTNLocationTab');
 
 			//if there's a findtext menu (not available online)
 			if (ft){
 				var dd_href = $(summary).find('.EXLViewOnlineTab a').attr('href');
                        		var dd_params = dd_href.substring( dd_href.indexOf('?') + 1 );
-                        	var dd_param_array = dd_params.split("&");
 
-				// If there's no location tab pnx it means we don't have it in print
+				// If there's no location tab or pnx it means we don't have it in print
 				if ((lt.length == "0") && (lookupPNX == "")){
                 			var ddui = '/primo_library/libweb/tiles/local/ill_request.jsp';
-				//otherwise we have it in print but it's not requestable (so goes through docdel)
-				} else if(rt.length == "0"){
-                	        	var ddui = '/primo_library/libweb/tiles/local/docdel_openurl.jsp';
 				}
 	
                 		$.ajax({type: "get", url: ddui, dataType: "html", data: dd_params,  success: function(data){
@@ -170,7 +185,7 @@ function getTNLocations(element, tabType, url){
       var tn_pnxId = EXLTA_recordId(element);
       var resp = '';
       var ddud = 'pnxId=' + pnxId + '&tn_pnxId=' + tn_pnxId + '&primary=ndu_aleph';
-      var ddui = '/primo_library/libweb/tiles/local/location_rs.jsp';
+      var ddui = '/primo_library/libweb/tiles/local/location.jsp';
       $.ajax({type: "get", url: ddui, dataType: "html", data: ddud,  success: function(data){
 
            var p = $(element).parents('.EXLResult').find('.'+tabType+'-Container').children('.EXLTabContent').children('#ndLocation');
