@@ -44,15 +44,17 @@ $(document).ready(function() {
                                         if(req.match(dre)){
 						//add this tab!
         					EXLTA_addTab_TN(summary, 'Request','NewTNRequestTab',location.href,'EXLDetailsTab','detailsTab','requestTab',false,'NewTNLocationTab');
-                                      //  }else{ //not requestable so we add a docdel link if also not available online
-//						var re = new RegExp("FindText");
-//                				var ft = re.test($(summary).find('.EXLViewOnlineTab').html());
-//						
-//						var rt = $(summary).find('.EXLResultTabs').find('.NewTNLocationTab');
+                                        }else{ //not requestable so we add a docdel link if also not available online
+console.log('not requestable' + lookupPNX);
+						var re = new RegExp("FindText");
+                				var ft = re.test($(summary).find('.EXLViewOnlineTab').html());
+						
+						//var rt = $(summary).find('.EXLResultTabs').find('.NewTNLocationTab');
 //
 //						//make sure there's a findtext link
-//						if(ft){
+						if(ft){
 //							var dd_href = $(summary).find('.EXLViewOnlineTab a').attr('href');
+console.log('findtextlink found' + lookupPNX);
 //                       					var dd_params = dd_href.substring( dd_href.indexOf('?') + 1 );
 //                	        	
 //							var ddui = '/primo_library/libweb/tiles/local/docdel_openurl.jsp';
@@ -63,7 +65,7 @@ $(document).ready(function() {
 //                 	         				}
 //                					}}); 
 //
-//						}
+						}
 
 					}
 
@@ -72,15 +74,15 @@ $(document).ready(function() {
 
 
                 
-//			//For Doc Delivery/ILL tab
-//			var re = new RegExp("FindText");
-//                	var ft = re.test($(summary).find('.EXLViewOnlineTab').html());
-//
-//			var lt = $(summary).find('.EXLResultTabs').find('.NewTNLocationTab');
-//
-//			//if there's a findtext menu (not available online)
-//			if (ft){
-//console.log('ft found ' + lookupPNX);
+			//For Doc Delivery/ILL tab
+			var re = new RegExp("FindText");
+                	var ft = re.test($(summary).find('.EXLViewOnlineTab').html());
+
+			var lt = $(summary).find('.EXLResultTabs').find('.NewTNLocationTab');
+
+			//if there's a findtext menu (not available online)
+			if (ft){
+console.log('ILL test ft found ' + lookupPNX);
 //				var dd_href = $(summary).find('.EXLViewOnlineTab a').attr('href');
 //                       		var dd_params = dd_href.substring( dd_href.indexOf('?') + 1 );
 //
@@ -96,7 +98,7 @@ $(document).ready(function() {
 //                  		              	$(summary).find('.EXLResultTabs').parents('.EXLResult').find('.EXLReviewsTab').after('<li id="docDelUrl" class="EXLReviewsTab EXLResultTab">' + data + '</li>');
 //                 	         	}
 //                		}}); 
-//			}
+			}
                  }});
            }
 
