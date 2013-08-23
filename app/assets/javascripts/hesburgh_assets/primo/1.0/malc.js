@@ -427,6 +427,7 @@ function getLocations(element, tabType){
       $.ajax({type: "get", url: ddui, dataType: "html", data: ddud,  success: function(data){
 
 		        var p = $(element).parents('.EXLResult').find('.'+tabType+'-Container').children('.EXLTabContent').children('#ndLocation');
+console.log($(p));
 			$(p).removeClass();
 			$(p).html(data);
 		}
