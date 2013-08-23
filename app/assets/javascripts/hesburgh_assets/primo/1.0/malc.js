@@ -124,7 +124,6 @@ $(document).ready(function(){
 
 	$('.NewLocationTab a').click(
         	function(e){
-console.log($(this).parents('.EXLResultTab').hasClass('EXLResultSelectedTab'));
 			msTabHandler(e, this, 'NewLocationTab', '<div id="ndLocation" class="EXLTabLoading"></div>',getLocations,location.href, $(this).parents('.EXLResultTab').hasClass('EXLResultSelectedTab'));
         	});
 
@@ -421,13 +420,12 @@ function EXLTA_isFullDisplay(){
 }
 
 function getLocations(element, tabType){
-console.log(tabType);
       var dn = EXLTA_recordId(element);
       var resp = '';
       var ddud = 'pnxId=' + dn + '&primary=ndu_aleph';
       var ddui = '/primo_library/libweb/tiles/local/location.jsp';
       $.ajax({type: "get", url: ddui, dataType: "html", data: ddud,  success: function(data){
-
+console.log($(element).parents('.EXLResult').find('.'+tabType+'-Container'));
 		        var p = $(element).parents('.EXLResult').find('.'+tabType+'-Container').children('.EXLTabContent').children('#ndLocation');
 			$(p).removeClass();
 			$(p).html(data);
