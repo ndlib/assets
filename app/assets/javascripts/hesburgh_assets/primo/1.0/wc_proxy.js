@@ -56,7 +56,7 @@ $(document).ready(function() {
                 					$.ajax({type: "get", url: ddui, dataType: "html", data: dd_params,  success: function(data){
                 	          				var dre = /http/;
                  	         				if(data.match(dre)){
-                  		              				$(summary).find('.EXLResultTabs').parents('.EXLResult').find('.EXLReviewsTab').after('<li id="docDelUrl" class="EXLReviewsTab EXLResultTab">' + data + '</li>');
+                  		              				$(summary).find('.EXLResultTabs').parents('.EXLResult').find('.EXLReviewsTab').after('<li id="docDelUrl" class="EXLResultTab">' + data + '</li>');
                  	         				}
                 					}}); 
 
@@ -85,7 +85,7 @@ $(document).ready(function() {
                 		$.ajax({type: "get", url: ddui, dataType: "html", data: dd_params,  success: function(data){
                 	          var dre = /http/;
                  	         	if(data.match(dre)){
-                  		              	$(summary).find('.EXLResultTabs').parents('.EXLResult').find('.EXLReviewsTab').after('<li id="docDelUrl" class="EXLReviewsTab EXLResultTab">' + data + '</li>');
+                  		              	$(summary).find('.EXLResultTabs').parents('.EXLResult').find('.EXLReviewsTab').after('<li id="docDelUrl" class="EXLResultTab">' + data + '</li>');
                  	         	}
                 		}}); 
 			}
