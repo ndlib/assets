@@ -425,7 +425,7 @@ function getLocations(element, tabType){
       var ddud = 'pnxId=' + dn + '&primary=ndu_aleph';
       var ddui = '/primo_library/libweb/tiles/local/location.jsp';
       $.ajax({type: "get", url: ddui, dataType: "html", data: ddud,  success: function(data){
-
+console.log($(element).parents('.EXLResult').find('.'+tabType+'-Container'));
 		        var p = $(element).parents('.EXLResult').find('.'+tabType+'-Container').children('.EXLTabContent').children('#ndLocation');
 			$(p).removeClass();
 			$(p).html(data);
