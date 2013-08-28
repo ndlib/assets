@@ -46,7 +46,12 @@
 
 
 
-  .span-dropdown {
+  .primo-dropdown select {
+    padding: 4px !important;
+    margin-bottom: 0px;
+  }
+
+  .primo-dropdown-span {
     margin: 0;
     font-size: 100%;
     vertical-align: middle;
