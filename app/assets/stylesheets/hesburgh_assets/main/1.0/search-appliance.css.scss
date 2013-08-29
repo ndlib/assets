@@ -45,7 +45,7 @@
   }
 
 
-  #exlidAdvancedSearchRibbon input {
+  .EXLAdvancedSearchFormRow input {
     height: auto !important;
     margin: 0 !important;
   }
@@ -53,21 +53,12 @@
   .EXLAdvancedSearchFormRow select {
     padding: 4px !important;
     line-height: 18px;
-    height: 36px !important;
+    height: auto !important;
     margin: 0;
   }
 
   div.EXLAdvancedSearchFormRow {
     padding-bottom: 0px;
-  }
-
-  select.EXLAdvancedSearchFormRow {
-    height: 22px;
-  }
-
-
-  #exlidAdvancedSearchRibbon input.submit {
-    margin-top: -80px;
   }
 
   .primo-dropdown-span {
