@@ -51,14 +51,10 @@
   }
 
   #exlidAdvancedSearchRibbon select {
-    padding: 4px;
+    padding: 4px !important;
     line-height: 18px;
-    height: auto !important;
+    height: 36px !important;
     margin: 0;
-  }
-
-  #EXLSearchFieldRibbon div.EXLAdvancedSearchFormRow {
-     padding-bottom:0px !important;
   }
 
   .primo-dropdown-span {
