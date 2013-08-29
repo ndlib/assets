@@ -45,7 +45,12 @@
   }
 
 
-  #exlidAdvancedSearchRibbon input, select {
+  #exlidAdvancedSearchRibbon input {
+    height: auto !important;
+    margin: 0;
+  }
+
+  #exlidAdvancedSearchRibbon select {
     padding: 4px;
     line-height: 18px;
     height: auto !important;
