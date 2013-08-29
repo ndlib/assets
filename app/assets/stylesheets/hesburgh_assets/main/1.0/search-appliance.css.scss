@@ -56,6 +56,15 @@
     height: 36px !important;
     margin: 0;
   }
+  
+  .EXLAdvancedSearchFormRow div {
+    padding-bottom: 0px;
+  }
+
+  .EXLAdvancedSearchFormRow select {
+    height: 22px;
+  }
+
 
   #exlidAdvancedSearchRibbon input.submit {
     margin-top: -80px;
