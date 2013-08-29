@@ -48,7 +48,7 @@ $(document).ready(function(){
 				$.ajax({type: "get", url: ddui, dataType: "html", data: ddud,  success: function(data){
 					var dre = /http/;
 					if(data.match(dre)){
-						rt.after('<li id="docDelUrl" class="EXLReviewsTab EXLResultTab">' + data + '</li>');
+						rt.after('<li id="docDelUrl" class="EXLResultTab">' + data + '</li>');
 					}
 					}});
                                 var rud = 'pnxId=' + dn + '&institution=NDU';
