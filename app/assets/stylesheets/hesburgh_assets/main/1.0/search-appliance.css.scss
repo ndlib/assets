@@ -60,7 +60,7 @@
     height: auto !important;
   }
 
-  .EXLSearchFieldRibbonFormSelectedCollectionLabel span {
+  span.EXLSearchFieldRibbonFormSelectedCollectionLabel a {
     margin: 0;
     font-size: 100%;
     vertical-align: middle;
@@ -93,7 +93,7 @@
   input.srch-box {
   	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
   	-moz-box-sizing: border-box;
-    padding: 4px 30px 4px 2px !important;
+    padding: 4px;
     border:none;
     border-radius: 0;
     height: auto !important;
