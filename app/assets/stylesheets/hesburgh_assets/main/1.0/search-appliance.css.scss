@@ -60,7 +60,7 @@
     height: auto !important;
   }
 
-  span.EXLSearchFieldRibbonFormSelectedCollectionLabel a {
+  span.EXLSearchFieldRibbonFormSelectedCollectionLabel {
     margin: 0;
     font-size: 100%;
     vertical-align: middle;
@@ -95,14 +95,15 @@
   	-moz-box-sizing: border-box;
     border:none;
     border-radius: 0;
-    height: 36px !important;
+    height: 36px;
+    padding: 4px 30px 4px 12px !important;
   }
-
 
   input.srch-box.long {
     width:424px;
     margin-right:3px;
   }
+
 
   dl.tabs {
     @include tabs;
@@ -191,14 +192,6 @@
   	border:solid 1px #B1C6D3;
   }
 
-  input.srch-box.long {
-  	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-  	-moz-box-sizing: border-box;
-    height: 36px;
-    padding: 4px 30px 4px 12px !important;
-    border:none;
-    border-radius: 0;
-  }
 
   .btn {
   	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
