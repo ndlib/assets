@@ -93,11 +93,12 @@
   input.srch-box {
   	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
   	-moz-box-sizing: border-box;
-    padding: 4px;
     border:none;
     border-radius: 0;
     height: 36px !important;
   }
+
+
   input.srch-box.long {
     width:424px;
   }
