@@ -43,7 +43,54 @@
             border-radius: 3px;
   }
 
+  #exlidSearchTile .extra-links{
+    margin-top:10px;
+    margin-left: 5px;
+  }
 
+  #exlidAdvancedSearchTile .extra-links{
+    margin-left:.5em;
+  }
+  #exlidSearchTile div#search_box{
+    margin-top:4px;
+  }
+  #exlidAdvancedSearchTile div#search_box{
+    margin-top:4px;
+  }
+  div#exlidSearchTile{
+    height:150px
+  }
+  div#exlidSearchRibbon{
+    margin-top:10px;
+  }
+  div#exlidAdvancedSearchTile{
+    height:235px;
+    padding-top: 10px;
+  }
+  div#exlidAdvancedSearchRibbon{
+    width:850px;
+    margin-top:0px;
+  }
+  div.EXLSearchFieldRibbon {
+    padding:0px !important;
+    height:auto; !important
+  }
+  div.EXLSearchFieldRibbonFormFieldsGroup2{
+    padding-top:0px !important;
+  }
+  div#exlidAdvancedSearchRibbon input.submit{
+    margin-top:-30px !important;
+    padding:0px !important;
+  }
+  div.EXLSearchTabsContainer{
+    min-width:740px;
+    height:32px;
+    margin-bottom:0px;
+  }
+
+  .EXLAdvancedSearchFormRow {
+    padding-bottom: 0px !important;
+  }
   .EXLAdvancedSearchFormRow input {
     height: auto !important;
   }
@@ -61,18 +108,17 @@
   }
 
   span.EXLSearchFieldRibbonFormSelectedCollectionLabel {
-    margin: 0;
+    margin: 1px;
+    padding: 4px 0px 4px 8px;
     font-size: 100%;
     vertical-align: middle;
     font-size: 13px;
     font-weight: normal;
-    line-height: 18px;
-    height: 36px;
+    line-height: 200%;
+    height: 26px;
     width:95%;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     display: inline-block;
-    padding: 4px !important;
-    font-size: 13px;
     color: #555555;
     background-color: #ffffff;
     border: 1px solid #cccccc;
@@ -95,14 +141,15 @@
   	-moz-box-sizing: border-box;
     border:none;
     border-radius: 0;
-    height: 24px;
-    padding: 4px 30px 4px 12px !important;
-    width:230px !important;
+    height: 28px;
+    padding: 4px;
+    width:230px;
   }
 
   input.srch-box.long {
     width:424px;
     margin-right:3px;
+    padding: 4px 30px 4px 12px !important;
   }
 
 
@@ -303,6 +350,7 @@
     float: left;
     margin-bottom: 20px;
     width: 100%;
+    min-width: 740px;
     z-index: 1;
   }
 
