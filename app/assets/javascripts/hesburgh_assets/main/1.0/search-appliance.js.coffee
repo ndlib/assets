@@ -4,10 +4,10 @@ jQuery ($) ->
   if $searchAppliance.length > 0
     $links = $searchAppliance.find('.tabs dd > a')
     $tabContents = $searchAppliance.find('.tabs-content > li')
-    alert $searchAppliance
 
     searchApplianceRedirect = (event) ->
       link = $(this)
+      alert link
       href = link.attr('href')
       if href && /^[^#]/.test(href)
         activeTabContent = $tabContents.filter('.active')
