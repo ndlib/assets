@@ -1,6 +1,6 @@
 jQuery ($) ->
   $searchAppliance = $('#tab_box').filter('.search-appliance')
-  alert 'JS!'
+  alert $searchAppliance
 
   if $searchAppliance.length > 0
     $links = $searchAppliance.find('.tabs dd > a')
