@@ -53,6 +53,7 @@
   }
   #exlidSearchTile div#search_box{
     margin-top:4px;
+    min-width:740px;
   }
   #exlidAdvancedSearchTile div#search_box{
     margin-top:4px;
@@ -350,7 +351,6 @@
     float: left;
     margin-bottom: 20px;
     width: 100%;
-    min-width: 740px;
     z-index: 1;
   }
 
