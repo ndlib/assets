@@ -1,10 +1,10 @@
 jQuery ($) ->
   $searchAppliance = $('#tab_box').filter('.search-appliance')
-  alert $searchAppliance
 
   if $searchAppliance.length > 0
     $links = $searchAppliance.find('.tabs dd > a')
     $tabContents = $searchAppliance.find('.tabs-content > li')
+    alert $searchAppliance
 
     searchApplianceRedirect = (event) ->
       link = $(this)
