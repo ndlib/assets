@@ -13,11 +13,8 @@ jQuery ($) ->
         searchField = activeTabContent.find('input[type=text]:first')
         if searchField.length > 0
           event.preventDefault()
-          alert "#{href}?q=#{escape(searchField.val())}"
-          try
-            window.location.href="#{href}?thisq=#{escape(searchField.val())}"
-          catch error
-            alert "And the error is ... #{error}"
+          alert "#{href}?thisq=#{escape(searchField.val())}"
+          window.location.href="#{href}?thisq=#{escape(searchField.val())}"
 
     $links.click(searchApplianceRedirect)
 
