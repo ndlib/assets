@@ -13,7 +13,7 @@ jQuery ($) ->
         searchField = activeTabContent.find('input[type=text]:first')
         qUrl = "#{href}?q=#{escape(searchField.val())}"
         if searchField.length > 0
-          window.location.href = 'http://ejlpprd.library.nd.edu/search/ejournals/?q=HERE' 
+          window.location.href = 'http://librarypprd.library.nd.edu/search/ejournals/?q=HERE' 
 
     $links.click(searchApplianceRedirect)
 
