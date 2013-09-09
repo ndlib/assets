@@ -10,8 +10,8 @@ jQuery ($) ->
       href = link.attr('href')
       if href && /^[^#]/.test(href)
         activeTabContent = $tabContents.filter('.active')
-        alert activeTabContent
-        exit
+        event.preventDefault()
+        alert activeTabContent.find('input[type=text]')
         if searchField.length > 0
           event.preventDefault()
           window.location = "#{href}?q=#{escape(searchField.val())}"
