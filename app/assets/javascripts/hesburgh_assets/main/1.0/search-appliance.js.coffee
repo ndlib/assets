@@ -11,10 +11,10 @@ jQuery ($) ->
       if href && /^[^#]/.test(href)
         activeTabContent = $tabContents.filter('.active')
         searchField = activeTabContent.find('input[type=text]:first')
+        window.location.href='http://www.google.com'
         if searchField.length > 0
           event.preventDefault()
           alert '#{href}?q=#{escape(searchField.val())}'
-          window.location.href='http://www.google.com'
 
     $links.click(searchApplianceRedirect)
 
