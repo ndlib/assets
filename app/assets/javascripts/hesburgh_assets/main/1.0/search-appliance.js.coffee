@@ -12,6 +12,7 @@ jQuery ($) ->
         activeTabContent = $tabContents.filter('.active')
         alert activeTabContent.attr('id')
         searchField = activeTabContent.find('input[type=text]').first()
+        alert activeTabContent.find('input[type=text]').first().attr('id')
         if searchField.length > 0
           event.preventDefault()
           window.location = "#{href}?q=#{escape(searchField.val())}"
