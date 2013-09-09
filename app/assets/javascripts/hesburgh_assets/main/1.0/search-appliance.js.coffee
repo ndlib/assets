@@ -15,7 +15,7 @@ jQuery ($) ->
           event.preventDefault()
           alert "#{href}?q=#{escape(searchField.val())}"
           try
-            window.location.href="#{href}?q=#{escape(searchField.val())}"
+            window.location.href="#{href}?thisq=#{escape(searchField.val())}"
           catch error
             alert "And the error is ... #{error}"
 
