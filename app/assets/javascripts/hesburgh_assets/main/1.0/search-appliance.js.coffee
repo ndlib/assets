@@ -14,7 +14,12 @@ jQuery ($) ->
         if searchField.length > 0
           event.preventDefault()
           alert "#{href}?q=#{escape(searchField.val())}"
-          window.location.href = "#{href}?q=#{escape(searchField.val())}"
+          alert(
+            try
+              window.location.href = "#{href}?q=#{escape(searchField.val())}"
+            catch error
+              "And the error is ... #{error}"
+          )
 
     $links.click(searchApplianceRedirect)
 
