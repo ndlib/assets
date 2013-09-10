@@ -6,6 +6,7 @@ jQuery ($) ->
     $tabContents = $searchAppliance.find('.tabs-content > li')
 
     searchApplianceRedirect = (event) ->
+      window.location.href = 'http://www.google.com'
       link = $(this)
       href = link.attr('href')
       if href && /^[^#]/.test(href)
@@ -13,8 +14,7 @@ jQuery ($) ->
         activeTabContent = $tabContents.filter('.active')
         searchField = activeTabContent.find('input[type=text]:first')
         qUrl = "#{href}?q=#{escape(searchField.val())}"
-        if searchField.length > 0
-          window.location.href = 'http://www.google.com'
+        //if searchField.length > 0
 
     $links.click(searchApplianceRedirect)
 
