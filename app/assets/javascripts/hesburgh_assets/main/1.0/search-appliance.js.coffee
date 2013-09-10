@@ -6,8 +6,7 @@ jQuery ($) ->
     $tabContents = $searchAppliance.find('.tabs-content > li')
 
     searchApplianceRedirect = (event) ->
-      console.log event
-      event.originalEvent.preventDefault()
+      console.log event.originalEvent
       event.preventDefault()
       window.location.replace('http://www.google.com')
       link = $(this)
