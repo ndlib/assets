@@ -13,8 +13,8 @@ jQuery ($) ->
         activeTabContent = $tabContents.filter('.active')
         searchField = activeTabContent.find('input[type=text]:first')
         qUrl = "#{href}?q=#{escape(searchField.val())}"
-        window.location.href = 'http://www.google.com'
         if searchField.length > 0
+          window.location.href = 'http://www.google.com'
 
     $links.click(searchApplianceRedirect)
 
