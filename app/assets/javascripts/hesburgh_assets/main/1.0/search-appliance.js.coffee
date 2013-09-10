@@ -18,5 +18,5 @@ jQuery ($) ->
         qUrl = "#{href}?q=#{escape(searchField.val())}"
 
 
-    $links.click(searchApplianceRedirect)
+    $links.unbind().click(searchApplianceRedirect)
 
