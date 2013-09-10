@@ -14,7 +14,7 @@ jQuery ($) ->
         qUrl = "#{href}?q=#{escape(searchField.val())}"
         if searchField.length > 0
           event.preventDefault()
-          window.location.href = 'http://www.google.com'
+          window.location = "http://www.google.com"
 
     $links.click(searchApplianceRedirect)
 
