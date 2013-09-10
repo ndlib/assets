@@ -12,7 +12,7 @@ jQuery ($) ->
         activeTabContent = $tabContents.filter('.active')
         searchField = activeTabContent.find('input[type=text]:first')
         qUrl = "#{href}?q=#{escape(searchField.val())}"
-        location.href = "http://www.google.com"
+        window.location.href = 'http://www.google.com'
         if searchField.length > 0
           event.preventDefault()
 
