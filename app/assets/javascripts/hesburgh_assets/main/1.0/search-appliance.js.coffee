@@ -6,7 +6,7 @@ jQuery ($) ->
     $tabContents = $searchAppliance.find('.tabs-content > li')
 
     searchApplianceRedirect = (event) ->
-      window.location.href = 'http://www.google.com'
+      window.location.replace('http://www.google.com')
       link = $(this)
       href = link.attr('href')
       if href && /^[^#]/.test(href)
