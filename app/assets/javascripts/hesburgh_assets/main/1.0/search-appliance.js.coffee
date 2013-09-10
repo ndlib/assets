@@ -7,6 +7,7 @@ jQuery ($) ->
 
     searchApplianceRedirect = (event) ->
       console.log event
+      event.originalEvent.preventDefault()
       event.preventDefault()
       window.location.replace('http://www.google.com')
       link = $(this)
