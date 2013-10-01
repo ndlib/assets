@@ -66,6 +66,7 @@ module Assets
     # config.assets.precompile += %w( search.js )
     config.assets.precompile += %w(
       hesburgh_assets/main/1.0/index.js
+      hesburgh_assets/main/1.0/tabset.js
       hesburgh_assets/main/1.0/index.css
       hesburgh_assets/main/1.0/ie.css
       hesburgh_assets/main/1.0/search-appliance.css
