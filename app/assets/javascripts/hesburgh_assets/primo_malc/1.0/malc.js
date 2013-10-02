@@ -43,6 +43,33 @@ $('#exlidAdvancedSearchRibbon .submit').live('click',function(){
 
 $(document).ready(function(){
 
+
+      $('.cbox').live('click', function(event){
+                var xh;
+                event.preventDefault();
+                var ur = $(this).attr('href');
+                var ht = '<div id="itoutter" style="width: 300px; height: 200px;"><img style="display: block; margin: auto; padding-top: 70px;" src="../images/local/loading_alt.gif" /></div>';
+                var xh = ajHandle();
+                $.colorbox({html:ht, onClosed:function(){ xh.abort(); }});
+                performAj(xh, ur, "GET", "", "colorbox");
+
+        });
+
+       $('.mbox').live('click', function(event){
+                event.preventDefault();
+                var dat = $(this).attr('value');
+                var it = $(this).attr('item');
+                var ur = $(this).attr('href');
+                var ht = '<div id="mps" style="width: 300px; height: 200px;"><img style="display: block; margin: auto; padding-top: 70px;" src="../images/local/loading_alt.gif" /></div>';
+                var pdat = "xml=" + dat + "&item=" + it;
+                var xh = ajHandle();
+                $.colorbox({html:ht, onClosed:function(){ xh.abort(); } });
+                performAj(xh, ur, "POST", pdat, "colorbox");
+
+                });
+
+
+
 // Check browser for worldcat tab
 
 	var vid = $(location).attr('href').match(/vid=\w*/)   ;
