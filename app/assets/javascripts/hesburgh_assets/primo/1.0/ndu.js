@@ -125,11 +125,17 @@ function performAj(xmlhttp, url, m, dat, type){
                 xmlhttp.open("GET",url + "&t=" + Math.random(),true);
 		xmlhttp.send();
         }
-$('.EXLMainMenuITEMhelp').click(function() {
-    $(this).attr('onclick', 'openWindow(this.href, this.target, top=100,left=50,width=600,height=500,resizable=1,scrollbars=1); return false;');
-
-    return false;
-});
+$('.EXLMainMenuITEMhelp').click(function (event){
+ 
+                    var url = $(this).attr("href");
+                    var windowName = "Help";//$(this).attr("name");
+                    var windowSize = ['width=600,height=500,resizable=1,scrollbars=1'];
+ 
+                    window.open(url, windowName, windowSize);
+ 
+                    event.preventDefault();
+ 
+                });
 
 
 }
