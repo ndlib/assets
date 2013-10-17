@@ -79,8 +79,10 @@ $(document).ready(function(){
 
 		});
 	
+	
 
 });
+
 
 function EXLTA_recordId(element){
         return $(element).parents('.EXLResult').find('.EXLResultRecordId').attr('id');
@@ -125,6 +127,8 @@ function performAj(xmlhttp, url, m, dat, type){
                 xmlhttp.open("GET",url + "&t=" + Math.random(),true);
 		xmlhttp.send();
         }
+				
+
 
 }
 
