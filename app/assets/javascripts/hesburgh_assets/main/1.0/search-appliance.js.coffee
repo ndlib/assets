@@ -8,6 +8,7 @@ jQuery ($) ->
     searchApplianceRedirect = (event) ->
       link = $(this)
       href = link.attr('href')
+      alert href
       if href && /^[^#]/.test(href)
         activeTabContent = $tabContents.filter('.active')
         searchField = activeTabContent.find('input[type=text]:first')
