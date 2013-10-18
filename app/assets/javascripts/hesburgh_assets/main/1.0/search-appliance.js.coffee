@@ -7,7 +7,6 @@ jQuery ($) ->
 
     searchApplianceRedirect = (event) ->
       link = $(this)
-      alert(link) 
       href = link.attr('href')
       if href && /^[^#]/.test(href)
         activeTabContent = $tabContents.filter('.active')
@@ -18,7 +17,4 @@ jQuery ($) ->
           event.stopImmediatePropagation()
           event.stopPropagation()
           window.location.replace(qUrl)
-
-
-    $links.unbind().click(searchApplianceRedirect)
 
