@@ -1,8 +1,13 @@
  
 jQuery(function($) {
+	if ($("#search_field").hasClass("long")) {
+               $("#help-box").addClass("right");
+        }
+
 	if ( $("#exlidAdvancedSearchTile").hasClass("EXLAdvancedSearch")){
 		$('#help-box').addClass("advanced");
 	}
+
 	$('.EXLMainMenuITEMhelp').click(function (event){
  
                     var url = $(this).attr("href");
