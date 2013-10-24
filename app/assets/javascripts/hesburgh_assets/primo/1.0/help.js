@@ -1,7 +1,7 @@
  
 jQuery(function($) {
-	if ($("#search_field").hasClass("long")) {
-               $("#help-box").addClass("right");
+	if (!$("#search_field").hasClass("long")) {
+               $("#help-box").addClass("small-input");
         }
 
 	if ( $("#exlidAdvancedSearchTile").hasClass("EXLAdvancedSearch")){
