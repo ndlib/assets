@@ -1,6 +1,6 @@
 jQuery ($) ->
-  $(".search-toggle").click ->
-    $(".header_search").toggleClass("closed")
-    $(".header").toggleClass("open")
+  $(".search-toggle").click (e) ->
+    e.preventDefault()
+    $(".header").toggleClass("open-search")
 
   $('#nav').mobileMenu({combine:false, prependTo:'.menu'})
