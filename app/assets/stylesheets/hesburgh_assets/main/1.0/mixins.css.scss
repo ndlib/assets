@@ -73,30 +73,26 @@ $content-bg: #F8F7E9;
 }
 
 @mixin tabs-small {
-    position: relative;
+  position: relative;
 
-    dd {
-        padding-right:0;
-        width:50%;
-        height: auto;
-    }
+  dd {
+      padding-right:0;
+      width:50%;
+      height: auto;
+  }
 
-    dd a {
-        border-radius: 0;
-        padding-top: 3px;
-        height: auto;
-    }
-
-    dd > a.active {
+  dd a {
+      border-radius: 0;
       padding-top: 3px;
-      border-bottom-width: 0;
-    }
+      height: auto;
+  }
 
-    .onesearch span, .ndcatalog span {
-      padding-top: 24px !important;
-    }
+  dd > a.active {
+    padding-top: 3px;
+    border-bottom-width: 0;
+  }
 
-    input.srch-box.long {
-      width: 100%;
-    }
+  .onesearch span, .ndcatalog span {
+    padding-top: 24px !important;
+  }
 }

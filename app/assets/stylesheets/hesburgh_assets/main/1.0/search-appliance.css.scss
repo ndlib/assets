@@ -93,7 +93,7 @@
   	box-shadow: none;
   	z-index: auto;
   	padding:16px !important;
-    margin: 0 !important;
+    margin: 0;
     list-style: none outside none !important;
   }
 
@@ -363,6 +363,14 @@ html[data-useragent*='MSIE 10.0'] .search-appliance dl.tabs dd a.active {
       dd > a.active {
         border-top-width: 0;
       }
+    }
+
+    ul.contained.tabs-content > li {
+      width: 100%;
+      margin-bottom: 20px;
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+              box-sizing: border-box;
     }
   }
 }

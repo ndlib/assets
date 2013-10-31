@@ -315,15 +315,18 @@ dl.tabs dd {
       position: static;
     }
 
+    input.srch-box.long {
+      width: 100%;
+    }
+
     ul.contained.tabs-content > li {
       width: 100%;
       margin-bottom: 20px;
-      box-sizing:border-box;
-      -moz-box-sizing:border-box;
-      -webkit-box-sizing:border-box;
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+              box-sizing: border-box;
     }
   }
-
 }
 
 @media only screen and (max-width: 767px) {
