@@ -291,6 +291,7 @@
   dl.tabs dd > a.active {
    border-style: solid;
    border-width: 8px 15px 15px 8px;
+   border-color: #fff;
    -moz-border-image: url(search_appliance/corner.png) 8 15 15 8 round;
    -webkit-border-image: url(search_appliance/corner.png) 8 15 15 8 round;
    -o-border-image: url(search_appliance/corner.png) 8 15 15 8 round;
@@ -299,7 +300,8 @@
    padding-right:0;
    padding-left:6px;
    background-image: none;
-   background-color:transparent;
+   background-color: #fff;
+   background-clip: padding-box;
    color:#2B5781;
 
   }
