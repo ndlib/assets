@@ -361,6 +361,10 @@ html[data-useragent*='MSIE 10.0'] .search-appliance dl.tabs dd a.active {
       dd > a.active {
         border-top-width: 0;
       }
+
+      dd a {
+        background: #CECEBF;
+      }
     }
 
     ul.contained.tabs-content > li {
