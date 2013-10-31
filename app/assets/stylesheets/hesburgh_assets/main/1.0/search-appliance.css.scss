@@ -249,6 +249,7 @@
         padding: 13px 0 0.5em;
         height:0;
         width: 13px;
+        line-height: 30px;
         overflow:hidden;
         display: block;
         border:none;
@@ -310,11 +311,6 @@
     background-image: none;
     background-color:transparent;
     box-shadow: none;
-  }
-
-  dl.tabs dd > a.active:hover, dl.tabs dd > a.active:active {
-    background:transparent;
-
   }
 
   .onesearch span, .ndcatalog span {
