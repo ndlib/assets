@@ -362,7 +362,7 @@ td {
     }
 
     ul.contained.tabs-content > li {
-        border-radius:0 0 14px 14px;
+        border-radius: 0;
         clear:both;
         box-shadow:none;
     }
@@ -400,10 +400,6 @@ td {
         padding:0;
     }
 
-    ul.contained.tabs-content li {
-        border-radius: 0;
-    }
-
     input.srch-box.long {
         width:95%;
     }
@@ -412,22 +408,6 @@ td {
         border-radius: 0;
         margin:0 !important;
         box-shadow: none;
-    }
-
-    .home-page dl.tabs dd a {
-        padding-top:10px;
-    }
-
-    .home-page .tabs {
-        position: static;
-    }
-
-    .home-page ul.contained.tabs-content > li {
-        width: 100%;
-        margin-bottom: 20px;
-        box-sizing:border-box;
-        -moz-box-sizing:border-box;
-        -webkit-box-sizing:border-box;
     }
 
     .onesearch, .ndcatalog {
@@ -446,38 +426,6 @@ td {
       right:10px;
       display: none;
     }
-}
-
-@media only screen and (max-width: 960px) {
-    .home-page .inner-left {
-        padding-bottom: 25px;
-        padding-left: 15px;
-        padding-top: 25px;
-    }
-
-    .home-page .inner-right {
-        padding-top:25px;
-    }
-
-    .row .eight {
-        width: calc(97.8% - 290px);
-        width: -moz-calc(97.8% - 290px);
-        width: -webkit-calc(97.8% - 290px);
-    }
-
-    .home-page .row .four {
-        width: 290px;
-    }
-
-    .home-page .column, .home-page .columns {
-        margin-left: 2.2%;
-    }
-
-    .taupe-bg {
-        background-position: 104% 0%;
-    }
-
-
 }
 
 @media only screen and (max-width: 767px) {

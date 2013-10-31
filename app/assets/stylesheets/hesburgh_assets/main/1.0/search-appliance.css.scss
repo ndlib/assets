@@ -358,41 +358,11 @@ html[data-useragent*='MSIE 10.0'] .search-appliance dl.tabs dd a.active {
 @media only screen and (max-width: 990px) {
   .search-appliance {
     dl.tabs {
-        position: relative;
-    }
+      @include tabs-small;
 
-    dl.tabs dd {
-        padding-right:0;
-        width:50%;
-        height: auto;
+      dd > a.active {
+        border-top-width: 0;
+      }
     }
-
-    dl.tabs dd a {
-        border-radius: 0;
-        padding-top: 3px;
-        height: auto;
-    }
-
-    dl.tabs dd > a.active {
-      padding-top: 3px;
-      border-top-width: 0;
-      border-bottom-width: 0;
-    }
-
-    .onesearch span, .ndcatalog span {
-      padding-top: 24px !important;
-    }
-
-    input.srch-box.long {
-      width: 100%;
-    }
-  }
-
-  ul.contained.tabs-content > li {
-    width: 100%;
-    margin-bottom: 20px;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
   }
 }

@@ -71,3 +71,32 @@ $content-bg: #F8F7E9;
     }
   }
 }
+
+@mixin tabs-small {
+    position: relative;
+
+    dd {
+        padding-right:0;
+        width:50%;
+        height: auto;
+    }
+
+    dd a {
+        border-radius: 0;
+        padding-top: 3px;
+        height: auto;
+    }
+
+    dd > a.active {
+      padding-top: 3px;
+      border-bottom-width: 0;
+    }
+
+    .onesearch span, .ndcatalog span {
+      padding-top: 24px !important;
+    }
+
+    input.srch-box.long {
+      width: 100%;
+    }
+}
