@@ -4,9 +4,7 @@
 
 @import "mixins.css.scss";
 
-dl.tabs {
-  @include tabs;
-}
+@include tabs;
 
 /* Tabs (temp) */
 

@@ -2,6 +2,8 @@
 //  Home Page
 // -------------
 
+@import "mixins.css.scss";
+
 @mixin image-tab {
   background-position:0px 0px;
   background-repeat: no-repeat;
@@ -83,6 +85,9 @@
     margin-bottom:9px;
   }
 
+  .search-appliance {
+    max-width: none;
+  }
 }
 
 dl.tabs dd {
@@ -268,22 +273,7 @@ dl.tabs dd {
       position: relative;
     }
 
-    dl.tabs dd {
-      padding-right:0;
-      width:50%;
-      height: auto;
-    }
-    dl.tabs dd a {
-      border-radius: 0;
-      height: auto;
-    }
-    dl.tabs dd a:hover {background:#fff;}
-    dl.tabs dd .default a {
-      height: 0;
-    }
-    input.srch-box.long, .search-appliance input.srch-box.long {
-      width: 100%;
-    }
+    @include tabs-small;
 
     .row .eight {
       width: calc(97.8% - 290px);
@@ -301,23 +291,6 @@ dl.tabs dd {
 
     .tabs {
       position: static;
-    }
-
-    input.srch-box.long {
-      width: 100%;
-    }
-
-    ul.contained.tabs-content > li {
-        border-radius: 0;
-        clear:both;
-        box-shadow:none;
-    }
-
-    ul.contained.tabs-content > li {
-      width: 100%;
-      -webkit-box-sizing: border-box;
-         -moz-box-sizing: border-box;
-              box-sizing: border-box;
     }
 
     .about-tab {
