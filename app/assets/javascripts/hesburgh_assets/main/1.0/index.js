@@ -9,7 +9,7 @@
 //= require ./jquery.colorbox-min.js
 //= require ./jquery.gritter.js
 //= require ./hoverIntent.js
-//= require ./simplegallery.js
+//= require ./coin-slider.js
 //= require ./superfish.js
 //= require ./jquery.mobilemenu.min.js
 //= require ./mobile.js

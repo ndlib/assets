@@ -208,7 +208,8 @@ ul.contained.tabs-content > li#simple1Tab {
 ----------------------------------------- */
 
 
-.box {
+.box,
+#quicklinks {
     @include box;
     z-index:20;
     margin-bottom:1.12em;

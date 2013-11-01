@@ -16,6 +16,10 @@ jQuery(function($) {
     }
   }
 
+  if ($("#gallerycs").coinslider) {
+    $('#gallerycs').coinslider({ width: 263, height: 135, delay: 50000, effect: 'straight', sph:1,spw:1, });
+  }
+
   $("#search_box .legend").add(".header_search .legend").each(function() {
     var legend = $(this);
     var legendText = legend.text();
