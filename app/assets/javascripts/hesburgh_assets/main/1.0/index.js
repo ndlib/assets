@@ -11,7 +11,7 @@
 //= require ./hoverIntent.js
 //= require ./coin-slider.js
 //= require ./superfish.js
-//= require ./jquery.mobilemenu.min.js
+//= require ./jquery.mobilemenu.js
 //= require ./mobile.js
 //= require ./main.js
 //= require ./mainupdate.js
