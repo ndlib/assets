@@ -144,12 +144,13 @@ $(document).ready(function(){
 			var fulltxt = availText.match(/Full text available/g);
 			//var nofulltxt = availText.match(/No full text online/g);
 			var nofulltxt = availText.match(/Not available online/g);
+			var findtext = availText.match(/See FindText/g);
 			if (!online && !fulltxt && !nofulltxt) {
 				var taera = thisERA.parents().parents().parents().children('.EXLTabsRibbon').children('div').children('.EXLResultTabs').children('.NewLocationTab').children('a');
 				taera.trigger('click');
 				msTabHandler(e, taera, 'NewLocationTab', '<div id="ndLocation" class="EXLTabLoading"></div>',getLocations,location.href, $(this).parents('.EXLResultTab').hasClass('EXLResultSelectedTab'));
 			}	
-			if (online || fulltxt || nofulltxt) {
+			if (online || fulltxt || nofulltxt || findtext) {
 				//$('#' + resultNum + '-ViewOnlineTab').css('font-size','200%');
 
 				//this triggers the online tab clicked	
