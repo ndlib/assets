@@ -155,6 +155,7 @@ $(document).ready(function(){
 
 				//this triggers the online tab clicked	
 				var ont = $(this).parent().parent().parent().find('.EXLViewOnlineTab');
+console.log(ont);
 				var ontu = ont.children('a').attr('href');
 				var ontc = ont.attr('class');
 				var ontp = new RegExp("EXLResultTabIconPopout");
