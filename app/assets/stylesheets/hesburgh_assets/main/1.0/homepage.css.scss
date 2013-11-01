@@ -2,6 +2,8 @@
 //  Home Page
 // -------------
 
+@import "mixins.css.scss";
+
 @mixin image-tab {
   background-position:0px 0px;
   background-repeat: no-repeat;
@@ -29,7 +31,6 @@
   }
   span {
     margin:0;
-    padding-right:4px;
     overflow: hidden;
     position: relative;
     display: block;
@@ -38,7 +39,7 @@
 
 .taupe-bg,
 .home-page > .container > .content {
-  background: url(taupe_bg.png) #f8f7e9 repeat-y top right;
+  background: url(/assets/hesburgh_assets/main/1.0/taupe_bg.png) #f8f7e9 repeat-y top right;
   border-top: 2px solid #f3ede4;
   border-bottom: 2px solid #f3ede4;
   z-index:10;
@@ -77,13 +78,15 @@
 
   .tabs {
     z-index:100;
-    position: absolute;
   }
 
   .btn {
     margin-bottom:9px;
   }
 
+  .search-appliance {
+    max-width: none;
+  }
 }
 
 dl.tabs dd {
@@ -93,7 +96,7 @@ dl.tabs dd {
     right: 7px;
 
     a {
-      background: url(off.gif) no-repeat scroll left center transparent;
+      background: url(/assets/hesburgh_assets/main/1.0/off.gif) no-repeat scroll left center transparent;
       color:#696969;
       text-decoration: none;
       padding: 13px 0 0.5em;
@@ -108,7 +111,7 @@ dl.tabs dd {
     }
 
     a.act, .active {
-      background-image: url(on.gif);
+      background-image: url(/assets/hesburgh_assets/main/1.0/on.gif);
     }
   }
 }
@@ -182,13 +185,13 @@ dl.tabs dd {
 }
 
 .onesearch span {
-    background-image: url(onesearch.png);
+    background-image: url(/assets/hesburgh_assets/main/1.0/onesearch.png);
     @include image-tab;
     width: 80px !important;
 }
 
 .ndcatalog span {
-    background-image: url(ndcatalog.png);
+    background-image: url(/assets/hesburgh_assets/main/1.0/ndcatalog.png);
     @include image-tab;
     width: 73px !important;
 }
@@ -269,22 +272,7 @@ dl.tabs dd {
       position: relative;
     }
 
-    dl.tabs dd {
-      padding-right:0;
-      width:50%;
-      height: auto;
-    }
-    dl.tabs dd a {
-      border-radius: 0;
-      height: auto;
-    }
-    dl.tabs dd a:hover {background:#fff;}
-    dl.tabs dd .default a {
-      height: 0;
-    }
-    input.srch-box.long, .search-appliance input.srch-box.long {
-      width: 100%;
-    }
+    @include tabs-small;
 
     .row .eight {
       width: calc(97.8% - 290px);
@@ -302,23 +290,6 @@ dl.tabs dd {
 
     .tabs {
       position: static;
-    }
-
-    input.srch-box.long {
-      width: 100%;
-    }
-
-    ul.contained.tabs-content > li {
-        border-radius: 0;
-        clear:both;
-        box-shadow:none;
-    }
-
-    ul.contained.tabs-content > li {
-      width: 100%;
-      -webkit-box-sizing: border-box;
-         -moz-box-sizing: border-box;
-              box-sizing: border-box;
     }
 
     .about-tab {
