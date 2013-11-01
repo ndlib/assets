@@ -187,13 +187,13 @@ dl.tabs dd {
 .onesearch span {
     background-image: url(/assets/hesburgh_assets/main/1.0/onesearch.png);
     @include image-tab;
-    width: 80px !important;
+    width: 84px;
 }
 
 .ndcatalog span {
     background-image: url(/assets/hesburgh_assets/main/1.0/ndcatalog.png);
     @include image-tab;
-    width: 73px !important;
+    width: 73px;
 }
 
 #quicklinks {

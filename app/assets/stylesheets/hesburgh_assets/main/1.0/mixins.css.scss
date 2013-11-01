@@ -73,6 +73,11 @@ $tabs-small-gradient: top,#9bbcdd 0%,#9cbddd 80%,#b0cae4 80%,#b5cde6 100%;
       }
     }
   }
+
+  dl.contained.tabs dd a {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
 }
 
 @mixin tabs-small {
@@ -136,6 +141,7 @@ $tabs-small-gradient: top,#9bbcdd 0%,#9cbddd 80%,#b0cae4 80%,#b5cde6 100%;
       > a.active, a {
         border: 1px solid #B1C6D3;
         border-bottom: none;
+        padding-left: 13px;
       }
 
       a {
