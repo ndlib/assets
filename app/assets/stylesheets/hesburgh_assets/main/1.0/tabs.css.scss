@@ -87,8 +87,16 @@ li.tb .menu_center{
 
 }
 
+.tabs-content > li {
+  margin: 32px 0 40px;
+}
+
 @media only screen and (max-width: 990px) {
   dl.tabs {
     @include tabs-small;
+  }
+
+  .tabs-content > li {
+    margin: 0 0 20px;
   }
 }

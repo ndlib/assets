@@ -172,7 +172,7 @@
     	box-shadow: none;
     	z-index: auto;
     	padding:16px !important;
-      margin: 0;
+      margin: 36px 0 40px;
       list-style: none outside none !important;
     }
 
@@ -315,19 +315,6 @@
   .about-tab:hover, .about-tab a:hover {
   	background-color: transparent;
   }
-
-  #search_box {
-    margin-top:36px;
-    float: left;
-    margin-bottom: 20px;
-    width: 100%;
-    z-index: 1;
-    position: relative;
-  }
-}
-
-.home-page .search-appliance #search_box {
-  margin-bottom: 40px;
 }
 
 @media only screen and (max-width: 990px) {
@@ -336,18 +323,22 @@
       @include tabs-small;
 
       dd {
-        > a.active {
-          border-top-width: 0;
+        > a.active, a {
+          border: 1px solid #B1C6D3;
+          border-bottom: none;
         }
 
         a {
           background: #CECEBF;
+          border-left: none;
+          border-right: none;
         }
       }
     }
 
     ul.contained.tabs-content > li {
       width: 100%;
+      margin-top: 0;
       margin-bottom: 20px;
       -webkit-box-sizing: border-box;
          -moz-box-sizing: border-box;

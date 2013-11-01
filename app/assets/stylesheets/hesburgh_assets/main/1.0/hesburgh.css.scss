@@ -13,19 +13,19 @@
 
 
 body {
-	background-color: #2B5781;
+  background-color: #2B5781;
     color: $body-blue;
     font-family: $helvetica;
 }
 
 .container {
-	margin: 0 auto;
+  margin: 0 auto;
 }
 
 div.header {
-	background:url(/assets/hesburgh_assets/main/1.0/header-home.jpg) no-repeat;
-	position:relative;
-	height: 90px;
+  background:url(/assets/hesburgh_assets/main/1.0/header-home.jpg) no-repeat;
+  position:relative;
+  height: 90px;
 
     h4, h3 {
         margin:0;
@@ -84,7 +84,7 @@ div.header {
 }
 
 .breadcrumb, .content, .footer {
-	background: $content-bg;
+  background: $content-bg;
 }
 
 .footer {
@@ -176,14 +176,6 @@ ul.contained.tabs-content > li {
 
 ul.contained.tabs-content > li#simple1Tab {
   padding-top: 14px;
-}
-
-#search_box {
-  margin-bottom: 40px;
-  float: left;
-  width: 100%;
-  margin-top: 32px;
-  z-index: 1;
 }
 
 .content .container:first-child {
@@ -356,245 +348,187 @@ td {
   display: none !important;
 }
 
-/*Tablet Styles*/
+/*Tablet Styles */
 
 @media only screen and (max-width: 990px) {
-    dl.tabs dd a {
-        border-radius:0;
-        z-index:35;
-        box-shadow:none;
-    }
+  body > .container {
+    padding: 0;
+  }
 
-    ul.contained.tabs-content > li {
-        border-radius: 0;
-        clear:both;
-        box-shadow:none;
-    }
+  .container {
+    padding:10px 10px 0;
+  }
 
-    dl.tabs dd {
-        margin:0;
-        width:100%;
-    }
-
-    .home-page dl.tabs dd a {
-        width:100%;
-        box-sizing:border-box;
-        -moz-box-sizing:border-box;
-        -webkit-box-sizing:border-box;
-        display:block;
-        line-height: 1em;
-        height: 100%;
-    }
-
-    dl.tabs dd a:hover {background:#fff;}
-
-    .home-page dl.tabs dd {
-        width:50%;
-        border: none;
-        margin:0 !important;
-        padding-right:0;
-    }
-
-    #tabs li div  {
-        width:100%;
-        border-radius: 0;
-        margin:0 !important;
-        box-shadow: none;
-        border-width: 1px 0;
-        padding:0;
-    }
-
-    input.srch-box.long {
-        width:95%;
-    }
-    #search_box {
-        padding:0;
-        border-radius: 0;
-        margin:0 !important;
-        box-shadow: none;
-    }
-
-    .onesearch, .ndcatalog {
-        padding-top: 5px !important;
-    }
-
-
-    ul.extra-links {
-        margin-left:0;
-        width: 100%;
-        float: left;
-    }
-
-    .about-tab {
-      bottom:10px;
-      right:10px;
-      display: none;
-    }
-
-
+  .header_search {
+    right: 10px;
+  }
 }
 
 /*Phone Styles */
 
 @media only screen and (max-width: 480px) {
 
-    .btn-toolbar {
-        display:none;
-    }
+  .btn-toolbar {
+    display:none;
+  }
 
-    .container {
-        padding:10px 10px 0;
-    }
+  body > .container {
+    padding: 0;
+  }
 
-    .search-toggle {
-      display: block !important;
-      position:absolute;
-      top:5px;
-      right:5px;
-      font-family:'icons';
-      text-decoration:none;
-      background: none repeat scroll 0 0 #FEE084;
-      border-width: 1px;
-      speak:none;
-      padding: 4px 7px;
-    }
+  .container {
+      padding:10px 10px 0;
+  }
 
-    div.header {
-        height:45px;
-        background-size:auto 100%;
+  .search-toggle {
+    display: block !important;
+    position:absolute;
+    top:5px;
+    right:5px;
+    font-family:'icons';
+    text-decoration:none;
+    background: none repeat scroll 0 0 #FEE084;
+    border-width: 1px;
+    speak:none;
+    padding: 4px 7px;
+  }
 
-        h4 {
-            margin:0;
-            a {
-                width:200px;
-                position: static;
-                float:left;
-                padding-top:45px;
-                height:0;
-            }
-        }
-    }
+  div.header {
+      height:45px;
+      background-size:auto 100%;
 
-    div.header.open-search {
-        margin-bottom:38px;
-    }
+      h4 {
+          margin:0;
+          a {
+              width:200px;
+              position: static;
+              float:left;
+              padding-top:45px;
+              height:0;
+          }
+      }
+  }
 
-    .header_search {
+  div.header.open-search {
+      margin-bottom:38px;
+  }
+
+  .header_search {
+    display: none;
+      top:45px;
+      background:#C0C8D0;
+      -webkit-box-shadow: inset 0px 0px 5px 0px #666;
+      box-shadow: inset 0px 0px 5px 0px #666;
+      width:100%;
+      position:static;
+      clear:both;
+      overflow:hidden;
+      text-align:right;
+      height:auto;
+
+      fieldset {
+          padding:5px;
+      }
+
+      #search_field {
+          width:-moz-calc(100% - 40px) !important;
+          width:-webkit-calc(100% - 40px) !important;
+          width:calc(100% - 40px) !important;
+      }
+  }
+
+  .open-search .header_search {
+    display: block;
+  }
+
+
+  .home-page .header_search .btn {
+      margin-bottom:0;
+  }
+
+  .header_search input, .header_search button {
+      float:none;
+  }
+
+  .header_search form, .header_search input {
+      margin:0;
+  }
+
+  .menu {
+      background:$body-blue;
+      padding:5px 5px;
+      box-sizing:border-box;
+      -moz-box-sizing:border-box;
+      -webkit-box-sizing:border-box;
+
+      select {
+          margin-bottom:0;
+          display:block;
+          width:inherit;
+      }
+  }
+
+  .sf-sub-indicator {
       display: none;
-        top:45px;
-        background:#C0C8D0;
-        -webkit-box-shadow: inset 0px 0px 5px 0px #666;
-        box-shadow: inset 0px 0px 5px 0px #666;
-        width:100%;
-        position:static;
-        clear:both;
-        overflow:hidden;
-        text-align:right;
-        height:auto;
+  }
 
-        fieldset {
-            padding:5px;
-        }
+  /* HORIZONTAL FORMS AT SMALL SCREEN */
+  .form-horizontal .control-label {
+      float:none !important;
+      width:auto !important;
+      text-align:left;
+  }
 
-        #search_field {
-            width:-moz-calc(100% - 40px) !important;
-            width:-webkit-calc(100% - 40px) !important;
-            width:calc(100% - 40px) !important;
-        }
-    }
+  .form-horizontal .controls {
+      margin-left:0 !important;
+  }
 
-    .open-search .header_search {
-      display: block;
-    }
+  .form-horizontal .form-actions  {
+      padding-left: 0px;
+  }
 
 
-    .home-page .header_search .btn {
-        margin-bottom:0;
-    }
+  .input-xlarge {
+      width:auto;
+  }
 
-    .header_search input, .header_search button {
-        float:none;
-    }
+  .box {
+      margin-top:10px;
+  }
 
-    .header_search form, .header_search input {
-        margin:0;
-    }
+  .column, .columns, .content {position:static;}
 
-    .menu {
-        background:$body-blue;
-        padding:5px 5px;
-        box-sizing:border-box;
-        -moz-box-sizing:border-box;
-        -webkit-box-sizing:border-box;
+  #gallery {
+      display:none;
+  }
 
-        select {
-            margin-bottom:0;
-            display:block;
-            width:inherit;
-        }
-    }
+  .taupe-bg {
+      background-image:none;
+  }
 
-    .sf-sub-indicator {
-        display: none;
-    }
+  h1 {
+      font-size:20px;
+      line-height: 24px;
+  }
 
-    /* HORIZONTAL FORMS AT SMALL SCREEN */
-    .form-horizontal .control-label {
-        float:none !important;
-        width:auto !important;
-        text-align:left;
-    }
+  .home-page .inner-left, .home-page .inner-right {
+      padding:0;
+  }
 
-    .form-horizontal .controls {
-        margin-left:0 !important;
-    }
+  #hours {
+      width:100%;
+      -moz-box-sizing:border-box;
+      -webkit-box-sizing:border-box;
+      box-sizing:border-box;
+      margin-bottom: 1.12em;
+  }
 
-    .form-horizontal .form-actions  {
-        padding-left: 0px;
-    }
-
-
-    .input-xlarge {
-        width:auto;
-    }
-
-    .box {
-        margin-top:10px;
-    }
-
-    .column, .columns, .content {position:static;}
-
-    #gallery {
-        display:none;
-    }
-
-    .taupe-bg {
-        background-image:none;
-    }
-
-    h1 {
-        font-size:20px;
-        line-height: 24px;
-    }
-
-    .home-page .inner-left, .home-page .inner-right {
-        padding:0;
-    }
-
-    #hours {
-        width:100%;
-        -moz-box-sizing:border-box;
-        -webkit-box-sizing:border-box;
-        box-sizing:border-box;
-        margin-bottom: 1.12em;
-    }
-
-    table {
-        width:100%;
-    }
+  table {
+      width:100%;
+  }
 
 }
 
 span.show {
-    display: inline-block;
+  display: inline-block;
 }
