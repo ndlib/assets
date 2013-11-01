@@ -31,7 +31,6 @@
   }
   span {
     margin:0;
-    padding-right:4px;
     overflow: hidden;
     position: relative;
     display: block;
@@ -186,7 +185,7 @@ dl.tabs dd {
 }
 
 .onesearch span {
-    background-image: url(/assets/hesburgh_assets/main/1.0/ndcatalog.pngonesearch.png);
+    background-image: url(/assets/hesburgh_assets/main/1.0/onesearch.png);
     @include image-tab;
     width: 80px !important;
 }
