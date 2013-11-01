@@ -72,7 +72,6 @@
   }
 
   ul.contained.tabs-content > li {
-    float: left;
     z-index: 0;
   }
 
@@ -114,8 +113,8 @@ dl.tabs dd {
   }
 }
 
-.extra-links { list-style-type:none; padding-left:0 !important; float:left;margin-left: 0; }
-.extra-links li { display:inline; padding-right: 1em;  float:left; }
+.extra-links { list-style-type:none; padding-left:0 !important;margin-left: 0; }
+.extra-links li { display:inline; padding-right: 1em; }
 
 .new img {
     border: medium none !important;
@@ -150,6 +149,7 @@ dl.tabs dd {
     float: left;
     padding: 0 0 0 1px;
     width: 261px;
+    margin-bottom: 1.5em;
 }
 
 #chat-head {
@@ -177,7 +177,6 @@ dl.tabs dd {
     background-color: #F5F3E2;
     border: 2px solid #FCFBF5;
     float: left;
-    margin: 2em 0 0;
     padding: 0.75em;
     width: 242px;
 }
@@ -247,7 +246,8 @@ dl.tabs dd {
 
 @media only screen and (max-width: 990px) {
   .home-page {
-    #coin-slider-gallerycs {
+    #coin-slider-gallerycs,
+    #chat {
       display: none;
     }
     #quicklinks ul {
@@ -282,7 +282,7 @@ dl.tabs dd {
     dl.tabs dd .default a {
       height: 0;
     }
-    #tab_box input.srch-box.long {
+    input.srch-box.long, .search-appliance input.srch-box.long {
       width: 100%;
     }
 
@@ -358,5 +358,10 @@ dl.tabs dd {
 @media only screen and (max-width: 480px) {
   #hours {
     margin: 0;
+  }
+
+  #quicklinks {
+    border-radius: 0;
+    box-shadow: none;
   }
 }

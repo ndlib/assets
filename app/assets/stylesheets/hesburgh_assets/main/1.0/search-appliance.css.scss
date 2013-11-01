@@ -27,8 +27,7 @@
     @include tabs;
 
     z-index: 100;
-    position: absolute;
-    height:36px;
+    height:37px;
 
     dd {
       height: 37px;
@@ -167,12 +166,11 @@
     > li  {
       @include box;
       position: relative;
-      float: left;
     	border-radius: 0;
     	box-shadow: none;
     	z-index: auto;
     	padding:16px !important;
-      margin: 36px 0 40px;
+      margin-bottom: 40px;
       list-style: none outside none !important;
     }
 
@@ -249,7 +247,7 @@
   input[type=text],
   input[type=search],
   input.srch-box {
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.3);
     -moz-box-sizing: border-box;
     border:none;
     border-radius: 0;
@@ -285,12 +283,11 @@
   .extra-links {
     list-style-type:none;
     padding-left:0 !important;
-    float:left;margin-left: 0;
+    margin-left: 0;
 
     li {
       display:inline;
       padding-right: 1em;
-      float:left;
     }
   }
 
@@ -337,8 +334,8 @@
     }
 
     ul.contained.tabs-content > li {
+      float: left;
       width: 100%;
-      margin-top: 0;
       margin-bottom: 20px;
       -webkit-box-sizing: border-box;
          -moz-box-sizing: border-box;

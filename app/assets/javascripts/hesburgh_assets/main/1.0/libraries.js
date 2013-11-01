@@ -1,23 +1,12 @@
 jQuery(function($) {
 
-  var pathnameArr = window.location.pathname.split('/');
-  switch (pathnameArr[1]) {
-    case 'styleguide':
-        $('.sg').insertAfter('.header h3');
+  var gallery = $("#gallerycs");
+  if (gallery.length > 0) {
+    gallery.after('<div id="chat"><div id="chat-head">Click to Chat with a Librarian <img src="//asset.library.nd.edu/assets/hesburgh_assets/main/1.0/blue_arrow_horiz.png" /></div><div id="chat-widget"><div class="libraryh3lp" jid="nd-ask-a-lib@chat.libraryh3lp.com"><iframe src="http://libraryh3lp.com/chat/nd-ask-a-lib@chat.libraryh3lp.com?skin=10273&amp;theme=gota&amp;title=Ask%20a%20Librarian&amp;identity=asklib" frameborder="0" style="width: 257px; height: 300px; border: 0px inset #2a4480;"></iframe></div></div></div>');
 
-    break;
-  }
-    if ($(window).width() < 960) {
-
+    if (gallery.coinslider) {
+      gallery.coinslider({ width: 263, height: 135, delay: 50000, effect: 'straight', sph:1,spw:1, });
     }
-  else {
-    if ($("#gallerycs").length > 0) {
-      $("#gallerycs").after('<div id="chat"><div id="chat-head">Click to Chat with a Librarian <img src="//asset.library.nd.edu/assets/hesburgh_assets/main/1.0/blue_arrow_horiz.png" /></div><div id="chat-widget"><div class="libraryh3lp" jid="nd-ask-a-lib@chat.libraryh3lp.com"><iframe src="http://libraryh3lp.com/chat/nd-ask-a-lib@chat.libraryh3lp.com?skin=10273&amp;theme=gota&amp;title=Ask%20a%20Librarian&amp;identity=asklib" frameborder="0" style="width: 257px; height: 300px; border: 0px inset #2a4480;"></iframe></div></div></div>');
-    }
-  }
-
-  if ($("#gallerycs").coinslider) {
-    $('#gallerycs').coinslider({ width: 263, height: 135, delay: 50000, effect: 'straight', sph:1,spw:1, });
   }
 
   $("#search_box .legend").add(".header_search .legend").each(function() {
