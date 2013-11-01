@@ -136,6 +136,7 @@ $(document).ready(function(){
 		});
 
 	$('.EXLResultAvailability').live('click', function(event){
+console.log('click');
 		if(event.type == 'click'){
 			var thisERA = $(this);
         		var resultNum = $(this).parents('.EXLResult').attr("id");
@@ -145,12 +146,14 @@ $(document).ready(function(){
 			//var nofulltxt = availText.match(/No full text online/g);
 			var nofulltxt = availText.match(/Not available online/g);
 			var findtext = availText.match(/See FindText/g);
+console.log(findtext);
 			if (!online && !fulltxt && !nofulltxt) {
 				var taera = thisERA.parents().parents().parents().children('.EXLTabsRibbon').children('div').children('.EXLResultTabs').children('.NewLocationTab').children('a');
 				taera.trigger('click');
 				msTabHandler(e, taera, 'NewLocationTab', '<div id="ndLocation" class="EXLTabLoading"></div>',getLocations,location.href, $(this).parents('.EXLResultTab').hasClass('EXLResultSelectedTab'));
 			}	
 			if (online || fulltxt || nofulltxt || findtext) {
+console.log('link');
 				//$('#' + resultNum + '-ViewOnlineTab').css('font-size','200%');
 
 				//this triggers the online tab clicked	
