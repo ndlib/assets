@@ -41,3 +41,9 @@ div.header h3 a {
     height: 50px !important;
     top: 35px !important;
 }
+
+@media only screen and (max-width: 480px) {
+  div.header h4 a {
+    height: 0;
+  }
+}
