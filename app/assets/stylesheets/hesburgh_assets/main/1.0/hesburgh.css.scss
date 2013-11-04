@@ -14,8 +14,12 @@
 
 body {
   background-color: #2B5781;
-    color: $body-blue;
-    font-family: $helvetica;
+  color: $body-blue;
+  font-family: $helvetica;
+
+  > .container {
+    padding: 0;
+  }
 }
 
 .container {
