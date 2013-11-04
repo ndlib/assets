@@ -30,6 +30,15 @@
   }
   // End Bootstrap
 
+  input,
+  textarea,
+  select,
+  .uneditable-input {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
   @include tabs;
 
   dl.tabs {
@@ -311,9 +320,3 @@
   	background-color: transparent;
   }
 }
-
-// @media only screen and (max-width: 990px) {
-//   .search-appliance {
-//     @include search-appliance-tabs-small;
-//   }
-// }
