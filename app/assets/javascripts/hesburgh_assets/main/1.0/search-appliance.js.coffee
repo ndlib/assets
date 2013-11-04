@@ -18,3 +18,4 @@ jQuery ($) ->
           event.stopPropagation()
           window.location.href = qUrl
 
+    $links.click(searchApplianceRedirect)
