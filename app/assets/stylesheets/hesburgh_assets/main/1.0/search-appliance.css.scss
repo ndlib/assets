@@ -23,6 +23,13 @@
   }
   // End Foundation
 
+  // Bootstrap
+  [class^="icon-"], [class*=" icon-"] {
+    vertical-align: text-top;
+    margin-top: 1px;
+  }
+  // End Bootstrap
+
   @include tabs;
 
   dl.tabs {
@@ -209,18 +216,6 @@
 
   form {
     margin-bottom: 0;
-  }
-
-  .form-inline {
-    margin-bottom: 9px;
-
-    .btn {
-      margin-bottom: 0;
-    }
-
-    .pull-left .btn {
-      margin-left: 4px;
-    }
   }
 
   input, select, textarea {

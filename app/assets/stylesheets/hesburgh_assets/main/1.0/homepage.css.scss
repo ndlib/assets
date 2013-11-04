@@ -305,6 +305,10 @@ dl.tabs dd {
       right:10px;
       display: none;
     }
+
+    .search-appliance {
+      @include search-appliance-tabs-small;
+    }
   }
 }
 
