@@ -11,6 +11,7 @@ module StyleGuideHelper
       ["Two Column Left", :two_column_left],
       ["Two Column Right", :two_column_right],
       ["Homepage", :homepage],
+      ["Branch", :branch],
       ["Search Appliance", :search_appliance]
     ]
     li_tags = []
