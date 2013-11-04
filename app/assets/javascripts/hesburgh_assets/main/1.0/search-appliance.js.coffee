@@ -16,5 +16,5 @@ jQuery ($) ->
           event.preventDefault()
           event.stopImmediatePropagation()
           event.stopPropagation()
-          window.location.replace(qUrl)
+          window.location.href = qUrl
 
