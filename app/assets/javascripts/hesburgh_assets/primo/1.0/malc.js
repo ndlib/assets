@@ -151,12 +151,10 @@ $(document).ready(function(){
 				msTabHandler(e, taera, 'NewLocationTab', '<div id="ndLocation" class="EXLTabLoading"></div>',getLocations,location.href, $(this).parents('.EXLResultTab').hasClass('EXLResultSelectedTab'));
 			}	
 			if (online || fulltxt || nofulltxt || findtext) {
-console.log('link');
 				//$('#' + resultNum + '-ViewOnlineTab').css('font-size','200%');
 
 				//this triggers the online tab clicked	
 				var ont = $(this).parent().parent().parent().find('.EXLViewOnlineTab');
-console.log(ont);
 				var ontu = ont.children('a').attr('href');
 				var ontc = ont.attr('class');
 				var ontp = new RegExp("EXLResultTabIconPopout");
