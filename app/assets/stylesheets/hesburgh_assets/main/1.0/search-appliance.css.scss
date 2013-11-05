@@ -30,6 +30,9 @@
   }
   // End Bootstrap
 
+  position: relative;
+  z-index: 1;
+
   input,
   textarea,
   select,
