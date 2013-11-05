@@ -17,6 +17,9 @@ set :application_symlinks, [
   {"/log" => "/server/log"}
 ]
 
+set :default_symlinks, [
+]
+
 #############################################################
 #  Environment settings
 #############################################################
