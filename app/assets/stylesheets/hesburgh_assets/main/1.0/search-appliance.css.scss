@@ -186,10 +186,10 @@
     > li  {
       @include box;
       position: relative;
-    	border-radius: 0;
-    	box-shadow: none;
-    	z-index: auto;
-    	padding:16px !important;
+      border-radius: 0;
+      box-shadow: none;
+      z-index: auto;
+      padding:16px !important;
       margin-bottom: 40px;
       list-style: none outside none !important;
     }
@@ -274,8 +274,8 @@
   }
 
   .btn {
-  	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-  	background-color: #CBB53F;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    background-color: #CBB53F;
     background-image: none;
     font-weight: normal;
     text-transform: uppercase;
@@ -302,16 +302,20 @@
   }
 
   p.about-tab {
-  	border:none;
-  	right:0;
-  	bottom:0;
+    margin-bottom: 0;
+    text-align: right;
+    position: absolute;
+    border:none;
+    right:0;
+    bottom:0;
     padding: .3em;
 
     a {
       padding:3px 6px 3px 20px;
-      background:url('info.gif') 5px center no-repeat;
+      background:url('/assets/hesburgh_assets/main/1.0/') 5px center no-repeat;
       font-weight: bold;
       font-size:10px;
+      cursor: pointer;
     }
 
     a:hover {
@@ -320,6 +324,6 @@
   }
 
   .about-tab:hover, .about-tab a:hover {
-  	background-color: transparent;
+    background-color: transparent;
   }
 }
