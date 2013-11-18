@@ -133,7 +133,7 @@ module HesburghAssets
     end
 
     def root_crumb
-      link_to("Hesburgh Libraries", "https://library.nd.edu")
+      link_to("Hesburgh Libraries", library_url())
     end
 
     def application_crumb
