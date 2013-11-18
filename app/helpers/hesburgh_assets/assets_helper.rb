@@ -14,18 +14,48 @@ module HesburghAssets
       11 => "eleven",
       12 => "twelve"
     }
-    # Includes the relevant library SSI file from http://www.library.nd.edu/ssi/<filename>.shtml
+
+    def include_branch_ssi(filepath)
+      include_ssi("#{active_branch_path}#{filepath}")
+    end
+
+    # Includes the relevant library SSI file from http://library.nd.edu/ssi/<filename>.shtml
     def include_ssi(filepath)
       render :partial => "/layouts/hesburgh_assets/include_ssi", :locals => {:filepath => filepath}
     end
 
     def read_ssi_file(filepath)
       require 'open-uri'
-      ssi_url = "http://www.library.nd.edu/#{filepath}"
-      f = open(ssi_url, "User-Agent" => "Ruby/#{RUBY_VERSION}")
+      f = open(ssi_url(filepath), "User-Agent" => "Ruby/#{RUBY_VERSION}")
       contents = f.read
-      contents = contents.gsub(/(href|src)="\//,"\\1=\"https://www.library.nd.edu/")
+      contents = link_sub(contents)
       contents
+    end
+
+    def ssi_url(filepath)
+      "http://library.nd.edu#{filepath}"
+    end
+
+    def active_branch_path
+      if active_branch_code == 'main'
+        ''
+      elsif active_branch_code == 'architecture_library'
+        '/architecture'
+      else
+        "/#{active_branch_code}"
+      end
+    end
+
+    def active_branch_code
+      if params[:active_branch_code].blank?
+        'main'
+      else
+        params[:active_branch_code]
+      end
+    end
+
+    def link_sub(contents)
+      contents.gsub(/(href|src)="\//,"\\1=\"http://library.nd.edu/")
     end
 
     def number_to_word(number)
