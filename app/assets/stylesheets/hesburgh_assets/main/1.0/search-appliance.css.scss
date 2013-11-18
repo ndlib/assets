@@ -95,10 +95,10 @@
         border-style: solid;
         border-width: 8px 14px 15px 8px;
         border-color: #fff;
-        -moz-border-image: url(search_appliance/corner.png) 8 14 15 8 round;
-        -webkit-border-image: url(search_appliance/corner.png) 8 14 15 8 round;
-        -o-border-image: url(search_appliance/corner.png) 8 14 15 8 round;
-        border-image: url(search_appliance/corner.png) 8 14 15 8 fill round;
+        -moz-border-image: url(/assets/hesburgh_assets/main/1.0/search_appliance/corner.png) 8 14 15 8 round;
+        -webkit-border-image: url(/assets/hesburgh_assets/main/1.0/search_appliance/corner.png) 8 14 15 8 round;
+        -o-border-image: url(/assets/hesburgh_assets/main/1.0/search_appliance/corner.png) 8 14 15 8 round;
+        border-image: url(/assets/hesburgh_assets/main/1.0/search_appliance/corner.png) 8 14 15 8 fill round;
         padding-top:0;
         padding-right:0;
         padding-left:6px;
@@ -120,7 +120,7 @@
         right: 7px;
 
         a {
-          background: url("search_appliance/off.gif") no-repeat scroll left center transparent;
+          background: url(/assets/hesburgh_assets/main/1.0/search_appliance/off.gif) no-repeat scroll left center transparent;
           color:#696969;
           text-decoration: none;
           padding: 13px 0 0.5em;
@@ -135,7 +135,7 @@
         }
 
         .act {
-          background-image: url(search_appliance/on.gif);
+          background-image: url(/assets/hesburgh_assets/main/1.0/search_appliance/on.gif);
         }
       }
     }
@@ -152,21 +152,21 @@
   }
 
   .onesearch span {
-    background-image: url(search_appliance/onesearch.off.png);
+    background-image: url(/assets/hesburgh_assets/main/1.0/search_appliance/onesearch.off.png);
     width: 80px !important;
   }
 
   .onesearch.active span {
-    background-image: url(search_appliance/onesearch.png);
+    background-image: url(/assets/hesburgh_assets/main/1.0/search_appliance/onesearch.png);
   }
 
   .ndcatalog span {
-    background-image: url(search_appliance/ndcatalog.off.png);
+    background-image: url(/assets/hesburgh_assets/main/1.0/search_appliance/ndcatalog.off.png);
     width: 73px !important;
   }
 
   .ndcatalog.active span {
-    background-image: url(search_appliance/ndcatalog.png);
+    background-image: url(/assets/hesburgh_assets/main/1.0/search_appliance/ndcatalog.png);
   }
 
   ul.tabs-content {
@@ -312,7 +312,7 @@
 
     a {
       padding:3px 6px 3px 20px;
-      background:url('/assets/hesburgh_assets/main/1.0/info.gif') 5px center no-repeat;
+      background:url(/assets/hesburgh_assets/main/1.0/info.gif) 5px center no-repeat;
       font-weight: bold;
       font-size:10px;
       cursor: pointer;
