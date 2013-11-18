@@ -83,6 +83,9 @@ module HesburghAssets
       content_for(:content_title_links, raw(links.join(" ")))
     end
 
+    def preheader_content
+    end
+
     def breadcrumb(*crumbs)
       crumbs.unshift(link_to("Assets", root_path))
       crumbs.unshift(link_to("Hesburgh Libraries", "https://www.library.nd.edu"))
