@@ -39,10 +39,8 @@ module HesburghAssets
     def active_branch_path
       if active_branch_code == 'main'
         ''
-      elsif active_branch_code == 'architecture_library'
-        '/architecture'
       else
-        "/#{active_branch_code}"
+        "/#{active_branch_code.gsub('_library','')}"
       end
     end
 
@@ -52,6 +50,10 @@ module HesburghAssets
       else
         params[:active_branch_code]
       end
+    end
+
+    def branch_site?
+      active_branch_code != 'main'
     end
 
     def link_sub(contents)

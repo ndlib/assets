@@ -15,7 +15,7 @@ class StyleGuideController < ApplicationController
   end
 
   def branch
-    render layout: 'engineering'
+    params[:active_branch_code] = "engineering_library"
   end
 
   def search_appliance
