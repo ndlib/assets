@@ -17,4 +17,5 @@ gem 'therubyracer', '~> 0.10.0'
 
 group :development, :test do
   gem "hesburgh_infrastructure", git: 'git@git.library.nd.edu:hesburgh_infrastructure'
+  gem 'rb-readline', '~> 0.4.2'
 end
