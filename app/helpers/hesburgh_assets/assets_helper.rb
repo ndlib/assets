@@ -16,12 +16,19 @@ module HesburghAssets
     }
 
     def include_branch_ssi(filepath)
-      include_ssi("#{active_branch_path}#{filepath}")
+      include_ssi("#{active_branch_path}#{clean_ssi_path(filepath)}")
     end
 
     # Includes the relevant library SSI file from http://library.nd.edu/ssi/<filename>.shtml
     def include_ssi(filepath)
-      render :partial => "/layouts/hesburgh_assets/include_ssi", :locals => {:filepath => filepath}
+      render :partial => "/layouts/hesburgh_assets/include_ssi", :locals => {:filepath => clean_ssi_path(filepath)}
+    end
+
+    def clean_ssi_path(filepath)
+      if !(filepath =~ /^\//)
+        filepath = "/#{filepath}"
+      end
+      filepath
     end
 
     def read_ssi_file(filepath)
