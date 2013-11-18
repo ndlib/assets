@@ -2,8 +2,12 @@ require "hesburgh_assets/engine"
 
 module HesburghAssets
 
-  def self.host(environment = Rails.env)
-    hosts[environment]
+  def self.assets_host
+    hosts["assets"]
+  end
+
+  def self.library_host
+    hosts["library"]
   end
 
   private
@@ -17,5 +21,6 @@ module HesburghAssets
 
     def self.hosts
       @hosts ||= self.load_yml('hosts.yml')
+      @hosts[Rails.env] || @hosts['default']
     end
 end

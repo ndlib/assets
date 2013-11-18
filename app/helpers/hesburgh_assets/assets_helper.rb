@@ -102,10 +102,17 @@ module HesburghAssets
       @body_class = new_class
     end
 
+    def library_url(path = nil)
+      if path && !(path =~ /^\//)
+        path = "/#{path}"
+      end
+      "http://#{HesburghAssets.library_host}#{path}"
+    end
+
     def hesburgh_asset_path(directory, file, options)
       version = options.delete(:version) || "1.0"
       path = "hesburgh_assets/#{directory}/#{version}/#{file}"
-      if asset_host = HesburghAssets.host
+      if asset_host = HesburghAssets.assets_host
         path = "//#{asset_host}/assets/#{path}"
       end
       path
