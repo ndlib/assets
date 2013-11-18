@@ -1,5 +1,6 @@
 //
 //= require jquery
+//= require ./jquery.migrate-1.2.1.js
 //= require twitter/bootstrap
 //= require ./modernizr.foundation.js
 //= require ./foundation.js

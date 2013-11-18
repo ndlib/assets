@@ -10,13 +10,13 @@ jQuery.foundation = jQuery.foundation || {};
 jQuery.foundation.customForms = jQuery.foundation.customForms || {};
 
 jQuery(document).ready(function ($) {
-    
+
   $.foundation.customForms.appendCustomMarkup = function (options) {
     var defaults = {
       disable_class: "js-disable-custom"
     };
     var options = $.extend(defaults, options);
-    
+
     function appendCustomMarkup(idx, sel) {
       var $this = $(sel).hide(),
           type  = $this.attr('type'),
@@ -95,7 +95,7 @@ jQuery(document).ready(function ($) {
       }
 
     }
-    
+
     $('form.custom input:radio[data-customforms!=disabled]').each(appendCustomMarkup);
     $('form.custom input:checkbox[data-customforms!=disabled]').each(appendCustomMarkup);
     $('form.custom select[data-customforms!=disabled]').each(appendCustomSelect);
@@ -104,18 +104,18 @@ jQuery(document).ready(function ($) {
 });
 
 (function ($) {
-  
+
   function refreshCustomSelect($select) {
     var maxWidth = 0,
         $customSelect = $select.next();
     $options = $select.find('option');
     $customSelect.find('ul').html('');
-    
+
     $options.each(function () {
       $li = $('<li>' + $(this).html() + '</li>');
       $customSelect.find('ul').append($li);
     });
-    
+
     // re-populate
     $options.each(function (index) {
       if (this.selected) {
@@ -123,7 +123,7 @@ jQuery(document).ready(function ($) {
         $customSelect.find('.current').html($(this).html());
       }
     });
-    
+
     // fix width
     $customSelect.removeAttr('style')
       .find('ul').removeAttr('style');
@@ -136,9 +136,9 @@ jQuery(document).ready(function ($) {
     });
     $customSelect.css('width', maxWidth + 18 + 'px');
     $customSelect.find('ul').css('width', maxWidth + 16 + 'px');
-    
+
   }
-  
+
   function toggleCheckbox($element) {
     var $input = $element.prev(),
         input = $input[0];
@@ -151,7 +151,7 @@ jQuery(document).ready(function ($) {
         $input.trigger('change');
     }
   }
-  
+
   function toggleRadio($element) {
     var $input = $element.prev(),
         input = $input[0];
@@ -163,30 +163,30 @@ jQuery(document).ready(function ($) {
       });
       input.checked = ((input.checked) ? false : true);
       $element.toggleClass('checked');
-    
+
       $input.trigger('change');
     }
   }
-  
-  $('form.custom span.custom.checkbox').live('click', function (event) {
+
+  $(document).on('click', 'form.custom span.custom.checkbox', function (event) {
     event.preventDefault();
     event.stopPropagation();
-    
+
     toggleCheckbox($(this));
   });
-  
-  $('form.custom span.custom.radio').live('click', function (event) {
+
+  $(document).on('click', 'form.custom span.custom.radio', function (event) {
     event.preventDefault();
     event.stopPropagation();
-    
+
     toggleRadio($(this));
   });
-  
-  $('form.custom select').live('change', function (event) {
+
+  $(document).on('change', 'form.custom select', function (event) {
     refreshCustomSelect($(this));
   });
-  
-  $('form.custom label').live('click', function (event) {
+
+  $(document).on('click', 'form.custom label', function (event) {
     var $associatedElement = $('#' + $(this).attr('for')),
         $customCheckbox,
         $customRadio;
@@ -203,11 +203,11 @@ jQuery(document).ready(function ($) {
     }
   });
 
-  $('form.custom div.custom.dropdown a.current, form.custom div.custom.dropdown a.selector').live('click', function (event) {
+  $(document).on('click', 'form.custom div.custom.dropdown a.current, form.custom div.custom.dropdown a.selector', function (event) {
     var $this = $(this),
         $dropdown = $this.closest('div.custom.dropdown'),
         $select = $dropdown.prev();
-    
+
     event.preventDefault();
 
     if (false == $select.is(':disabled')) {
@@ -224,35 +224,35 @@ jQuery(document).ready(function ($) {
         return false;
     }
   });
-  
-  $('form.custom div.custom.dropdown li').live('click', function (event) {
+
+  $(document).on('click', 'form.custom div.custom.dropdown li', function (event) {
     var $this = $(this),
         $customDropdown = $this.closest('div.custom.dropdown'),
         $select = $customDropdown.prev(),
         selectedIndex = 0;
-        
+
     event.preventDefault();
     event.stopPropagation();
-    
+
     $this
       .closest('ul')
       .find('li')
       .removeClass('selected');
     $this.addClass('selected');
-    
+
     $customDropdown
       .removeClass('open')
       .find('a.current')
       .html($this.html());
-    
+
     $this.closest('ul').find('li').each(function (index) {
       if ($this[0] == this) {
         selectedIndex = index;
       }
-      
+
     });
     $select[0].selectedIndex = selectedIndex;
-    
+
     $select.trigger('change');
   });
 })(jQuery);

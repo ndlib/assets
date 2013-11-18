@@ -8,8 +8,8 @@
 /*globals jQuery */
 
 (function ($) {
-  
-  $('a[data-reveal-id]').live('click', function (event) {
+
+  $(document).on('click', 'a[data-reveal-id]', function (event) {
     event.preventDefault();
     var modalLocation = $(this).attr('data-reveal-id');
     $('#' + modalLocation).reveal($(this).data());
@@ -40,7 +40,7 @@
         modalBg = $('<div class="reveal-modal-bg" />').insertAfter(modal);
         modalBg.fadeTo('fast', 0.8);
       }
-      
+
       function unlockModal() {
         locked = false;
       }
@@ -124,12 +124,12 @@
       modal.bind('reveal:close.reveal', closeAnimation);
       modal.bind('reveal:opened.reveal reveal:closed.reveal', unlockModal);
       modal.bind('reveal:closed.reveal', destroy);
-      
+
       modal.bind('reveal:open.reveal', options.open);
       modal.bind('reveal:opened.reveal', options.opened);
       modal.bind('reveal:close.reveal', options.close);
       modal.bind('reveal:closed.reveal', options.closed);
-      
+
       modal.trigger('reveal:open');
 
       closeButton = $('.' + options.dismissModalClass).bind('click.reveal', function () {

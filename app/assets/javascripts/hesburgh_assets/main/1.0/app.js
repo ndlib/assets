@@ -67,7 +67,7 @@ jQuery(document).ready(function ($) {
   /* DROPDOWN NAV ------------- */
 
   var lockNavBar = false;
-  $('.nav-bar a.flyout-toggle').live('click', function(e) {
+  $(document).on('click', '.nav-bar a.flyout-toggle', function(e) {
     e.preventDefault();
     var flyout = $(this).siblings('.flyout');
     if (lockNavBar === false) {

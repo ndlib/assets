@@ -13,7 +13,6 @@ gemspec
 # To use debugger
 # gem 'debugger'
 gem "rails", '~> 3.2.14'
-gem "jquery-rails", '~> 2.1.4'
 gem 'therubyracer', '~> 0.10.0'
 
 group :development, :test do
