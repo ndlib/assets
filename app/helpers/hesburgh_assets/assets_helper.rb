@@ -98,5 +98,24 @@ module HesburghAssets
     def set_body_class(new_class)
       @body_class = new_class
     end
+
+    def hesburgh_asset_path(directory, file, options)
+      version = options.delete(:version) || "1.0"
+      path = "hesburgh_assets/#{directory}/#{version}/#{file}"
+      if asset_host = HesburghAssets.host
+        path = "//#{asset_host}/assets/#{path}"
+      end
+      path
+    end
+
+    def hesburgh_stylesheet_link_tag(directory, file, options = {})
+      path = hesburgh_asset_path(directory, file, options)
+      stylesheet_link_tag(path, options)
+    end
+
+    def hesburgh_javascript_include_tag(directory, file, options = {})
+      path = hesburgh_asset_path(directory, file, options)
+      javascript_include_tag(path, options)
+    end
   end
 end
