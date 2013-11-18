@@ -87,9 +87,22 @@ module HesburghAssets
     end
 
     def breadcrumb(*crumbs)
-      crumbs.unshift(link_to("Assets", root_path))
-      crumbs.unshift(link_to("Hesburgh Libraries", "https://www.library.nd.edu"))
+      crumbs.unshift(application_crumb)
+      crumbs.unshift(root_crumb)
+      crumbs.delete(nil)
       content_for(:breadcrumb, raw(crumbs.join(" &gt; ")))
+    end
+
+    def root_crumb
+      link_to("Hesburgh Libraries", "https://library.nd.edu")
+    end
+
+    def application_crumb
+      link_to(application_name, root_path)
+    end
+
+    def application_name
+      Rails.application.class.parent_name.to_s.titleize
     end
 
     def body_class
