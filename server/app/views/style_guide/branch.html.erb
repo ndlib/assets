@@ -5,5 +5,9 @@
   <%= render :partial => "homepage_right" %>
 <% end %>
 
+<% content_for(:body_bottom) do %>
+  <%= render :partial => "homepage_modals" %>
+<% end %>
+
 <%= render partial: 'homepage_main' %>
 
