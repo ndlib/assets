@@ -348,3 +348,11 @@ dl.tabs dd {
     box-shadow: none;
   }
 }
+
+html[data-useragent*='MSIE 10.0'] dl.tabs dd > a.active, dl.tabs dd > a.active:hover {
+  border-width: 0;
+  margin:0;
+  padding:8px 15px 15px 14px !important;
+  border-right:solid 1px #B1C6D3 !important;
+  background:#fff url(http://library.nd.edu/local_images/ie.corner.gif) top left !important;
+}
