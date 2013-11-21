@@ -5,5 +5,6 @@
 //= require ./jquery.tablesorter.js
 //= require ./malc.js
 //= require ./ndu.js
+//= require ./search-partner-libraries.js
 //= require ./wc.js
 //= require ./wc_proxy.js
