@@ -16,11 +16,14 @@ jQuery(function($) {
     if (!input.val()) {
       input.val(legendText);
     }
-    input.focus(function(){
+    var clearPlaceholder = function() {
       if (input.val() == legendText) {
-        $(this).val('');
+        input.val('');
       }
-    });
+    };
+    var form = input.parents('form');
+    form.submit(clearPlaceholder);
+    input.focus(clearPlaceholder);
     input.blur(function() {
       if (!input.val()) {
         input.val(legendText);
