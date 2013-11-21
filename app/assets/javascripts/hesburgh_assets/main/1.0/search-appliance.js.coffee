@@ -19,3 +19,7 @@ jQuery ($) ->
           window.location.href = qUrl
 
     $links.click(searchApplianceRedirect)
+
+  doc = document.documentElement
+  doc.setAttribute "data-useragent", navigator.userAgent
+
