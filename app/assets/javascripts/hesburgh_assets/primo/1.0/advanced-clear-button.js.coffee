@@ -9,5 +9,5 @@ jQuery ($) ->
     clearButton.click (event) ->
       event.preventDefault()
       params = $('#tab, #vid, #mode').serialize()
-      path = window.location.pathname.replace('dlSearch.do','search.do')
+      path = form.attr('action').replace(/\?.*/,'')
       window.location = path + '?' + params
