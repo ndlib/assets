@@ -37,6 +37,10 @@
     box-sizing: border-box;
   }
 
+  .checkbox, .radio {
+    padding-left: 18px;
+  }
+
   @include tabs;
 
   dl.contained.tabs dd a {

@@ -13,18 +13,21 @@
     <div id="search_box">
       <ul class="tabs-content contained">
         <li class="active" id="tab_primoTab">
-          <form name="searchForm" method="get" action="<%= library_url("/search/onesearch") %>" class="simple EXLForm" enctype="application/x-www-form-urlencoded; charset=utf-8">
+          <form name="searchForm" method="get" action="<%= primo_search_url("onesearch") %>" class="simple EXLForm" enctype="application/x-www-form-urlencoded; charset=utf-8">
             <!--<p class="new about-tab hide-on-phones"><img src="/local_images/new.png"> <a class="cboxElement" href="/expl/expl-onesearch.shtml">Learn more</a> about our new search service.</p><span class="feedback hide-on-phones"><a href="/onesearch/feedback/">Let us know</a> what you think.</span>-->
             <fieldset>
               <span class="legend">Search articles, the ND catalog and area libraries</span>
               <input tabindex="1" type="text" id="catplus_search" class="srch-box long" name="q" value="" onkeydown="" accesskey="s" />
+              <% if !Rails.env.production? %>
+                <input type="hidden" name="vid" value="NDUC">
+              <% end %>
               <button type="submit" class="searchbtn btn">Search</button>
 
             </fieldset>
           </form>
           <ul class="extra-links">
-            <li><a href="http://onesearch.library.nd.edu/primo_library/libweb/action/search.do?vid=NDU&resetConfig=true&tab=onesearch&mode=Advanced">Advanced search</a></li>
-            <li><a href="http://onesearch.library.nd.edu/primo_library/libweb/action/search.do?vid=NDU&tab=nd_campus&mode=Basic&resetConfig=true">ND Catalog</a></li>
+            <li><a href="<%= primo_search_url("onesearch", mode: 'Advanced') %>">Advanced search</a></li>
+            <li><a href="<%= primo_search_url("nd_campus") %>">ND Catalog</a></li>
             <li><a href="http://alephprod.library.nd.edu/F/?func=find-b-0">Catalog Classic</a></li>
             <li><a href="http://eresources.library.nd.edu/databases/worldcat">WorldCat</a></li>
 
@@ -35,17 +38,20 @@
         </li>
 
         <li class="tab_cat ui-tabs ui-tabs-hide" id="tab_catTab">
-          <form name="searchForm" method="get" action="<%= library_url("/search/catalog") %>" class="simple EXLForm" enctype="application/x-www-form-urlencoded; charset=utf-8">
+          <form name="searchForm" method="get" action="<%= primo_search_url("nd_campus") %>" class="simple EXLForm" enctype="application/x-www-form-urlencoded; charset=utf-8">
             <fieldset>
               <span class="legend">Find books, music, movies, etc. in ND and area libraries</span>
               <input type="text" id="catplus_search" class="srch-box long" name="q" value="" onkeydown="" accesskey="s" />
+              <% if !Rails.env.production? %>
+                <input type="hidden" name="vid" value="NDUC">
+              <% end %>
               <button type="submit" class="searchbtn btn">Search</button>
-
+              <label class="checkbox"><input type="checkbox" name="search_scope" value="default_scope"> Include Partner Libraries</label>
             </fieldset>
           </form>
         <!--<div id="problem" style="color: green;"><a href="http://library.nd.edu/catalogplus/what_you_should_know.shtml">5 Things You Should Know</a> about CatalogPlus, especially if you are an ardent CatalogClassic user. <br /><br /></div>-->
           <ul class="extra-links">
-            <li><a href="http://onesearch.library.nd.edu/primo_library/libweb/action/search.do?vid=NDU&resetConfig=true&tab=nd_campus&mode=Advanced">Advanced search</a></li>
+            <li><a href="<%= primo_search_url("nd_campus", mode: 'Advanced') %>">Advanced search</a></li>
             <li><a href="http://alephprod.library.nd.edu/F/?func=find-b-0">Catalog Classic</a></li>
             <li><a href="http://eresources.library.nd.edu/databases/worldcat">WorldCat</a></li>
           </ul>
@@ -55,7 +61,7 @@
         </li>
 
         <li class="tab_art ui-tabs ui-tabs-hide" id="tab_artTab">
-          <form action="<%= library_url("/search/articles") %>" method="get">
+          <form action="<%= search_url("articles") %>" method="get">
             <fieldset>
               <span class="legend">Find articles on a topic</span>
               <input id="quick_search" class="srch-box long" type="text" name="q" value="" />
@@ -64,9 +70,9 @@
             </fieldset>
           </form>
           <ul class="extra-links">
-            <li><a href="http://xerxes.library.nd.edu/quicksearch/databases/subject/general-multidisciplinary">Advanced Search</a></li>
-            <li><a href="http://library.nd.edu/find_articles/index.shtml#tab_tad">Most used article databases</a></li>
-            <li><a href="/find_articles/index.shtml#simple3 ">Articles by subject</a></li>
+            <li><a href="<%= search_url("articles") %>">Advanced Search</a></li>
+            <li><a href="<%= library_url("/find_articles/index.shtml#tab_tad") %>">Most used article databases</a></li>
+            <li><a href="<%= library_url("/find_articles/index.shtml#simple3") %>">Articles by subject</a></li>
           </ul>
           <p class="about-tab">
             <a data-reveal-id="art">About Articles</a>
@@ -74,7 +80,7 @@
         </li>
 
         <li class="tab_jou ui-tabs ui-tabs-hide" id="tab_jouTab">
-          <form action="<%= library_url("/search/ejournals") %>" method="get">
+          <form action="<%= search_url("ejournals") %>" method="get">
             <fieldset>
               <span class="legend">Find a specific journal</span>
               <input tabindex="5" id="journals_search" class="srch-box long" type="text" name="q" value="" />
@@ -84,7 +90,7 @@
           </form>
 
           <ul class="extra-links">
-            <li><a href="http://ejl.library.nd.edu/">Advanced search</a></li>
+            <li><a href="<%= search_url("ejournals") %>">Advanced search</a></li>
             <li><a href="http://eresources.library.nd.edu/ejournals/alljournals">All journals</a></li>
           </ul>
           <p class="about-tab">
@@ -93,7 +99,7 @@
         </li>
 
         <li class="tab_dat ui-tabs ui-tabs-hide" id="tab_datTab">
-          <form action="<%= library_url("/search/databases") %>" method="get"  enctype="application/x-www-form-urlencoded" accept-charset="utf-8" name="myform" id="myform">
+          <form action="<%= search_url("databases") %>" method="get"  enctype="application/x-www-form-urlencoded" accept-charset="utf-8" name="myform" id="myform">
             <fieldset>
               <span class="legend">Find databases by title or keyword</span>
               <input id="dbf_search" class="srch-box long" type="text" name="q" value="" />
@@ -142,16 +148,18 @@
         </li>
 
         <li class="tab_boo ui-tabs ui-tabs-hide" id="tab_booTab">
-          <form name="searchForm" method="get" action="<%= library_url("/search/ebooks") %>" class="simple EXLForm" enctype="application/x-www-form-urlencoded; charset=utf-8">
+          <form name="searchForm" method="get" action="<%= primo_search_url("ebooks") %>" class="simple EXLForm" enctype="application/x-www-form-urlencoded; charset=utf-8">
             <fieldset>
               <span class="legend">Find electronic books in ND and area libraries</span>
               <input type="text" id="search_field" class="EXLSearchInputText EXLMainSearchField srch-box long" name="q" value="" onkeydown="" accesskey="s" />
+              <% if !Rails.env.production? %>
+                <input type="hidden" name="vid" value="NDUC">
+              <% end %>
               <button type="submit" class="searchbtn btn">Search</button>
-
             </fieldset>
           </form>
           <ul class="extra-links">
-            <li><a href="http://library.nd.edu/srch-find/ebooks.shtml">e-Book collections</a></li>
+            <li><a href="<%= library_url("/srch-find/ebooks.shtml") %>">e-Book collections</a></li>
             <li><a href="http://eresources.library.nd.edu/databases/googlebook">Google Books</a></li>
             <li><a href="http://eresources.library.nd.edu/databases/hathitrust">HathiTrust</a> (<a href="http://eresources.library.nd.edu/databases/hathifaq">FAQ</a>)</li>
          </ul>
