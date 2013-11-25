@@ -64,6 +64,9 @@ $tabs-small-gradient: top,#9bbcdd 0%,#9cbddd 80%,#b0cae4 80%,#b5cde6 100%;
         behavior: url(PIE.htc);
         margin:0;
       }
+      a.active, a.active:hover {
+        background: #FFF;
+      }
       a:hover {
         background: -moz-linear-gradient($tabs-hover-gradient); /* FF3.6+ */
         background: -webkit-linear-gradient($tabs-hover-gradient); /* Chrome10+,Safari5.1+ */
