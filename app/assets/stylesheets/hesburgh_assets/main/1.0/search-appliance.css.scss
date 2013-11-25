@@ -251,6 +251,10 @@
             border-radius: 3px;
   }
 
+  input[type=checkbox] {
+    padding: 0 !important;
+  }
+
   select {
     padding: 8px 4px;
     height: 36px;
