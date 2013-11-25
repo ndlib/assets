@@ -310,6 +310,14 @@ dl.tabs dd {
       @include search-appliance-tabs-small;
     }
   }
+
+  html[data-useragent*='MSIE 10.0'] {
+    .home-page {
+      .search-appliance {
+        @include search-appliance-ie-tabs-small;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 767px) {

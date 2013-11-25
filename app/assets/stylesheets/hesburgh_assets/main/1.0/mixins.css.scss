@@ -152,3 +152,16 @@ $tabs-small-gradient: top,#9bbcdd 0%,#9cbddd 80%,#b0cae4 80%,#b5cde6 100%;
     }
   }
 }
+
+@mixin search-appliance-ie-tabs-small {
+  dl.tabs {
+    dd {
+      > a.active {
+        padding: 3px 0 0.5em 13px;
+        background-image: none;
+        border: 1px solid #B1C6D3;
+        border-bottom: none;
+      }
+    }
+  }
+}

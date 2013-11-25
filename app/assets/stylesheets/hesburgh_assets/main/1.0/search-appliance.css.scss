@@ -16,11 +16,6 @@
   dl.tabs dt:first-child { padding: 0 9px 0 0; }
   dl.tabs dd { display: block; width: auto; height: 30px; padding: 0; float: left; }
   dl.tabs dd a { display: block; width: auto; height: 29px; padding: 0 9px; line-height: 30px; border: solid 1px #ddd; margin: 0 -1px 0 0; color: #555; background: #eee; }
-
-  dl.contained.tabs dd a {
-    padding-right: 14px;
-    padding-left: 14px;
-  }
   // End Foundation
 
   // Bootstrap
@@ -43,6 +38,11 @@
   }
 
   @include tabs;
+
+  dl.contained.tabs dd a {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
 
   dl.tabs {
 
@@ -327,10 +327,15 @@
     background-color: transparent;
   }
 }
-html[data-useragent*='MSIE 10.0'] dl.tabs dd > a.active, dl.tabs dd > a.active:hover {
-  border-width: 0;
-  margin:0;
-  padding:8px 15px 15px 14px !important;
-  border-right:solid 1px #B1C6D3 !important;
-  background:#fff url(http://library.nd.edu/local_images/ie.corner.gif) top left !important;
+
+html[data-useragent*='MSIE 10.0'] {
+  .search-appliance {
+    dl.tabs dd > a.active {
+      border-width: 0;
+      margin:0;
+      padding:8px 15px 15px 14px;
+      border-right:solid 1px #B1C6D3;
+      background:#fff url(http://library.nd.edu/local_images/ie.corner.gif) top left;
+    }
+  }
 }
