@@ -261,14 +261,18 @@ dl.tabs dd {
     #chat {
       display: none;
     }
+    #hours, .hours {
+      width: auto;
+      max-width: 300px;
+    }
     #quicklinks ul {
       width: 100%;
     }
     .inner-left {
-      padding: 10px 10px 0;
+      padding: 10px 0 0;
     }
     .inner-right {
-      padding: 10px 0 0 15px;
+      padding: 10px 0 0 5px;
     }
     .taupe-bg .eight {
       // margin:0 !important;
@@ -327,7 +331,6 @@ dl.tabs dd {
   }
   .home-page {
     #hours {
-      width: auto;
       clear: both;
     }
 
