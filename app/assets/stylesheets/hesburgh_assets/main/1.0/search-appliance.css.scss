@@ -106,10 +106,13 @@
         padding-top:0;
         padding-right:0;
         padding-left:6px;
+        color:#2B5781;
+      }
+
+      > a.active, a.active:hover {
         background-image: none;
         background-color: #fff;
         background-clip: padding-box;
-        color:#2B5781;
       }
 
       > a.active:active {
