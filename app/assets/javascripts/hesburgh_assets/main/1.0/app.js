@@ -22,6 +22,17 @@ jQuery(document).ready(function ($) {
       $(contentLocation).closest('.tabs-content').children('li').hide();
       $(contentLocation).css('display', 'block');
     }
+
+    var parents = $tab.parents();
+    if (parents.is('.home-page') && parents.is('.search-appliance')) {
+      var previousContent = $($activeTab.attr('href') + 'Tab');
+      var previousInput = previousContent.find('input.srch-box');
+      var input = $(contentLocation).find('input.srch-box');
+      if (previousInput.val()) {
+        input.val(previousInput.val());
+        input.focus();
+      }
+    }
   }
 
   $('dl.tabs').each(function () {
