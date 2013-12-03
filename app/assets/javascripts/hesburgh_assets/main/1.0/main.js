@@ -121,9 +121,9 @@ jQuery(function($) {
   $('#chat-head').click(function(){
     $('#chat-widget').slideToggle();
     if($('#chat-head img').attr('src') == '/assets/hesburgh_assets/main/1.0/blue_arrow_horiz.png'){
-      $('#chat-head img').attr('src', '/assets/hesburgh_assets/main/1.0/blue_arrow_vert.png');
+      $('#chat-head img').attr('src', '/assets/hesburgh_assets/main/1.0/white_arrow_vert.png');
     }else{
-      $('#chat-head img').attr('src', '/assets/hesburgh_assets/main/1.0/blue_arrow_horiz.png');
+      $('#chat-head img').attr('src', '/assets/hesburgh_assets/main/1.0/white_arrow_horiz.png');
     };
 
   });
