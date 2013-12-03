@@ -54,13 +54,15 @@ jQuery(function($) {
   });
 
   //Set the user's Default Search tab
-  defaultTab = getCookie('DEFAULT_TAB');
-  var page = window.location.hostname;
+  var defaultTab = getCookie('DEFAULT_TAB');
 
   if (defaultTab && !window.location.hash ) {
-    window.location.hash = defaultTab;
-    if (window.location.hash) {
-      activateTab($('a[href="' + window.location.hash + '"]'));
+    $tab = $('a[href="' + defaultTab + '"]');
+    if ($tab.length > 0) {
+      window.location.hash = defaultTab;
+      if (window.location.hash) {
+        activateTab($tab);
+      }
     }
   }
 
