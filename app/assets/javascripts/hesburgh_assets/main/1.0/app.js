@@ -25,12 +25,16 @@ jQuery(document).ready(function ($) {
 
     var parents = $tab.parents();
     if (parents.is('.home-page') && parents.is('.search-appliance')) {
+      // If the user has typed anything in the search box of the previous tab, copy it to the next tab's search box
       var previousContent = $($activeTab.attr('href') + 'Tab');
       var previousInput = previousContent.find('input.srch-box');
-      var input = $(contentLocation).find('input.srch-box');
-      if (previousInput.val()) {
+      previousInput.focus();
+      if (previousInput.val() && previousInput.val() != previousInput.data('placeholder')) {
+        var input = $(contentLocation).find('input.srch-box');
         input.val(previousInput.val());
         input.focus();
+        // Make sure the cursor is at the end of the search box
+        input[0].setSelectionRange(input.val().length, input.val().length);
       }
     }
   }

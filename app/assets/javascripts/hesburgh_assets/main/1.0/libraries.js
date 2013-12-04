@@ -13,11 +13,12 @@ jQuery(function($) {
     var legend = $(this);
     var legendText = legend.text();
     var input = legend.siblings('.srch-box');
+    input.data('placeholder',legendText);
     if (!input.val()) {
-      input.val(legendText);
+      input.val(input.data('placeholder'));
     }
     var clearPlaceholder = function() {
-      if (input.val() == legendText) {
+      if (input.val() == input.data('placeholder')) {
         input.val('');
       }
     };
@@ -26,7 +27,7 @@ jQuery(function($) {
     input.focus(clearPlaceholder);
     input.blur(function() {
       if (!input.val()) {
-        input.val(legendText);
+        input.val(input.data('placeholder'));
       }
     });
   });
