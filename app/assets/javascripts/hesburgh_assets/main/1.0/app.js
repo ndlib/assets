@@ -34,7 +34,9 @@ jQuery(document).ready(function ($) {
         input.val(previousInput.val());
         input.focus();
         // Make sure the cursor is at the end of the search box
-        input[0].setSelectionRange(input.val().length, input.val().length);
+        if (input[0].setSelectionRange) {
+          input[0].setSelectionRange(input.val().length, input.val().length);
+        }
       }
     }
   }
