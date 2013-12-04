@@ -315,7 +315,7 @@ dl.tabs dd {
     }
   }
 
-  html[data-useragent*='MSIE 10.0'] {
+  html[data-useragent*='MSIE 10.0'], html[data-useragent*='MSIE 9.0'] {
     .home-page {
       .search-appliance {
         @include search-appliance-ie-tabs-small;

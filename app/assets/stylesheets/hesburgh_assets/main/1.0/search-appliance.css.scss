@@ -102,7 +102,7 @@
         -moz-border-image: url(/assets/hesburgh_assets/main/1.0/search_appliance/corner.png) 8 14 15 8 round;
         -webkit-border-image: url(/assets/hesburgh_assets/main/1.0/search_appliance/corner.png) 8 14 15 8 round;
         -o-border-image: url(/assets/hesburgh_assets/main/1.0/search_appliance/corner.png) 8 14 15 8 round;
-        border-image: url(/assets/hesburgh_assets/main/1.0/search_appliance/corner.png) 8 14 15 8 fill round;
+        border-image: url(/assets/hesburgh_assets/main/1.0/search_appliance/corner.png) 8 14 15 8 fill stretch;
         padding-top:0;
         padding-right:0;
         padding-left:4px;
@@ -339,7 +339,7 @@
   }
 }
 
-html[data-useragent*='MSIE 10.0'] {
+html[data-useragent*='MSIE 10.0'], html[data-useragent*='MSIE 9.0'], html[data-useragent*='MSIE 8.0'] {
   .search-appliance {
     dl.tabs dd > a.active {
       border-width: 0;
@@ -347,6 +347,24 @@ html[data-useragent*='MSIE 10.0'] {
       padding:8px 11px 15px 12px;
       border-right:solid 1px #B1C6D3;
       background:#fff url(/assets/hesburgh_assets/main/1.0/search_appliance/ie.corner.gif) top left;
+    }
+  }
+}
+
+html[data-useragent*='MSIE 8.0'] {
+  .search-appliance {
+    input.srch-box {
+      border: solid 1px #CCC;
+    }
+  }
+
+  ul.contained.tabs-content {
+
+    > li:before,
+    > li:after {
+      content: none;
+      box-shadow: none;
+      width: 0;
     }
   }
 }
