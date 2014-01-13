@@ -11,7 +11,8 @@ jQuery ($) ->
       if href && /^[^#]/.test(href) && !/[?]/.test(href)
         activeTabContent = $tabContents.filter('.active')
         searchField = activeTabContent.find('input[type=text]:first')
-        qUrl = "#{href}?q=#{escape(searchField.val())}"
+        qParam = $.param({q: searchField.val()})
+        qUrl = "#{href}?#{qParam}"
         if searchField.length > 0
           event.preventDefault()
           event.stopImmediatePropagation()
