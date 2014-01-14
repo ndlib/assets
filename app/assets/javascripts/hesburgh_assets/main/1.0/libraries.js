@@ -14,7 +14,7 @@ jQuery(function($) {
     var legendText = legend.text();
     var input = legend.siblings('.srch-box');
     input.data('placeholder',legendText);
-    if (!input.val()) {
+    if (!input.val() && !input.is(":focus")) {
       input.val(input.data('placeholder'));
     }
     var clearPlaceholder = function() {
