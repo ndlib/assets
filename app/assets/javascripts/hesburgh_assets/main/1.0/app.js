@@ -33,6 +33,7 @@ jQuery(document).ready(function ($) {
         var input = $(contentLocation).find('input.srch-box');
         input.val(previousInput.val());
         input.focus();
+        previousInput.val(previousInput.data('placeholder'));
         // Make sure the cursor is at the end of the search box
         if (input[0].setSelectionRange) {
           input[0].setSelectionRange(input.val().length, input.val().length);
