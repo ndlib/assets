@@ -13,7 +13,7 @@ gemspec
 # To use debugger
 # gem 'debugger'
 gem "rails", '~> 3.2.14'
-gem 'therubyracer', '~> 0.10.0'
+gem 'therubyracer'
 
 group :development, :test do
   gem "hesburgh_infrastructure", git: 'git@git.library.nd.edu:hesburgh_infrastructure'
