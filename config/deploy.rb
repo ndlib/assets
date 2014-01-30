@@ -23,20 +23,23 @@ set :application_symlinks, [
 
 # Defaults are set in lib/hesburgh_infrastructure/capistrano/environments.rb
 
+set :scm_command, '/usr/bin/git'
+
+set :user, 'app'
+set :ruby_bin, "/opt/ruby/current/bin"
+
 desc "Setup for the Pre-Production environment"
 task :pre_production do
   # Customize pre_production configuration
-  set :user,      'apprd'
-  set :home_path, "/shared/asset_pprd"
-  set :domain, "assetpprd.library.nd.edu"
+  set :deploy_to, "/home/app/#{application}"
+  set :domain, "assetpprd-vm.library.nd.edu"
 end
 
 desc "Setup for the production environment"
 task :production do
   # Customize production configuration
-  set :user,      'aprod'
-  set :home_path, "/shared/asset_prod"
-  set :domain, "asset.library.nd.edu"
+  set :deploy_to, "/home/app/#{application}"
+  set :domain, "assetprod-vm.library.nd.edu"
 end
 
 #############################################################
