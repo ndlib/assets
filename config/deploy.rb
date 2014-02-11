@@ -24,7 +24,7 @@ set :application_symlinks, [
 # Defaults are set in lib/hesburgh_infrastructure/capistrano/environments.rb
 
 set :scm_command, '/usr/bin/git'
-
+ssh_options[:keys] = []
 set :user, 'app'
 set :ruby_bin, "/opt/ruby/current/bin"
 
