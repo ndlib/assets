@@ -64,7 +64,7 @@ $(document).ready(function(){
 			var on_campus = data.on_campus ;
 			var logged_in = data.logged_in ;
 			var logURL = $('.EXLSignOut a').attr('href');
-		if( !on_campus && !logged_in && (!tab[1] || tab[1] == "primo_central_nd" )      ) {
+		if( !on_campus && !logged_in && (!tab[1] || tab[1] == "onesearch" )      ) {
 				$('.EXLResultsTable').before(
 					'<h1 class="sign_in_alert">Please <a href="' + logURL + '">sign in</a> to see all search results when off-campus.</h1>'
 				)
@@ -77,7 +77,7 @@ $(document).ready(function(){
 	if ( vid == "vid=NDU" ) {
 		//var onshelf_sel = $('.EXLSearchRefinementRemovefacet_tlevel').html().match(/On Shelf/);
 		var top_facet_selected = $('.EXLSearchRefinementRemovefacet_tlevel strong').html();
-		if ( ( top_facet_selected == 'On Shelf' )&& (!tab[1] || tab[1] == "primo_central_nd" ) ) {
+		if ( ( top_facet_selected == 'On Shelf' )&& (!tab[1] || tab[1] == "onesearch" ) ) {
 			$('.EXLResultsTable').before('<div class="sign_in_alert">Note: On Shelf results do not include articles or book chapters, even when the relevant journals or books are available in the library.</div>')
 		}
 	}
