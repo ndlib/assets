@@ -59,7 +59,7 @@ $(document).ready(function(){
 //End worldcat stuff 
 //Login alerts for primo central
 	var tab = $(location).attr('href').match(/tab=(\w*)/);
-	if ( vid == "vid=NDUPC"  ) {
+	if ( vid == "vid=NDU"  ) {
 		jQuery.getJSON('/primo_library/libweb/current_session.jsp', function(data){
 			var on_campus = data.on_campus ;
 			var logged_in = data.logged_in ;
@@ -74,7 +74,7 @@ $(document).ready(function(){
 	}
 
 //Alert message for availability facet
-	if ( vid == "vid=NDUPC" ) {
+	if ( vid == "vid=NDU" ) {
 		//var onshelf_sel = $('.EXLSearchRefinementRemovefacet_tlevel').html().match(/On Shelf/);
 		var top_facet_selected = $('.EXLSearchRefinementRemovefacet_tlevel strong').html();
 		if ( ( top_facet_selected == 'On Shelf' )&& (!tab[1] || tab[1] == "primo_central_nd" ) ) {
