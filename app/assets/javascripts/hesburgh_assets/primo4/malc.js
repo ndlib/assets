@@ -43,33 +43,6 @@ $('#exlidAdvancedSearchRibbon .submit').live('click',function(){
 
 $(document).ready(function(){
 
-
-      $('.cbox').live('click', function(event){
-                var xh;
-                event.preventDefault();
-                var ur = $(this).attr('href');
-                var ht = '<div id="itoutter" style="width: 300px; height: 200px;"><img style="display: block; margin: auto; padding-top: 70px;" src="../images/local/loading_alt.gif" /></div>';
-                var xh = ajHandle();
-                $.colorbox({html:ht, onClosed:function(){ xh.abort(); }});
-                performAj(xh, ur, "GET", "", "colorbox");
-
-        });
-
-       $('.mbox').live('click', function(event){
-                event.preventDefault();
-                var dat = $(this).attr('value');
-                var it = $(this).attr('item');
-                var ur = $(this).attr('href');
-                var ht = '<div id="mps" style="width: 300px; height: 200px;"><img style="display: block; margin: auto; padding-top: 70px;" src="../images/local/loading_alt.gif" /></div>';
-                var pdat = "xml=" + dat + "&item=" + it;
-                var xh = ajHandle();
-                $.colorbox({html:ht, onClosed:function(){ xh.abort(); } });
-                performAj(xh, ur, "POST", pdat, "colorbox");
-
-                });
-
-
-
 // Check browser for worldcat tab
 
 	var vid = $(location).attr('href').match(/vid=\w*/)   ;
@@ -86,13 +59,12 @@ $(document).ready(function(){
 //End worldcat stuff 
 //Login alerts for primo central
 	var tab = $(location).attr('href').match(/tab=(\w*)/);
-	if ( vid == "vid=NDUPC"  ) {
+	if ( vid == "vid=NDU"  ) {
 		jQuery.getJSON('/primo_library/libweb/current_session.jsp', function(data){
-			console.log(data);
 			var on_campus = data.on_campus ;
 			var logged_in = data.logged_in ;
 			var logURL = $('.EXLSignOut a').attr('href');
-		if( !on_campus && !logged_in && (!tab[1] || tab[1] == "primo_central_nd" )      ) {
+		if( !on_campus && !logged_in && (!tab[1] || tab[1] == "onesearch" )      ) {
 				$('.EXLResultsTable').before(
 					'<h1 class="sign_in_alert">Please <a href="' + logURL + '">sign in</a> to see all search results when off-campus.</h1>'
 				)
@@ -102,10 +74,10 @@ $(document).ready(function(){
 	}
 
 //Alert message for availability facet
-	if ( vid == "vid=NDUPC" ) {
+	if ( vid == "vid=NDU" ) {
 		//var onshelf_sel = $('.EXLSearchRefinementRemovefacet_tlevel').html().match(/On Shelf/);
 		var top_facet_selected = $('.EXLSearchRefinementRemovefacet_tlevel strong').html();
-		if ( ( top_facet_selected == 'On Shelf' )&& (!tab[1] || tab[1] == "primo_central_nd" ) ) {
+		if ( ( top_facet_selected == 'On Shelf' )&& (!tab[1] || tab[1] == "onesearch" ) ) {
 			$('.EXLResultsTable').before('<div class="sign_in_alert">Note: On Shelf results do not include articles or book chapters, even when the relevant journals or books are available in the library.</div>')
 		}
 	}
@@ -114,7 +86,7 @@ $(document).ready(function(){
 
 
 	$('.EXLSummary').each(function(){
-		var t = $(this).children('.EXLSummaryContainer').children('.EXLSummaryFields').children('.EXLResultAvailability').children('.EXLResultStatusAvailable');
+		var t = $(this).children('.EXLSummaryContainer').children('.EXLSummaryFields').children('.EXLResultAvailability');
 		var tt = t.html();
 		var l = $(this).children('.EXLTabsRibbon').children('div').children('.EXLResultTabs').children('.EXLLocationsTab').html();
 		var lt = false;	
@@ -172,12 +144,13 @@ $(document).ready(function(){
 			var fulltxt = availText.match(/Full text available/g);
 			//var nofulltxt = availText.match(/No full text online/g);
 			var nofulltxt = availText.match(/Not available online/g);
-			if (!online && !fulltxt && !nofulltxt) {
+			var findtext = availText.match(/See FindText/g);
+			if (!online && !fulltxt && !nofulltxt && !findtext) {
 				var taera = thisERA.parents().parents().parents().children('.EXLTabsRibbon').children('div').children('.EXLResultTabs').children('.NewLocationTab').children('a');
 				taera.trigger('click');
 				msTabHandler(e, taera, 'NewLocationTab', '<div id="ndLocation" class="EXLTabLoading"></div>',getLocations,location.href, $(this).parents('.EXLResultTab').hasClass('EXLResultSelectedTab'));
 			}	
-			if (online || fulltxt || nofulltxt) {
+			if (online || fulltxt || nofulltxt || findtext) {
 				//$('#' + resultNum + '-ViewOnlineTab').css('font-size','200%');
 
 				//this triggers the online tab clicked	
@@ -453,7 +426,7 @@ function getLocations(element, tabType){
       var ddud = 'pnxId=' + dn + '&primary=ndu_aleph';
       var ddui = '/primo_library/libweb/tiles/local/location.jsp';
       $.ajax({type: "get", url: ddui, dataType: "html", data: ddud,  success: function(data){
-
+console.log($(element).parents('.EXLResult').find('.'+tabType+'-Container'));
 		        var p = $(element).parents('.EXLResult').find('.'+tabType+'-Container').children('.EXLTabContent').children('#ndLocation');
 			$(p).removeClass();
 			$(p).html(data);
@@ -650,44 +623,4 @@ function showHideDetails(){
 
 
 
-function ajHandle(){
 
-        var xmlhttp;
-
-        if (window.XMLHttpRequest){
-                // code for IE7+, Firefox, Chrome, Opera, Safari
-                xmlhttp=new XMLHttpRequest();
-        }else{
-                // code for IE6, IE5
-                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-        }
-
-        return xmlhttp;
-
-}
-
-function performAj(xmlhttp, url, m, dat, type){
-
-        xmlhttp.onreadystatechange=function(){
-                if (xmlhttp.readyState==4 && xmlhttp.status==200){
-                        var dt = xmlhttp.responseText;
-                        if(type == "colorbox"){
-                                $.colorbox({html:dt, scrolling:false});
-                        }
-                }else if(xmlhttp.readyState==4 && xmlhttp.status != 200){
-                        if(type == "colorbox"){
-                               // setTimeout($.colorbox({html:xmlhttp.responseText}), 1000);
-                        }
-                }
-        }
-
-        if(m == 'POST'){
-                xmlhttp.open("POST",url,true);
-                xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-                xmlhttp.send(dat);
-        }else{
-                xmlhttp.open("GET",url + "&t=" + Math.random(),true);
-                xmlhttp.send();
-        }
-
-}
