@@ -1,11 +1,11 @@
 $('.EXLSummary').live('mouseover',function(){
 
 	var resultNum = $(this).parents('.EXLResult').attr("id");
-	$('#' + resultNum + ' .EXLTabsRibbon li').css('background-color','#eeeeee'); 	
+	$('#' + resultNum + ' .EXLTabsRibbon li').css('background-color','#eeeeee');
 	})
 
 $('.EXLSummary').live('mouseout',function(){
-         
+
         var resultNum = $(this).parents('.EXLResult').attr("id");
         $('#' + resultNum + ' .EXLTabsRibbon li').css('background-color','');
         })
@@ -46,17 +46,17 @@ $(document).ready(function(){
 // Check browser for worldcat tab
 
 	var vid = $(location).attr('href').match(/vid=\w*/)   ;
-	if ( vid == "vid=NDUWC" ) { 
+	if ( vid == "vid=NDUWC" ) {
 		var wcTab = $(location).attr('search').match(/(tab.worldcat)\w*/)
 		var guest = $('#exlidUserAreaRibbon').hasClass('EXLEShelfTileGuest');
-		if ( wcTab && guest) { 
+		if ( wcTab && guest) {
 			var signIn = $('#exlidSignOut a').attr('href');
 			$(location).attr('href',signIn)
-		} 
+		}
 	}
 
 
-//End worldcat stuff 
+//End worldcat stuff
 //Login alerts for primo central
 	var tab = $(location).attr('href').match(/tab=(\w*)/);
 	if ( vid == "vid=NDU"  ) {
@@ -89,14 +89,14 @@ $(document).ready(function(){
 		var t = $(this).children('.EXLSummaryContainer').children('.EXLSummaryFields').children('.EXLResultAvailability');
 		var tt = t.html();
 		var l = $(this).children('.EXLTabsRibbon').children('div').children('.EXLResultTabs').children('.EXLLocationsTab').html();
-		var lt = false;	
+		var lt = false;
 		if(l != null){
 			lt = true;
-		}	
+		}
 		var re = new RegExp("Online access available");
 		var tm = re.test(tt);
 		if(tm && lt){
-			t.append(" <span class=\"inprint\">(also in print, see locations for details)</span>");	
+			t.append(" <span class=\"inprint\">(also in print, see locations for details)</span>");
 		}
 		});
 
@@ -129,7 +129,7 @@ $(document).ready(function(){
 
 
 	$('.EXLResultAvailability').hover(function(){
-			$(this).addClass('underline');	
+			$(this).addClass('underline');
 		},
 		function(){
 			$(this).removeClass('underline');
@@ -149,17 +149,17 @@ $(document).ready(function(){
 				var taera = thisERA.parents().parents().parents().children('.EXLTabsRibbon').children('div').children('.EXLResultTabs').children('.NewLocationTab').children('a');
 				taera.trigger('click');
 				msTabHandler(e, taera, 'NewLocationTab', '<div id="ndLocation" class="EXLTabLoading"></div>',getLocations,location.href, $(this).parents('.EXLResultTab').hasClass('EXLResultSelectedTab'));
-			}	
+			}
 			if (online || fulltxt || nofulltxt || findtext) {
 				//$('#' + resultNum + '-ViewOnlineTab').css('font-size','200%');
 
-				//this triggers the online tab clicked	
+				//this triggers the online tab clicked
 				var ont = $(this).parent().parent().parent().find('.EXLViewOnlineTab');
 				var ontu = ont.children('a').attr('href');
 				var ontc = ont.attr('class');
 				var ontp = new RegExp("EXLResultTabIconPopout");
 				if(ontp.test(ontc) && ontu){
-					window.open(ontu, '_catalogplus_url');	
+					window.open(ontu, '_catalogplus_url');
 				}else{
 					$(this).parent().parent().parent().find('.EXLViewOnlineTab a').trigger('click');
 				}
@@ -192,7 +192,7 @@ $(document).ready(function(){
 
 
 
-// Facet Open 
+// Facet Open
 
 $(".EXLFacetContainer h4").each(function(){
     var facet = $(this).text();
@@ -203,7 +203,7 @@ $(".EXLFacetContainer h4").each(function(){
 if ($('.EXLSearchRefinementRemovefacet_creationdate strong').attr('class') == 'EXLSearchRefinementfacet_creationdate') {
   	$(".publication ol").children('.EXLAdditionalFacet').show();
   	$(".publication ol").children('.EXLFacetsDisplayMore').hide();
-	$(".publication ol").children('.EXLFacetsDisplayLess').show(); 
+	$(".publication ol").children('.EXLFacetsDisplayLess').show();
 };
 
 if ($('.EXLSearchRefinementRemovefacet_lang strong').attr('class') == 'EXLSearchRefinementfacet_lang') {
@@ -215,37 +215,37 @@ if ($('.EXLSearchRefinementRemovefacet_lang strong').attr('class') == 'EXLSearch
 if ($('.EXLSearchRefinementRemovefacet_topic strong').attr('class') == 'EXLSearchRefinementfacet_topic') {
   	$(".topic ol").children('.EXLAdditionalFacet').show();
   	$(".topic ol").children('.EXLFacetsDisplayMore').hide();
-	$(".topic ol").children('.EXLFacetsDisplayLess').show(); 
+	$(".topic ol").children('.EXLFacetsDisplayLess').show();
 };
 
 if ($('.EXLSearchRefinementRemovefacet_creator strong').attr('class') == 'EXLSearchRefinementfacet_creator') {
   	$(".author ol").children('.EXLAdditionalFacet').show();
   	$(".author ol").children('.EXLFacetsDisplayMore').hide();
-	$(".author ol").children('.EXLFacetsDisplayLess').show(); 
+	$(".author ol").children('.EXLFacetsDisplayLess').show();
 };
 
 if ($('.EXLSearchRefinementRemovefacet_library strong').attr('class') == 'EXLSearchRefinementfacet_library') {
   	$(".library ol").children('.EXLAdditionalFacet').show();
   	$(".library ol").children('.EXLFacetsDisplayMore').hide();
-	$(".library ol").children('.EXLFacetsDisplayLess').show(); 
+	$(".library ol").children('.EXLFacetsDisplayLess').show();
 };
 
 if ($('.EXLSearchRefinementRemovefacet_lcc strong').attr('class') == 'EXLSearchRefinementfacet_lcc') {
   	$(".call ol").children('.EXLAdditionalFacet').show();
   	$(".call ol").children('.EXLFacetsDisplayMore').hide();
-	$(".call ol").children('.EXLFacetsDisplayLess').show(); 
+	$(".call ol").children('.EXLFacetsDisplayLess').show();
 };
 
 if ($('.EXLSearchRefinementRemovefacet_domain strong').attr('class') == 'EXLSearchRefinementfacet_domain') {
   	$(".collection ol").children('.EXLAdditionalFacet').show();
   	$(".collection ol").children('.EXLFacetsDisplayMore').hide();
-	$(".collection ol").children('.EXLFacetsDisplayLess').show(); 
+	$(".collection ol").children('.EXLFacetsDisplayLess').show();
 };
 
 if ($('.EXLSearchRefinementRemovefacet_rtype strong').attr('class') == 'EXLSearchRefinementfacet_rtype') {
   	$(".resource ol").children('.EXLAdditionalFacet').show();
   	$(".resource ol").children('.EXLFacetsDisplayMore').hide();
-	$(".resource ol").children('.EXLFacetsDisplayLess').show(); 
+	$(".resource ol").children('.EXLFacetsDisplayLess').show();
 };
 
 
@@ -260,7 +260,7 @@ if ($('.EXLSearchRefinementRemovefacet_rtype strong').attr('class') == 'EXLSearc
 //		var sbut = $('#exlidAdvancedSearchRibbon fieldset div.EXLSearchFieldRibbonFormSubmitSearch');
 //		sbut.appendTo($('#exlidAdvancedSearchRibbon fieldset div.EXLSearchFieldRibbon'));
 //	}
-	
+
 
 //showHideDetails();
 
@@ -305,7 +305,7 @@ $(window).ajaxComplete(function() {
 function getRSI(){
         // get the sign in url
         var u = $('.EXLSignOut a').attr('href');
- 
+
 	var reqmes = $('.EXLRequestSystemFeedback span').html();
 	if(reqmes && u){
 		// reqmes = reqmes.replace('sign-in', '<a href="' + u + '">sign-in</a>');
@@ -315,7 +315,7 @@ function getRSI(){
                 var mess = '<b>We are currently experiencing problems with recall in the full view.  Please go back to the results screen to use recall for any specific record. <br /><br />We hope to have this problem resolved in a couple of weeks.  We appreciate your patience.</b>';
                 $('.EXLRequestSystemFeedback span').replaceWith(mess);
         }
-   
+
 }
 
 function checkTabPresence(rts, tabName){
@@ -327,7 +327,7 @@ function checkTabPresence(rts, tabName){
 	}
 
 	return det;
-	
+
 }
 
 
@@ -351,13 +351,13 @@ function EXLTA_addTab(tabName,tabType,url,tabSelectorCopy,tabUrlReplace,tabUrlRe
                                                 $(customTab).addClass('EXLResultLastTab');
                                                 $(this).append(customTab);
                			 }
-                	
+
 				//	$(this).parents('.EXLResult').find('.EXLSummary').append(customTabContainer);
 				var result = $(this).parents('.EXLResult');
-						
+
 				if (!isFullDisplay()){//Solves full display bug where container isn't added to page.
 					result = result.find('.EXLSummary');
-				}			
+				}
 				result.append(customTabContainer);
                         }
                 });
@@ -374,7 +374,7 @@ function msTabHandler(e,element,tabType,content,contentHandler,url,isSelected){
 			contentHandler(element, tabType);
                 }
 }
- 
+
 
 function EXLTA_wrapResultsInNativeTab(element, content,url, headerContent, po){
         var popOut = '<div class="EXLTabHeaderContent">'+headerContent+'</div><div class="EXLTabHeaderButtons"><ul><li class="EXLTabHeaderButtonPopout"><span></span><a href="'+url+'" target="_blank"><img src="../images/icon_popout_tab.png" /></a></li><li></li><li class="EXLTabHeaderButtonCloseTabs"><a href="#" title="hide tabs"><img src="../images/icon_close_tabs.png" alt="hide tabs"></a></li></ul></div>';
@@ -426,16 +426,15 @@ function getLocations(element, tabType){
       var ddud = 'pnxId=' + dn + '&primary=ndu_aleph';
       var ddui = '/primo_library/libweb/tiles/local/location.jsp';
       $.ajax({type: "get", url: ddui, dataType: "html", data: ddud,  success: function(data){
-console.log($(element).parents('.EXLResult').find('.'+tabType+'-Container'));
 		        var p = $(element).parents('.EXLResult').find('.'+tabType+'-Container').children('.EXLTabContent').children('#ndLocation');
 			$(p).removeClass();
 			$(p).html(data);
 		}
 
-	
-		
+
+
 	});
-	
+
 
 }
 
@@ -473,14 +472,14 @@ function new_malc_review(id)
                 $('#tagsReviews'+id).find('#displayReviewWriter').attr('checked', true);
                 $('#tagsReviews'+id).find('#agree04'+id).attr('checked', false);
 
-		$('#tagsReviews'+id).find('#exlidReviewFormSubmit').removeAttr('onclick'); 
+		$('#tagsReviews'+id).find('#exlidReviewFormSubmit').removeAttr('onclick');
 		$('#tagsReviews'+id).find('#exlidReviewFormSubmit').click(function(){
 			if ( $(this).parent().parent().parent().find('select option:selected').val() == 0 ) {
 				alert ('Please select a rating.');
 				return false;
 			}
 			else {
-				return edit_save(id); 
+				return edit_save(id);
 			}
         	});
         }
@@ -500,25 +499,25 @@ function showHideDetails(){
         var subjects = $('div.EXLDetailsContent ul li strong:contains("Subjects")').parent()
 		//alert (subjects);
         var desc = $('div.EXLDetailsContent ul li strong:contains("Description")').parent()
-		//alert (desc); 
+		//alert (desc);
 
    // Set variables for show-hide links
         var authLink = '<li class="showHide toggleAuth" id="showAuth"><a href=#><span class="showOp">+</span> Show all contributors</a><li class="showHide toggleAuth" id="hideAuth" style="display:none"><a href=#><span class="showOp">-</span> Show fewer contributors</a>';
- 
+
         var subLink = '<li class="showHide toggleSubj" id="showSub"><a href=#><span class="showOp">+</span> Show all subjects</a><li class="showHide toggleSubj" id="hideSub" style="display:none"><a href=#><span class="showOp">-</span>Show fewer subjects</a>';
- 
+
         var descLink = '<li href=# class="showHide toggleDesc showDesc"><a href=#><span class="showOp">+</span> Show more</a><li href=# class="showHide toggleDesc hideDesc" style="display:none"><a href=#><span class="showOp">-</span> Show less</a>';
- 
- 
+
+
     // Process Contributors, if they exist
- 
+
     if ( contrib.html() ) {
 		//alert ('contributor');
         // Remove Semicolons between lines for contributors
                 var contribHtml = contrib.html() ;
                 contribHtml = contribHtml.replace(/;/g,'');
                 contrib.html(contribHtml) ;
- 
+
         // Check field size
                 var numContrib = contrib.children('a').length;
 		alert(numContrib);
@@ -531,7 +530,7 @@ function showHideDetails(){
                         contrib.children('br:gt(2)').hide();
                         contrib.after( authLink );
         }
- 
+
         //Bind Contributor toggles
                 $('#showAuth').live( "click",function(){
                         contrib.children('a:gt(2)').show() ;
@@ -546,27 +545,27 @@ function showHideDetails(){
                         return false
                 });
     }  // End of Contributors
- 
+
     // Process Subjects, if they exist
- 
+
     if ( subjects.html() ) {
-		//alert ('subjects'); 
+		//alert ('subjects');
 
         // Remove Semicolons between lines for subjects
                 var subjHtml = subjects.html() ;
                 subjHtml = subjHtml.replace(/;/g,'');
                 subjects.html(subjHtml) ;
- 
+
         // Check field size
                 var numSubjects = subjects.children('a').length;
- 
+
         // Hide Excess Subjects
                 if (numSubjects > 3) {
                         subjects.children('a:gt(2)').hide();
                         subjects.children('br:gt(2)').hide();
                         subjects.after( subLink );
                 }
- 
+
         // Bind Subject Toggles
                 $('#showSub').live( "click",function(){
                         subjects.children('a:gt(2)').show();
@@ -580,30 +579,30 @@ function showHideDetails(){
                         $('.toggleSubj').toggle();
                         return false
                 } ) ;
- 
+
     }   // End of Subjects
- 
+
     // Process description, if it exists
- 
+
     if (desc) {
- 
+
         // Check Field Size
         var descLength = desc.html.length;
 	var descCount = desc.children('br').length;
 	//alert (descCount);
- 
+
         // Hide excess Description
- 
+
         if (descCount > 1) {
                 descHtml = desc.html();
                 descHtml = descHtml.replace(/<br>/,'<span id="descMore"><br>');
                 descHtml = descHtml + '</span>'
- 
+
                 desc.html(descHtml);
                 $('#descMore').hide();
                 desc.after( descLink );
         }
- 
+
         // Bind description toggles
                 $('.showDesc').live( "click",function(){
                         $('#descMore').show();
@@ -615,7 +614,7 @@ function showHideDetails(){
                         $('.toggleDesc').toggle();
                         return false
                 } ) ;
- 
+
     }   // End of description
 
 } //END of Show/Hide function

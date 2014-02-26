@@ -5,6 +5,7 @@
 //= require ./jquery.tablesorter.js
 //= require ./advanced-clear-button.js
 //= require ./malc.js
+//= require ./modal-popups.js
 //= require ./ndu.js
 //= require ./search-partner-libraries.js
 //= require ./wc.js
