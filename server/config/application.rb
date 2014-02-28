@@ -99,6 +99,8 @@ module Assets
       hesburgh_assets/primo/1.0/index.js
       hesburgh_assets/primo/1.0/index.css
       hesburgh_assets/primo_malc/1.0/index.js
+      hesburgh_assets/primo4/ndu/index.js
+      hesburgh_assets/primo4/malc/index.js
     )
 
     config.assets.initialize_on_precompile = false
