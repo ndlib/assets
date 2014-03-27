@@ -1,3 +1,0 @@
-//
-//= require ./NAMEOFSCRIPT.js
-
