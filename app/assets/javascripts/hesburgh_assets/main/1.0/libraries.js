@@ -47,8 +47,8 @@ jQuery(function($) {
     }, 500);
   });
 
-  $('ul.sf-menu').superfish({
-    delay:       0,
-    speed:       'fast'
-  });
+  //$('ul.sf-menu').superfish({
+  //  delay:       0,
+  //  speed:       'fast'
+  //});
 });
