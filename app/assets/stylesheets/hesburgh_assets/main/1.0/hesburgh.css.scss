@@ -122,15 +122,21 @@ div.header {
     width:200px;
     padding-top:49px;
     margin-left: 25px;
+    background-repeat: no-repeat;
+    background-size:contain;
 }
 
 .ndulogo {
-    background:url(/images/slogan.gif);
+    background:url(/assets/hesburgh_assets/main/1.0/slogan.gif);
     width: 200px;
     padding-top: 53px;
     float:right;
-    margin-right: 25px
+    margin-right: 25px;
+    overflow: hidden;
+    cursor: inherit;
 }
+
+
 
 .intranet {
     padding-right:21px;
