@@ -5,7 +5,7 @@ jQuery ($) ->
     recordID = EXLTA_recordId(element)
     if !link.data('loaded')
       success = (data) ->
-        container = link.parents(".EXLResult").find("." + tabType + "-Container").children(".EXLTabContent").children(".EXLOtherDetailsTabContent")
+        container = link.parents(".EXLResult").find("." + tabType + "-Container").children(".EXLTabContent").children(".ndl-details-tab-content")
         container.removeClass('EXLTabLoading')
         container.html data
         link.data('loaded', true)
@@ -14,11 +14,11 @@ jQuery ($) ->
     return
 
   ready = ->
-    EXLTA_addTab "New Details", "OtherDetailsTab", location.href, "EXLDetailsTab", "detailsTab", "otherDetailsTab", false, checkTabPresence, ".EXLDetailsTab"
-    $(".OtherDetailsTab").click (e) ->
+    EXLTA_addTab "New Details", "ndl-details-tab", location.href, "EXLDetailsTab", "detailsTab", "ndl-details-tab", false, checkTabPresence, ".EXLDetailsTab"
+    $(".ndl-details-tab").click (e) ->
       tab = $(this)
       link = tab.find('a').get(0)
-      msTabHandler e, link, "OtherDetailsTab", "<div id=\"ndOtherDetails\" class=\"EXLTabLoading EXLOtherDetailsTabContent\"></div>", getOtherDetails, location.href, tab.hasClass("EXLResultSelectedTab")
+      msTabHandler e, link, "ndl-details-tab", "<div id=\"ndlOtherDetails\" class=\"EXLTabLoading ndl-details-tab-content\"></div>", getOtherDetails, location.href, tab.hasClass("EXLResultSelectedTab")
       return
 
   $(document).ready(ready)
