@@ -4,7 +4,6 @@ jQuery ($) ->
 
   hoverIn = ->
     li = $(this)
-    console.log(li)
     li.prevAll().addClass('ndl-hover')
 
   hoverOut = ->
