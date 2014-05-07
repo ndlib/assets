@@ -102,6 +102,7 @@ module Assets
       hesburgh_assets/primo4/ndu/index.js
       hesburgh_assets/primo4/malc/index.js
       hesburgh_assets/primo4/login/login.css
+      hesburgh_assets/primo4/login/login.ie.css
       hesburgh_assets/tantur/1.0/index.css
     )
 
