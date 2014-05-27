@@ -14,3 +14,4 @@
 //= require ../tab-details.js
 //= require ../jquery.cookie.js
 //= require ../pagination.js
+//= require ../fix-dateslider.js
