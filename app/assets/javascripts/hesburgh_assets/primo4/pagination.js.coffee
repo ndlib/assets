@@ -7,7 +7,7 @@ jQuery ($) ->
   $pageElement = $(".EXLBriefResultsPaginationPageCount").first()
   if $pageElement.length > 0
     $paginationContainers = $('.EXLResultsNavigation')
-    $paginationContainer = $paginationContainers.first
+    $paginationContainer = $paginationContainers.first()
     $totalElement = $pageElement.next()
     totalText = $totalElement.text().trim()
     total = stringToInt(totalText)
