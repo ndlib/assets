@@ -1,12 +1,13 @@
 jQuery ($) ->
   stringToInt = (value) ->
-    parseInt value.replace(/[^\d]/, "")
+    parseInt value.replace(/[^\d]/g, "")
   queryParamsForPage = (page_number) ->
     indx = ((page_number - 1) * pageSize) + 1
     "&pag=nxt&indx=" + indx
   $pageElement = $(".EXLBriefResultsPaginationPageCount").first()
   if $pageElement.length > 0
-    $paginationContainer = $("#resultsNavNoId")
+    $paginationContainers = $('.EXLResultsNavigation')
+    $paginationContainer = $paginationContainers.first
     $totalElement = $pageElement.next()
     totalText = $totalElement.text().trim()
     total = stringToInt(totalText)
@@ -30,10 +31,12 @@ jQuery ($) ->
       lastLink.text "Last"
       lastLink.attr "href", baseLink + queryParamsForPage(totalPages)
       lastLink.attr "title", "Go to Last page"
-      $paginationContainer.append lastLink
+      $paginationContainers.each ->
+        $(this).append lastLink.clone()
     if $previousLink.length > 0
       firstLink = $paginationLinks.first().clone()
       firstLink.text "First"
       firstLink.attr "href", baseLink + queryParamsForPage(0)
       firstLink.attr "title", "Go to First page"
-      $paginationContainer.prepend firstLink
+      $paginationContainers.each ->
+        $(this).prepend firstLink.clone()
