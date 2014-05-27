@@ -12,3 +12,5 @@
 //= require ../wc.js
 //= require ../wc_proxy.js
 //= require ../tab-details.js
+//= require ../jquery.cookie.js
+//= require ../pagination.js
