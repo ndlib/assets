@@ -14,6 +14,7 @@ gemspec
 # gem 'debugger'
 gem "rails", '~> 3.2.14'
 gem 'therubyracer'
+gem 'newrelic_rpm'
 
 group :development, :test do
   gem "hesburgh_infrastructure", git: 'git@git.library.nd.edu:hesburgh_infrastructure'
