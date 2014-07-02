@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   match 'admin' => 'admin#index'
   match 'admin/:action' => 'admin', as: 'admin'
 
+  match 'rarebooks' => 'rarebooks#index'
+  match 'rarebooks/:action' => 'rarebooks', as: 'rarebooks'
+
   scope '/catalog' do
     match '/' => 'catalog#index', as: 'catalog_root'
 
