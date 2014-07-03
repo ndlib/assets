@@ -10,7 +10,7 @@
   <!-- Set the viewport width to device width for mobile -->
   <meta name="viewport" content="width=device-width" />
   <!-- InstanceBeginEditable name="doctitle" -->
-  <title>Rare Books &amp; Special Collections // Hesburgh Libraries // University of Notre Dame</title>
+  <title><%= @page_title ? @page_title +("// ").html_safe : "" %>Rare Books &amp; Special Collections // Hesburgh Libraries // University of Notre Dame</title>
   <!-- InstanceEndEditable -->
   <!-- Included CSS Files -->
   <%= hesburgh_stylesheet_link_tag :rarebooks, "index.css", :media => "all" %>
@@ -45,7 +45,7 @@
       <div class="row hide-on-phones" id="breadcrumb">
         <div class="twelve columns">
           <p><a href="http://library.nd.edu/">Hesburgh Libraries</a><!-- InstanceBeginEditable name="crumbs" -->
-            &gt; <a href="/index.shtml">Rare Books &amp; Special Collections</a> <%= @page_title ? ("&gt; ").html_safe + @page_title : ""%>
+            &gt; <a href="/index.shtml">Rare Books &amp; Special Collections</a> <%= @page_title ? ("&gt; ").html_safe + @page_title : "" %>
         </div>
       </div>
       <div class="row" id="content">
