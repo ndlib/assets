@@ -43,6 +43,32 @@ module HesburghAssets
       "http://library.nd.edu#{filepath}"
     end
 
+  ##
+ # Includes the relevant library SSI file from http://library.nd.edu/ssi/<filename>.shtml
+    def rarebooks_include_ssi(filepath)
+      render :partial => "/layouts/hesburgh_assets/rarebooks/include_ssi", :locals => {:filepath => rarebooks_clean_ssi_path(filepath)}
+    end
+
+    def rarebooks_clean_ssi_path(filepath)
+      if !(filepath =~ /^\//)
+        filepath = "/#{filepath}"
+      end
+      filepath
+    end
+
+    def rarebooks_read_ssi_file(filepath)
+      require 'open-uri'
+      f = open(rarebooks_ssi_url(filepath), "User-Agent" => "Ruby/#{RUBY_VERSION}")
+      contents = f.read
+      contents = link_sub(contents)
+      contents
+    end
+
+    def rarebooks_ssi_url(filepath)
+      "http://rarebooks.library.nd.edu#{filepath}"
+    end
+
+  ##
     def active_branch_path
       if active_branch_code == 'main'
         ''
@@ -186,5 +212,6 @@ module HesburghAssets
       path = hesburgh_asset_path(directory, file, options)
       javascript_include_tag(path, options)
     end
+
   end
 end

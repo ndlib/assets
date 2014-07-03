@@ -1,1 +1,38 @@
-<%= yield %>
+<!DOCTYPE html>
+<html lang="en" class="no-js"><!-- InstanceBegin template="/Templates/two-column.dwt" codeOutsideHTMLIsLocked="true" --><head>
+
+  <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+  <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+  <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+  <!--[if gt IE 8]><!-->  <!--<![endif]-->
+
+  <meta charset="utf-8" />
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+  <!-- InstanceBeginEditable name="doctitle" -->
+  <title>Rare Books &amp; Special Collections // Hesburgh Libraries // University of Notre Dame</title>
+  <!-- InstanceEndEditable -->
+  <!-- Included CSS Files -->
+
+  <!--#include virtual="/ssi/css.shtml" -->
+  <%= hesburgh_stylesheet_link_tag :rarebooks, "index.css", :media => "all" %>
+  <!-- Included JS Files -->
+
+  <%= hesburgh_javascript_include_tag :rarebooks, "index.js" %>
+
+
+
+  <!-- IE Fix for HTML5 Tags -->
+  <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+  <!-- InstanceBeginEditable name="head" -->
+  <!-- InstanceEndEditable -->
+  <!-- InstanceParam name="class" type="text" value="home" -->
+
+<link rel="shortcut icon" href="/favicon.ico" />
+  </head>
+  <body id="body" class="home">
+    <%= yield %>
+  </body>
+</html>
