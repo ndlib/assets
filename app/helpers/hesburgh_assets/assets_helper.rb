@@ -60,7 +60,7 @@ module HesburghAssets
       require 'open-uri'
       f = open(rarebooks_ssi_url(filepath), "User-Agent" => "Ruby/#{RUBY_VERSION}")
       contents = f.read
-      contents = link_sub(contents)
+      contents = rarebooks_link_sub(contents)
       contents
     end
 
@@ -91,6 +91,9 @@ module HesburghAssets
 
     def link_sub(contents)
       contents.gsub(/(href|src)="\//,"\\1=\"http://library.nd.edu/")
+    end
+    def rarebooks_link_sub(contents)
+      contents.gsub(/(href|src)="\//,"\\1=\"http://rarebooks.library.nd.edu/")
     end
 
     def number_to_word(number)
