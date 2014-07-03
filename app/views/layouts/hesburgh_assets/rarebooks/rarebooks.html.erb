@@ -14,17 +14,12 @@
   <!-- InstanceEndEditable -->
   <!-- Included CSS Files -->
   <%= hesburgh_stylesheet_link_tag :rarebooks, "index.css", :media => "all" %>
-  <link href="/assets/asset_server.css?body=1" media="all" rel="stylesheet" type="text/css" />
   <!-- Included JS Files -->
   <%= hesburgh_javascript_include_tag :rarebooks, "index.js" %>
   <!-- IE Fix for HTML5 Tags -->
   <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-  <!-- InstanceBeginEditable name="head" -->
-  <!-- InstanceEndEditable -->
-  <!-- InstanceParam name="class" type="text" value="home" -->
-
   <link rel="shortcut icon" href="/favicon.ico" />
   </head>
   <body id="body" class="home">
@@ -50,15 +45,14 @@
       <div class="row hide-on-phones" id="breadcrumb">
         <div class="twelve columns">
           <p><a href="http://library.nd.edu/">Hesburgh Libraries</a><!-- InstanceBeginEditable name="crumbs" -->
-            &gt; <a href="/index.shtml">Rare Books &amp; Special Collections</a>
-            <!-- InstanceEndEditable --></p>
+            &gt; <a href="/index.shtml">Rare Books &amp; Special Collections</a> <%= @page_title ? ("&gt; ").html_safe + @page_title : ""%>
         </div>
       </div>
       <div class="row" id="content">
           <%= yield %>
           <!--#include virtual="/ssi/info.shtml" -->
           <%= rarebooks_include_ssi("/ssi/info.shtml") %>
-          <!-- InstanceEndEditable --></div>
+          </div>
       </div>
       <div class="row footer">
         <!--#include virtual="/ssi/footer.shtml" -->
