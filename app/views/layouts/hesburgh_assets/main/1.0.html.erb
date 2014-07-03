@@ -2,8 +2,11 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Hesburgh Libraries // University of Notre Dame</title>
-    <meta name="description" content="Information resources and collections of the Hesburgh Libraries, University of Notre Dame." />
+    <title><% if content_for?(:content_title) "#{content_for(:content_title)} // " end %> Hesburgh Libraries // University of Notre Dame</title>
+
+    <% if content_for?(:meta_description) %>
+    	<meta name="description" content="<%= content_for(:meta_description)%>" />
+    <% end %>
     <meta name="viewport" content="width=device-width" />
 
     <%= favicon_link_tag hesburgh_asset_path(:main, "favicon.ico"), rel: 'shortcut icon', type: 'image/x-icon' %>
