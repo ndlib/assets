@@ -13,7 +13,7 @@ a:link, a:visited {
 .header {
 	background:#fff;
 
-	background-image:url(/images/header.7b.jpg);
+	background-image:url(/assets/hesburgh_assets/rarebooks/1.0/header.7b.jpg);
 	background-position: right;
 }
 
@@ -29,7 +29,7 @@ a:link, a:visited {
   height:0;
   display:block;
   overflow:hidden;
-  background:url(/images/rb.logo.sml.png);
+  background:url(/assets/hesburgh_assets/rarebooks/1.0/rb.logo.sml.png);
   position:absolute;
   left:11px;
   top:82px;
@@ -71,7 +71,7 @@ a:link, a:visited {
 	overflow:hidden;
 	padding-top:49px;
 	width:201px;
-	background:url(/images/nd.logo.png) no-repeat;
+	background:url(/assets/hesburgh_assets/rarebooks/1.0/nd.logo.png) no-repeat;
 	display:block;
 	position:absolute;
 	left:11px;
@@ -93,7 +93,7 @@ a:link, a:visited {
 	overflow:hidden;
 	padding-top:28px;
 	width:222px;
-	background:url(/images/hes.logo.png) no-repeat;
+	background:url(/assets/hesburgh_assets/rarebooks/1.0/hes.logo.png) no-repeat;
 	display:block;
 	position:absolute;
 	left:241px;
@@ -299,7 +299,7 @@ ul.subnav ul {
 
 #sidebar li {
 	margin-left:25px;
-	list-style-image:url(/images/bullet.png);
+	list-style-image:url(/assets/hesburgh_assets/rarebooks/1.0/bullet.png);
 	margin-bottom:0;
 }
 
@@ -397,7 +397,7 @@ table.blank tbody tr td {
 
 a[target="_blank"], a.offsite {
 	padding-right:16px;
-	background:url(/images/offsite.gif) right no-repeat;
+	background:url(/assets/hesburgh_assets/rarebooks/1.0/offsite.gif) right no-repeat;
 }
 
 .footer {
@@ -406,13 +406,13 @@ a[target="_blank"], a.offsite {
 
 .info {
 	margin-left:18px;
-	background:url(/images/info-top.gif) top no-repeat #A6B7BF;
+	background:url(/assets/hesburgh_assets/rarebooks/1.0/info-top.gif) top no-repeat #A6B7BF;
 	background-size:100%;
 
 }
 
 .info-inner {
-	background:url(/images/info-bottom.gif) bottom no-repeat;
+	background:url(/assets/hesburgh_assets/rarebooks/1.0/info-bottom.gif) bottom no-repeat;
 	padding:18px 14px;
 	background-size:100%;
 }
@@ -564,7 +564,7 @@ p.library-home {
 }
 
 .header {
-	background-image:url(/images/header.sml.2.jpg);
+	background-image:url(/assets/hesburgh_assets/rarebooks/1.0/header.sml.2.jpg);
 	background-position:right 0px;
 }
 

@@ -7,3 +7,4 @@
 //= require ./app.js
 //= require ./rarebooks.js
 //= require ./jquery.mobilemenu.min.js
+//= require ./fixes.js
