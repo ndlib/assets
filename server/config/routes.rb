@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   match 'rarebooks' => 'rarebooks#index'
   match 'rarebooks/:action' => 'rarebooks', as: 'rarebooks'
+  match 'css/navigation.css', :to => redirect('/assets/hesburgh_assets/rarebooks/1.0/navigation.css')
 
   scope '/catalog' do
     match '/' => 'catalog#index', as: 'catalog_root'

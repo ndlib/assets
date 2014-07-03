@@ -1,7 +1,8 @@
 //
 //= require ./modernizr.foundation.js
 //= require ./css3-mediaqueries.js
-//= require jquery
+//= require ./jquery.min.js
+
 //= require ./foundation.js
 //= require ./app.js
 //= require ./rarebooks.js
