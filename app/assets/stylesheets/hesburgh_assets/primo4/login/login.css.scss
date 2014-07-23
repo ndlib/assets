@@ -8,17 +8,28 @@ html {
   display: table;
 }
 body {
-  display: table-cell;
+  display:block;
   vertical-align: middle;
   font-family: Ariel, Helvetica, sans-serif;
   font-size: 14px !important;
-  background-color: white;
+  background-color: #2b5681;
+  margin-top:100px;
+  background: url("https://discover.library.nd.edu/assets/primo/ndu/header.jpg") no-repeat scroll center top #2b5681;
 }
 #main {
   border: 0 solid green;
   margin: 0 auto;
+  width: 100%;
+  box-shadow: none;
+  background: white;
+  padding:50px;
+  box-sizing:border-box;
+
+}
+
+#main form {
   width: 400px;
-  box-shadow: 0 0 0 50px white, 0 0 0 51px black;
+  margin:0 auto;
 }
 #login {
   width: 400px;
@@ -132,7 +143,7 @@ div#slider div#help {
   opacity: 1;
   overflow-y: hidden;
   margin: 0 0 0 0;
-  padding: 0 10px 0 10px;
+  padding: 5px 10px;
   transition: all 1s ease-in;
   color: #aaa;
   border: 1px solid #ccc;
@@ -161,6 +172,7 @@ h1 {
   height: 1.2em;
   max-height: 1.5em;
   overflow: hidden;
+  display: none;
 }
 input#checker:checked ~ h1 {
   max-height: 0;
