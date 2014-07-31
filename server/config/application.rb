@@ -106,6 +106,7 @@ module Assets
       hesburgh_assets/tantur/1.0/index.css
       hesburgh_assets/rarebooks/1.0/index.css
       hesburgh_assets/rarebooks/1.0/index.js
+      hesburgh_assets/cds/1.0/index.css
     )
 
     config.assets.initialize_on_precompile = false
