@@ -16,7 +16,7 @@ jQuery ($) ->
         # Test to make sure we don't search for the database finder placeholder text
         if qValue == legend.text()
           qValue = ""
-        qParam = $.param({q: searchField.val()})
+        qParam = $.param({q: qValue})
         qUrl = "#{href}?#{qParam}"
         if searchField.length > 0
           event.preventDefault()
