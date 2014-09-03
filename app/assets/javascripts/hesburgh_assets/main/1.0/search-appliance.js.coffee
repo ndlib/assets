@@ -11,6 +11,11 @@ jQuery ($) ->
       if href && /^[^#]/.test(href) && !/[?]/.test(href)
         activeTabContent = $tabContents.filter('.active')
         searchField = activeTabContent.find('input[type=text]:first')
+        qValue = searchField.val()
+        legend = searchField.siblings('.legend')
+        # Test to make sure we don't search for the database finder placeholder text
+        if qValue == legend.text()
+          qValue = ""
         qParam = $.param({q: searchField.val()})
         qUrl = "#{href}?#{qParam}"
         if searchField.length > 0
