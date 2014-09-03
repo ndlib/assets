@@ -6,7 +6,7 @@ jQuery(document).ready(function ($) {
   /* TABS --------------------------------- */
   /* Remove if you don't need :) */
 
-  function activateTab($tab) {
+  function activateTab($tab, initialLoad) {
     var $activeTab = $tab.closest('dl').find('a.active'),
         contentLocation = $tab.attr("href") + 'Tab';
 
@@ -24,7 +24,7 @@ jQuery(document).ready(function ($) {
     }
 
     var parents = $tab.parents();
-    if (parents.is('.home-page') && parents.is('.search-appliance')) {
+    if (!initialLoad && parents.is('.home-page') && parents.is('.search-appliance')) {
       // If the user has typed anything in the search box of the previous tab, copy it to the next tab's search box
       var previousContent = $($activeTab.attr('href') + 'Tab');
       var previousInput = previousContent.find('input.srch-box');
@@ -51,7 +51,7 @@ jQuery(document).ready(function ($) {
   });
 
   if (window.location.hash) {
-    activateTab($('a[href="' + window.location.hash + '"]'));
+    activateTab($('a[href="' + window.location.hash + '"]'), true);
     $.foundation.customForms.appendCustomMarkup();
   }
 
