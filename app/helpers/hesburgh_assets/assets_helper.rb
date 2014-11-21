@@ -31,10 +31,15 @@ module HesburghAssets
       filepath
     end
 
-    def read_ssi_file(filepath)
+    def get_ssi_contents(url)
       require 'open-uri'
-      f = open(ssi_url(filepath), "User-Agent" => "Ruby/#{RUBY_VERSION}")
-      contents = f.read
+      f = open(url, "User-Agent" => "Ruby/#{RUBY_VERSION}")
+      contents = f.read.encode('UTF-8', 'binary', invalid: :replace, undef: :replace, replace: '')
+      contents
+    end
+
+    def read_ssi_file(filepath)
+      contents = get_ssi_contents(ssi_url(filepath))
       contents = link_sub(contents)
       contents
     end
@@ -57,9 +62,7 @@ module HesburghAssets
     end
 
     def rarebooks_read_ssi_file(filepath)
-      require 'open-uri'
-      f = open(rarebooks_ssi_url(filepath), "User-Agent" => "Ruby/#{RUBY_VERSION}")
-      contents = f.read
+      contents = get_ssi_contents(rarebooks_ssi_url(filepath))
       contents = rarebooks_link_sub(contents)
       contents
     end
