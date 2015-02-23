@@ -109,6 +109,12 @@ module Assets
       hesburgh_assets/cds/1.0/index.css
       hesburgh_assets/london_library/1.0/index.js
       hesburgh_assets/london_library/1.0/index.css
+      koha/rome.js
+      koha/rome.css
+      koha/lup.js
+      koha/lup.css
+      koha/tantur.js
+      koha/tantur.css
     )
 
     config.assets.initialize_on_precompile = false
