@@ -1,4 +1,4 @@
-// -------------
+ // -------------
 //  Home Page
 // -------------
 
@@ -255,9 +255,13 @@ dl.tabs dd {
     width: 32%;
 }
 
+@media only screen and (max-width: 1024px) {
+  @include tabs-small;
+}
+
 @media only screen and (max-width: 990px) {
   .home-page {
-    
+
     #chat {
       display: none;
     }
@@ -284,7 +288,7 @@ dl.tabs dd {
       position: relative;
     }
 
-    @include tabs-small;
+
 
     .row .eight {
       width: calc(97.8% - 290px);
