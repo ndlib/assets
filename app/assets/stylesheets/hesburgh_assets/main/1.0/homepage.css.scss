@@ -256,10 +256,13 @@ dl.tabs dd {
 }
 
 @media only screen and (max-width: 1024px) {
-  @include tabs-small;
-  .search-appliance {
+  .home-page {
+    @include tabs-small;
+    .search-appliance {
       @include search-appliance-tabs-small;
     }
+  }
+
 }
 
 @media only screen and (max-width: 990px) {
