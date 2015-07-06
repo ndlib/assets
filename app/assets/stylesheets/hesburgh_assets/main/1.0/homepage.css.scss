@@ -257,6 +257,9 @@ dl.tabs dd {
 
 @media only screen and (max-width: 1024px) {
   @include tabs-small;
+  .search-appliance {
+      @include search-appliance-tabs-small;
+    }
 }
 
 @media only screen and (max-width: 990px) {
@@ -314,9 +317,7 @@ dl.tabs dd {
       display: none;
     }
 
-    .search-appliance {
-      @include search-appliance-tabs-small;
-    }
+
   }
 
   html[data-useragent*='MSIE 10.0'], html[data-useragent*='MSIE 9.0'] {
