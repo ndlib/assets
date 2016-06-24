@@ -1,5 +1,3 @@
-/* London Undergraduate Program Styles */
-
 @font-face {font-family:GPC; font-weight:300; font-style:normal;
   src:url('https://www.nd.edu/assets/fonts/GalaxiePolarisCondensed-Book.min.eot');
   src:url('https://www.nd.edu/assets/fonts/GalaxiePolarisCondensed-Book.min.eot?iefix') format('embedded-opentype'),
@@ -74,17 +72,9 @@
   text-shadow: 0 1px rgba(255, 255, 255, 0.7);
 }
 
-.main {
-//  background-color: rgb(233,233,233);
-}
-
 #opacheader a {
   color: #002b5b;
   text-decoration: none;
-}
-
-#tantur_logo {
-  padding: 5px 15px 5px;
 }
 
 .breadcrumb {
@@ -126,11 +116,6 @@
   margin-bottom: 1.25em;
 }
 
-#opacresultssidebar p.rome {
-  font-size: 80%;
-  line-height: 1.1;
-}
-
 #opaccredits {
   padding-bottom: 60px;
   background: url("https://international.nd.edu/images/marks/blue/ndmark300.png") no-repeat scroll right 20px bottom 5px / auto 40px;
@@ -152,37 +137,6 @@
 #lup_footer a {
   color: rgb(30,30,30);
   font-weight: bold;
-}
-
-#rome_footer {
-  color: rgb(30,30,30);
-  font-size: 95%;
-  line-height: 116%;
-  margin-top: 10px;
-  padding: 0.5em 0;
-  text-align: center;
-  text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
-  border: 1px solid #d2d2cf;
-  border-radius: 7px;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
-}
-
-#tantur_other_libs {
-  margin-left: -25px;
-}
-
-#tantur_other_libs li, #tantur_other_libs lh {
-  line-height: 1;
-  padding-top: .6ex;
-  padding-bottom: .6ex;
-  list-style: outside none; 
-  text-indent: -1em;
-  padding-left: 1.2em;
-  overflow-x: hidden;
-}
-
-#tantur_other_libs li:nth-of-type(2n+1) {
-  background-color: rgba(255,255,255,.6);
 }
 
 @media only screen and (min-width:0) and (max-width:600px) {
@@ -215,4 +169,3 @@
   }
 
 }
-
