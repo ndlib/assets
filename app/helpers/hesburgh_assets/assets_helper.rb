@@ -68,7 +68,7 @@ module HesburghAssets
     end
 
     def rarebooks_ssi_url(filepath)
-      "http://rarebooks.library.nd.edu#{filepath}"
+      "https://rarebooks.library.nd.edu#{filepath}"
     end
 
   ##
@@ -96,7 +96,7 @@ module HesburghAssets
       contents.gsub(/(href|src)="\//,"\\1=\"http://library.nd.edu/")
     end
     def rarebooks_link_sub(contents)
-      contents.gsub(/(href|src)="\//,"\\1=\"http://rarebooks.library.nd.edu/")
+      contents.gsub(/(href|src)="\//,"\\1=\"https://rarebooks.library.nd.edu/")
     end
 
     def number_to_word(number)
