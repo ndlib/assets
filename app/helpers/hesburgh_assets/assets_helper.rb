@@ -34,7 +34,7 @@ module HesburghAssets
     def get_ssi_contents(url)
       require 'open-uri'
       f = open(url, "User-Agent" => "Ruby/#{RUBY_VERSION}")
-      contents = f.read.encode('UTF-8', 'binary', invalid: :replace, undef: :replace, replace: '')
+      contents = f.read.encode('UTF-8', invalid: :replace, undef: :replace, replace: '')
       contents
     end
 
